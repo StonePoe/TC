@@ -95,7 +95,7 @@ body {
 .content-wrapper,
 .right-side {
   min-height: 100%;
-  background-color: #ecf0f5;
+  background-color: #ecf0f0;
   z-index: 800;
 }
 .main-footer {
@@ -417,7 +417,7 @@ a:focus {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 50px;
+  /*padding-top: 50px;*/
   min-height: 100%;
   width: 230px;
   z-index: 810;
@@ -4939,4 +4939,8 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal !important;
   }
+}
+
+.d-none {
+  display: none;
 }

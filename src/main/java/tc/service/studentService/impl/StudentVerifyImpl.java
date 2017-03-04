@@ -5,11 +5,13 @@ import org.springframework.stereotype.Service;
 import tc.data.dao.BankCardDAO;
 import tc.data.dao.StudentDAO;
 import tc.model.BankCard;
+import tc.model.Bankcard;
 import tc.model.Student;
 import tc.service.studentService.StudentVerify;
 import tc.service.tools.BankConnector;
 
 import javax.annotation.Resource;
+import javax.persistence.criteria.CriteriaBuilder;
 
 /**
  * Created by stonezhang on 2017/2/21.
@@ -24,16 +26,16 @@ public class StudentVerifyImpl implements StudentVerify {
     private BankCardDAO bankCardDAO;
 
     @Override
-    public boolean register(String name, String password, String bankcard) {
-        BankCard bankCard = new BankCard();
-        bankCard.setId(Integer.parseInt(bankcard));
-        double balance = BankConnector.getBalance(bankCard);
-        bankCardDAO.insert(Integer.parseInt(bankcard), balance);
+    public boolean register(String name, String password, String bankid) {
+        Bankcard bankcard = new Bankcard();
+        bankcard.setId(Integer.parseInt(bankid));
+        double balance = BankConnector.getBalance(bankcard);
+        bankCardDAO.insert(Integer.parseInt(bankid), balance);
 
         Student student = new Student();
         student.setName(name);
         student.setPassword(password);
-        student.setBankid(Long.parseLong(bankcard));
+        student.setBankid(Integer.parseInt(bankid));
         if (!existName(name)) {
             studentDAO.insert(student);
             return true;

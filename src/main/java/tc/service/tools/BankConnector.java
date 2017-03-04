@@ -1,12 +1,12 @@
 package tc.service.tools;
 
-import tc.model.BankCard;
+import tc.model.Bankcard;
 
 /**
  * Created by stonezhang on 2017/2/25.
  */
 public class BankConnector {
-    public static double getBalance (BankCard bankCard) {
+    public static double getBalance (Bankcard bankCard) {
         // visit the bank to search for the remaining money
         // ...
         // here shall contain some bank-linking service

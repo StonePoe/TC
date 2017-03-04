@@ -1,9 +1,8 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: stonezhang
-  Date: 2017/2/27
-  Time: 下午9:00
+  Date: 2017/3/2
+  Time: 下午1:37
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,31 +16,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
-<body class="studentMain">
+<body class="institutionMain">
 <%--<body background="../../img/R&L/LoginBackgroud.jpg">--%>
 <div>
     <section>
         <nav>
             <!--<div>header</div>-->
             <ul>
-                <li data-xcoord="0px" class="active" href="/student/login"><span href="/student/login">学生用户</span></li>
-                <li data-xcoord="160px" href="/institution/login"><span href="/institution/login">机构用户</span></li>
+                <li data-xcoord="0px"><span href="/student/login">学生用户</span></li>
+                <li data-xcoord="160px" class="active"><span href="/institution/login">机构用户</span></li>
             </ul>
         </nav>
     </section>
 </div>
 <div class="container">
-    <div class="cont_principal student" name="student">
+
+    <div class="cont_principal institution" name="institution">
 
         <div class="cont_centrar">
             <div class="cont_login">
-                <form action="<c:url value="/student/login/info"/>" method="post">
+                <form action="">
                     <div class="cont_tabs_login">
                         <ul class='ul_tabs'>
-                            <li class="active"><a onclick="sign_in()">学生登录</a>
+                            <li class="active"><a onclick="sign_in()">机构登录</a>
                                 <span class="linea_bajo_nom"></span>
                             </li>
-                            <li><a onclick="sign_up()">学生注册</a>
+                            <li><a onclick="sign_up()">机构注册</a>
                                 <span class="linea_bajo_nom"></span>
                             </li>
                         </ul>
@@ -49,10 +49,10 @@
 
                     <div class="cont_text_inputs">
                         <input type="text" class="input_form_sign d_block active_inp"
-                               placeholder="用户名" name="name" />
+                               placeholder="机构名" name="name" />
 
-                        <input type="text" class="input_form_sign"
-                               placeholder="银行卡号" name="bankid" />
+                        <!--<input type="text" class="input_form_sign"-->
+                        <!--placeholder="银行卡号" name="bankid" />-->
 
                         <input type="password" class="input_form_sign d_block active_inp"
                                placeholder="密码" name="pass" />
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="cont_btn">
-                        <button class="btn_sign_in btn_sign" type="submit">登录</button>
+                        <button class="btn_sign_in btn_sign" onclick="inputCheck()">登录</button>
                     </div>
                     <div class="cont_btn">
                         <button class="btn_sign_up btn_sign" style="display: none" onclick="inputCheck()">注册</button>
@@ -97,6 +97,6 @@
 <!-- Bootstrap 3.3.6 -->
 <script src="../../WEB-INF/lib/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../js/login.js"></script>
-<%--<script src="../../js/navbar.js"></script>--%>
+<script src="../../js/navbar.js"></script>
 </body>
 </html>

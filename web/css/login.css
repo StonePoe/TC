@@ -179,3 +179,11 @@
 .cont_text_inputs > input:nth-child(4){
     transition-delay: 0.8s;
 }
+
+.institutionMain {
+    background: url("../img/R&L/institutionLogin.png") fixed;
+}
+
+.studentMain {
+    background: url("../img/R&L/LoginBackgroud.jpg") fixed;
+}

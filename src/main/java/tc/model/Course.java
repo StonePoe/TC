@@ -1,42 +1,40 @@
 package tc.model;
 
-import java.sql.Date;
+import java.util.Date;
 
-/**
- * Created by stonezhang on 2017/2/20.
- */
 public class Course {
-    private long id;
-    private Long insid;
-    private Long tid;
-    private String description;
-    private Date startdate;
-    private Date enddate;
-    private Double price;
-    private Integer agree;
-    private String name;
+   private int id;
+   private int insid;
+   private int tid;
+   private String description;
+   private String startdate;
+   private String enddate;
+   private double price;
+   private int agree;
+   private String name;
+   private String imgUrl;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Long getInsid() {
+    public int getInsid() {
         return insid;
     }
 
-    public void setInsid(Long insid) {
+    public void setInsid(int insid) {
         this.insid = insid;
     }
 
-    public Long getTid() {
+    public int getTid() {
         return tid;
     }
 
-    public void setTid(Long tid) {
+    public void setTid(int tid) {
         this.tid = tid;
     }
 
@@ -48,68 +46,36 @@ public class Course {
         this.description = description;
     }
 
-    public Date getStartdate() {
+    public String getStartdate() {
         return startdate;
     }
 
-    public void setStartdate(Date startdate) {
+    public void setStartdate(String startdate) {
         this.startdate = startdate;
     }
 
-    public Date getEnddate() {
+    public String getEnddate() {
         return enddate;
     }
 
-    public void setEnddate(Date enddate) {
+    public void setEnddate(String enddate) {
         this.enddate = enddate;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public Integer getAgree() {
+    public int getAgree() {
         return agree;
     }
 
-    public void setAgree(Integer agree) {
+    public void setAgree(int agree) {
         this.agree = agree;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Course that = (Course) o;
-
-        if (id != that.id) return false;
-        if (insid != null ? !insid.equals(that.insid) : that.insid != null) return false;
-        if (tid != null ? !tid.equals(that.tid) : that.tid != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (startdate != null ? !startdate.equals(that.startdate) : that.startdate != null) return false;
-        if (enddate != null ? !enddate.equals(that.enddate) : that.enddate != null) return false;
-        if (price != null ? !price.equals(that.price) : that.price != null) return false;
-        if (agree != null ? !agree.equals(that.agree) : that.agree != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (insid != null ? insid.hashCode() : 0);
-        result = 31 * result + (tid != null ? tid.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (startdate != null ? startdate.hashCode() : 0);
-        result = 31 * result + (enddate != null ? enddate.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
-        result = 31 * result + (agree != null ? agree.hashCode() : 0);
-        return result;
     }
 
     public String getName() {
@@ -118,5 +84,13 @@ public class Course {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

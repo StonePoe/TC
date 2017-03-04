@@ -62,4 +62,16 @@ public class StudentInfoVO implements Serializable {
     public void setState(int state) {
         this.state = state;
     }
+
+    @Override
+    public String toString() {
+        return "StudentInfoVO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", bankCard='" + bankCard + '\'' +
+                ", memberId=" + memberId +
+                ", state=" + state +
+                '}';
+    }
 }

@@ -12,6 +12,12 @@
 
     <!-- Scans the classpath of this application for @Components to deploy as beans -->
     <context:component-scan base-package="tc.view.controller" />
+
+    <!--<mvc:resources mapping="/css/**" location="/css/"/>-->
+    <!--<mvc:resources mapping="/js/**" location="/js/"/>-->
+    <!--<mvc:resources mapping="/img/**" location="/img/"/>-->
+    <!--<mvc:resources mapping="/plugin/**" location="/plugin/"/>-->
+    <!--<mvc:resources mapping="/fonts/**" location="/fonts/"/>-->
     <!-- Configures the @Controller programming model -->
     <mvc:annotation-driven />
 

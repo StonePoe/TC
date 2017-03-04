@@ -1,48 +1,36 @@
 package tc.model;
 
-/**
- * Created by stonezhang on 2017/2/20.
- */
 public class Student {
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", bankid=" + bankid +
-                ", memeberid=" + memeberid +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
+   private int id;
+   private int bankid;
+   private int memberid;
+   private String password;
+   private String name;
+   private String imgUrl;
+   private int level;
 
-    private long id;
-    private Long bankid;
-    private Long memeberid;
-    private String password;
-    private String name;
-
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Long getBankid() {
+    public int getBankid() {
         return bankid;
     }
 
-    public void setBankid(Long bankid) {
+    public void setBankid(int bankid) {
         this.bankid = bankid;
     }
 
-    public Long getMemeberid() {
-        return memeberid;
+    public int getMemberid() {
+        return memberid;
     }
 
-    public void setMemeberid(Long memeberid) {
-        this.memeberid = memeberid;
+    public void setMemberid(int memberid) {
+        this.memberid = memberid;
     }
 
     public String getPassword() {
@@ -61,29 +49,19 @@ public class Student {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Student that = (Student) o;
-
-        if (id != that.id) return false;
-        if (bankid != null ? !bankid.equals(that.bankid) : that.bankid != null) return false;
-        if (memeberid != null ? !memeberid.equals(that.memeberid) : that.memeberid != null) return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-
-        return true;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    @Override
-    public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (bankid != null ? bankid.hashCode() : 0);
-        result = 31 * result + (memeberid != null ? memeberid.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        return result;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

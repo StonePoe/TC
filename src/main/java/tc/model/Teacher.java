@@ -1,18 +1,16 @@
 package tc.model;
 
-/**
- * Created by stonezhang on 2017/2/20.
- */
-
 public class Teacher {
-    private long id;
+    private int id;
     private String password;
+    private String imgUrl;
+    private String name;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -24,23 +22,19 @@ public class Teacher {
         this.password = password;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Teacher that = (Teacher) o;
-
-        if (id != that.id) return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
-
-        return true;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    @Override
-    public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        return result;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

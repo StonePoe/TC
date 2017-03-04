@@ -1,18 +1,16 @@
 package tc.model;
 
-/**
- * Created by stonezhang on 2017/2/20.
- */
 public class Manager {
-    private long id;
-    private String password;
-    private String name;
+   private int id;
+   private String password;
+   private String name;
+   private String imgUrl;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -32,25 +30,11 @@ public class Manager {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Manager that = (Manager) o;
-
-        if (id != that.id) return false;
-        if (password != null ? !password.equals(that.password) : that.password != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-
-        return true;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    @Override
-    public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + (password != null ? password.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        return result;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

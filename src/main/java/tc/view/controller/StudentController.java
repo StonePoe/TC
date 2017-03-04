@@ -1,9 +1,11 @@
 package tc.view.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import tc.bean.StudentInfoVO;
 import tc.service.studentService.StudentVOManager;
 import tc.service.studentService.StudentVerify;
@@ -61,26 +63,15 @@ public class StudentController {
 //                return "/student/StudentLogin";
 //            }
 //        }
-        return "/student/studentLogin";
+        return "student/studentLogin";
     }
 
-    @RequestMapping(value = "/login/infogotta", method = RequestMethod.POST)
+    @RequestMapping(value = "/login/info", method = RequestMethod.POST)
+//    @ResponseStatus(value= HttpStatus.OK)
     public String doLogin(HttpServletRequest request) {
         String studentName = request.getParameter("name");
         String studentPass = request.getParameter("password");
         String bankId = request.getParameter("bankid");
-//
-//        String beanName = "StudentVerify";
-//        String viewClassName = StudentVerify.class.getName();
-//        String namespace = EJBFactory.getJNDIPath() + beanName + "!" + viewClassName;
-//        StudentVerify studentVerify = (StudentVerify)EJBFactory.getEjb(namespace);
-//
-//        beanName = "StudentVOManager";
-//        viewClassName = StudentVOManager.class.getName();
-//        namespace = EJBFactory.getJNDIPath() + beanName + "!" + viewClassName;
-//        StudentVOManager studentVOManager = (StudentVOManager)EJBFactory.getEjb(namespace);
-//
-////        boolean isName = studentVerify.existName(studentName);
         boolean isId = false;
         try {
             int sid = Integer.parseInt(studentName);
@@ -103,10 +94,10 @@ public class StudentController {
         if (session == null) {
             return "/student/StudentLogin";
         }
-        session.setAttribute("studentinfo", studentInfoVO);
+        session.setAttribute("studentInfoVO", studentInfoVO);
         session.setAttribute("fromURL", "/student/login");
-
-        return "forward:/student/homepage";
+//
+        return "redirect:/student/homepage";
     }
 
     @RequestMapping(value = "/homepage", method = RequestMethod.GET)
@@ -126,6 +117,10 @@ public class StudentController {
 //        int id = studentInfoVO.getId();
 //        List<StudentCourseVO> courseVOList = studentVOManager.getStudentCourses(id);
 //        request.setAttribute("courseList", courseVOList);
+        System.out.println("student homepage");
+        HttpSession session = request.getSession(false);
+        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+        System.out.println(studentInfoVO);
         return "/student/homepage";
     }
 }
