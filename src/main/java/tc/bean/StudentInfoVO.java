@@ -1,25 +1,60 @@
 package tc.bean;
 
+import tc.model.Student;
+
 import java.io.Serializable;
 
 /**
  * Created by stonezhang on 2017/1/24.
  */
 public class StudentInfoVO implements Serializable {
-    private long id;
+    private int id;
     private String name;
     private String password;
+
+    private String img;
 
     private String bankCard;
     private int memberId;
 
-    private int state;
+    private int level;
 
-    public long getId() {
+    public StudentInfoVO() {
+
+    }
+
+    public StudentInfoVO(Student student) {
+        this.id = student.getId();
+        this.name = student.getName();
+        this.password = student.getPassword();
+        this.img = student.getImgUrl();
+        this.bankCard = String.valueOf(student.getBankid());
+        this.memberId = student.getMemberid();
+        this.level = student.getLevel();
+    }
+
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -55,23 +90,16 @@ public class StudentInfoVO implements Serializable {
         this.memberId = memberId;
     }
 
-    public int getState() {
-        return state;
-    }
-
-    public void setState(int state) {
-        this.state = state;
-    }
-
     @Override
     public String toString() {
         return "StudentInfoVO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
+                ", img='" + img + '\'' +
                 ", bankCard='" + bankCard + '\'' +
                 ", memberId=" + memberId +
-                ", state=" + state +
+                ", level=" + level +
                 '}';
     }
 }

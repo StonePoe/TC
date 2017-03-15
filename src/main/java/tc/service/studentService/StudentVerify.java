@@ -1,5 +1,7 @@
 package tc.service.studentService;
 
+import tc.bean.StudentInfoVO;
+
 /**
  * Created by stonezhang on 2017/1/23.
  */
@@ -15,4 +17,6 @@ public interface StudentVerify {
     public boolean isCorrectPsw(int id, String password);
 
     public void update(String name, String bankId, String password);
+
+    void updatePassword(int id, String password);
 }

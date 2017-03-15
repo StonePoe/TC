@@ -187,3 +187,8 @@
 .studentMain {
     background: url("../img/R&L/LoginBackgroud.jpg") fixed;
 }
+
+.error {
+    margin-left: 5%;
+    color: #e47365;
+}

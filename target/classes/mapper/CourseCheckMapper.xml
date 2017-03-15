@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.CourseCheckDAO">
+    <select id="selectByManager" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, course.id as cid,
+        course.insid as insid, institution.name as insName,
+        course.tid as tid, course.description as description,
+        course.startdate as startdate, course.enddate as enddate,
+        course.price as price, course.agree as agree,
+        course.name as name, course.imgUrl as imgUrl,
+        teacher.name as teacherName, courseField.type as fieldName,
+        course.field as fieldId, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment
+        from course, manager, teacher, institution, courseChecking, courseField
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and
+        institution.id = course.insid and teacher.id = course.tid
+        and courseField.id = course.field
+    </select>
+
+    <select id="selectByInsti" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, course.id as cid,
+        course.insid as insid, institution.name as insName,
+        course.tid as tid, course.description as description,
+        course.startdate as startdate, course.enddate as enddate,
+        course.price as price, course.agree as agree,
+        course.name as name, course.imgUrl as imgUrl,
+        teacher.name as teacherName, courseField.type as fieldName,
+        course.field as fieldId, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment
+        from course, manager, teacher, institution, courseChecking, courseField
+        where institution.id = #{insid} and course.insid = #{insid} and courseChecking.cid = course.id
+        and teacher.id = course.tid
+        and courseField.id = course.field
+    </select>
+
+    <select id="selectByCourse" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, course.id as cid,
+        course.insid as insid, institution.name as insName,
+        course.tid as tid, course.description as description,
+        course.startdate as startdate, course.enddate as enddate,
+        course.price as price, course.agree as agree,
+        course.name as name, course.imgUrl as imgUrl,
+        teacher.name as teacherName, courseField.type as fieldName,
+        course.field as fieldId, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment
+        from course, manager, teacher, institution, courseChecking, courseField
+        where course.id = #{cid} and institution.id = course.insid and courseChecking.cid = course.id
+        and teacher.id = course.tid
+        and courseField.id = course.field
+    </select>
+
+    <insert id="insert" parameterType="tc.model.CourseCheck">
+        insert into courseChecking (cid, mid, agree, comment) values (#{cid}, #{mid}, #{agree}, #{comment})
+    </insert>
+</mapper>

@@ -9,7 +9,7 @@
     <context id="testTables" targetRuntime="MyBatis3">
         <commentGenerator>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-            <property name="suppressAllComments" value="false" />
+            <property name="suppressAllComments" value="true" />
         </commentGenerator>
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
@@ -33,29 +33,31 @@
            如果maven工程只是单独的一个工程，targetProject="src/main/java"
            若果maven工程是分模块的工程，targetProject="所属模块的名称"，例如：
            targetProject="ecps-manager-mapper"，下同-->
-        <sqlMapGenerator targetPackage="mapping"
-                         targetProject="src/main/java">
-            <!-- enableSubPackages:是否让schema作为包的后缀 -->
-            <property name="enableSubPackages" value="false" />
-        </sqlMapGenerator>
-        <!-- targetPackage：mapper接口生成的位置 -->
-        <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="tc.data.test"
-                             targetProject="src/main/java">
-            <!-- enableSubPackages:是否让schema作为包的后缀 -->
-            <property name="enableSubPackages" value="false" />
-        </javaClientGenerator>
+        <!--<sqlMapGenerator targetPackage="mapping"-->
+                         <!--targetProject="src/main/java">-->
+            <!--&lt;!&ndash; enableSubPackages:是否让schema作为包的后缀 &ndash;&gt;-->
+            <!--<property name="enableSubPackages" value="false" />-->
+        <!--</sqlMapGenerator>-->
+        <!--&lt;!&ndash; targetPackage：mapper接口生成的位置 &ndash;&gt;-->
+        <!--<javaClientGenerator type="XMLMAPPER"-->
+                             <!--targetPackage="tc.data.test"-->
+                             <!--targetProject="src/main/java">-->
+            <!--&lt;!&ndash; enableSubPackages:是否让schema作为包的后缀 &ndash;&gt;-->
+            <!--<property name="enableSubPackages" value="false" />-->
+        <!--</javaClientGenerator>-->
         <!-- 指定数据库表 -->
         <table schema="tc" tableName="attending"></table>
         <table schema="tc" tableName="bankcard"></table>
         <table schema="tc" tableName="course"></table>
-        <table schema="tc" tableName="fundlog"></table>
+        <table schema="tc" tableName="courseField"></table>
+        <table schema="tc" tableName="fundLog"></table>
         <table schema="tc" tableName="institution"></table>
-        <table schema="tc" tableName="institutionlog"></table>
+        <table schema="tc" tableName="institutionField"></table>
+        <table schema="tc" tableName="institutionLog"></table>
         <table schema="tc" tableName="manager"></table>
-        <table schema="tc" tableName="membercard"></table>
+        <table schema="tc" tableName="memberCard"></table>
         <table schema="tc" tableName="student"></table>
-        <table schema="tc" tableName="studentlog"></table>
+        <table schema="tc" tableName="studentLog"></table>
         <table schema="tc" tableName="teacher"></table>
     </context>
 </generatorConfiguration>

@@ -66,4 +66,17 @@ public class Attending {
     public void setScore(double score) {
         Score = score;
     }
+
+    @Override
+    public String toString() {
+        return "Attending{" +
+                "id=" + id +
+                ", sid=" + sid +
+                ", cid=" + cid +
+                ", state=" + state +
+                ", isMember=" + isMember +
+                ", enrollingTime='" + enrollingTime + '\'' +
+                ", Score=" + Score +
+                '}';
+    }
 }

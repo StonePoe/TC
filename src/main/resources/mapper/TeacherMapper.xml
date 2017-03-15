@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.TeacherDAO">
+
+    <select id="selectById" resultType="tc.model.Teacher" >
+        select * from teacher where id = #{id}
+    </select>
+
+    <select id="selectByName" resultType="tc.model.Teacher">
+        select * from teacher where name = #{name}
+    </select>
+
+    <select id="select" resultType="tc.model.Teacher">
+        select * from teacher;
+    </select>
+
+    <insert id="insert" parameterType="tc.model.Teacher">
+        insert into teacher (password, `name`) values (#{password}, #{name})
+    </insert>
+
+</mapper>

@@ -7,7 +7,7 @@ public class MemberCard {
     private double balance;
     private int state;
     private int level;
-    private int bankid;
+    private String bankid;
     private String suspenddate;
     private String destroydate;
 
@@ -43,11 +43,11 @@ public class MemberCard {
         this.level = level;
     }
 
-    public int getBankid() {
+    public String getBankid() {
         return bankid;
     }
 
-    public void setBankid(int bankid) {
+    public void setBankid(String bankid) {
         this.bankid = bankid;
     }
 
@@ -65,5 +65,18 @@ public class MemberCard {
 
     public void setDestroydate(String destroydate) {
         this.destroydate = destroydate;
+    }
+
+    @Override
+    public String toString() {
+        return "MemberCard{" +
+                "id=" + id +
+                ", balance=" + balance +
+                ", state=" + state +
+                ", level=" + level +
+                ", bankid=" + bankid +
+                ", suspenddate='" + suspenddate + '\'' +
+                ", destroydate='" + destroydate + '\'' +
+                '}';
     }
 }

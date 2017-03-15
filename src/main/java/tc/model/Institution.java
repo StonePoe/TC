@@ -2,11 +2,12 @@ package tc.model;
 
 public class Institution {
     private int id;
-    private int password;
+    private String password;
     private int balance;
     private String name;
     private String imgUrl;
     private int field;
+    private String fieldName;
 
     public int getId() {
         return id;
@@ -16,11 +17,11 @@ public class Institution {
         this.id = id;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(int password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -54,5 +55,13 @@ public class Institution {
 
     public void setField(int field) {
         this.field = field;
+    }
+
+    public String getFieldName() {
+        return fieldName;
+    }
+
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
     }
 }

@@ -5,6 +5,7 @@ import java.util.Date;
 public class Course {
    private int id;
    private int insid;
+   private String insName;
    private int tid;
    private String description;
    private String startdate;
@@ -13,6 +14,11 @@ public class Course {
    private int agree;
    private String name;
    private String imgUrl;
+   private String teacherName;
+   private String teacherImg;
+   private String insImg;
+   private String fieldName;
+   private int fieldId;
 
     public int getId() {
         return id;
@@ -92,5 +98,75 @@ public class Course {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", insid=" + insid +
+                ", insName='" + insName + '\'' +
+                ", tid=" + tid +
+                ", description='" + description + '\'' +
+                ", startdate='" + startdate + '\'' +
+                ", enddate='" + enddate + '\'' +
+                ", price=" + price +
+                ", agree=" + agree +
+                ", name='" + name + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", teacherName='" + teacherName + '\'' +
+                ", teacherImg='" + teacherImg + '\'' +
+                ", insImg='" + insImg + '\'' +
+                ", fieldName='" + fieldName + '\'' +
+                ", fieldId=" + fieldId +
+                '}';
+    }
+
+    public int getFieldId() {
+        return fieldId;
+    }
+
+    public void setFieldId(int fieldId) {
+        this.fieldId = fieldId;
+    }
+
+    public String getFieldName() {
+        return fieldName;
+    }
+
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
+    }
+
+    public String getTeacherName() {
+        return teacherName;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
+    public String getInsName() {
+        return insName;
+    }
+
+    public void setInsName(String insName) {
+        this.insName = insName;
+    }
+
+    public String getInsImg() {
+        return insImg;
+    }
+
+    public void setInsImg(String insImg) {
+        this.insImg = insImg;
+    }
+
+    public String getTeacherImg() {
+        return teacherImg;
+    }
+
+    public void setTeacherImg(String teacherImg) {
+        this.teacherImg = teacherImg;
     }
 }

@@ -2,7 +2,7 @@ package tc.model;
 
 public class Student {
    private int id;
-   private int bankid;
+   private String bankid;
    private int memberid;
    private String password;
    private String name;
@@ -17,11 +17,11 @@ public class Student {
         this.id = id;
     }
 
-    public int getBankid() {
+    public String getBankid() {
         return bankid;
     }
 
-    public void setBankid(int bankid) {
+    public void setBankid(String bankid) {
         this.bankid = bankid;
     }
 
@@ -63,5 +63,18 @@ public class Student {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", bankid=" + bankid +
+                ", memberid=" + memberid +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", level=" + level +
+                '}';
     }
 }

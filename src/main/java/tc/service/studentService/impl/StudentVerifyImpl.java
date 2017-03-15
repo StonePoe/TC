@@ -2,16 +2,17 @@ package tc.service.studentService.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tc.data.dao.BankCardDAO;
-import tc.data.dao.StudentDAO;
-import tc.model.BankCard;
+import tc.bean.StudentInfoVO;
+import tc.dao.BankCardDAO;
+import tc.dao.MemberCardDAO;
+import tc.dao.StudentDAO;
 import tc.model.Bankcard;
+import tc.model.MemberCard;
 import tc.model.Student;
 import tc.service.studentService.StudentVerify;
 import tc.service.tools.BankConnector;
 
 import javax.annotation.Resource;
-import javax.persistence.criteria.CriteriaBuilder;
 
 /**
  * Created by stonezhang on 2017/2/21.
@@ -19,23 +20,38 @@ import javax.persistence.criteria.CriteriaBuilder;
 @Service("StudentVerify")
 public class StudentVerifyImpl implements StudentVerify {
 
-    @Resource
+    @Autowired
     private StudentDAO studentDAO;
 
-    @Resource
+    @Autowired
     private BankCardDAO bankCardDAO;
+
+    @Autowired
+    private MemberCardDAO memberCardDAO;
 
     @Override
     public boolean register(String name, String password, String bankid) {
         Bankcard bankcard = new Bankcard();
-        bankcard.setId(Integer.parseInt(bankid));
-        double balance = BankConnector.getBalance(bankcard);
-        bankCardDAO.insert(Integer.parseInt(bankid), balance);
+        bankcard.setId(bankid);
+        double balance = BankConnector.getBalance(bankid);
+        System.out.println("from student register: " + bankcard);
+        bankCardDAO.insert(bankid, balance);
+
+        MemberCard memberCard = new MemberCard();
+        memberCard.setBalance(0);
+        memberCard.setLevel(0);
+        // 0 for unused;
+        memberCard.setState(0);
+        memberCard.setBankid(bankid);
+        memberCardDAO.insert(memberCard);
+        int memberId = memberCard.getId();
 
         Student student = new Student();
         student.setName(name);
         student.setPassword(password);
-        student.setBankid(Integer.parseInt(bankid));
+        student.setBankid(bankid);
+        student.setMemberid(memberId);
+        student.setImgUrl("/img/student/default.png");
         if (!existName(name)) {
             studentDAO.insert(student);
             return true;
@@ -48,7 +64,7 @@ public class StudentVerifyImpl implements StudentVerify {
     @Override
     public boolean existName(String name) {
         Student student = studentDAO.selectByName(name);
-        System.out.println(student);
+        System.out.println("existName:" + name);
         if (student == null) {
             return false;
         }
@@ -60,7 +76,7 @@ public class StudentVerifyImpl implements StudentVerify {
     @Override
     public boolean existId(int id) {
         Student student = studentDAO.selectById(id);
-        System.out.println(student);
+        System.out.println("exist id: " + id);
         if (student == null) {
             return false;
         }
@@ -72,7 +88,7 @@ public class StudentVerifyImpl implements StudentVerify {
     @Override
     public boolean isCorrectPsw(String name, String password) {
         Student student = studentDAO.selectByName(name);
-        System.out.println(student);
+        System.out.println("is correct pw:" + name + " " + password);
         if (student.getPassword().equals(password)) {
             return true;
         }
@@ -84,7 +100,7 @@ public class StudentVerifyImpl implements StudentVerify {
     @Override
     public boolean isCorrectPsw(int id, String password) {
         Student student = studentDAO.selectById(id);
-        System.out.println(student);
+        System.out.println("is correct pw:" + id + " " + password);
         if (student.getPassword().equals(password)) {
             return true;
         }
@@ -98,4 +114,8 @@ public class StudentVerifyImpl implements StudentVerify {
 
     }
 
+    @Override
+    public void updatePassword(int id, String password) {
+        studentDAO.updatePassword(id, password);
+    }
 }

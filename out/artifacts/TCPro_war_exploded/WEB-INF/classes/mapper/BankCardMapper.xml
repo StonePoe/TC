@@ -2,9 +2,22 @@
 <!DOCTYPE mapper
         PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="tc.data.dao.BankCardDAO">
+<mapper namespace="tc.dao.BankCardDAO">
 
     <insert id="insert">
         insert into bankcard (id, balance) values (#{id}, #{balance});
     </insert>
+
+    <select id="findByStudent" resultType="tc.model.Bankcard">
+        select bankcard.id as id, bankcard.balance as balance from bankcard, student
+        where student.id = #{sid} and bankcard.id = student.bankid;
+    </select>
+
+    <select id="find" resultType="tc.model.Bankcard">
+        select * from bankcard where id = #{id}
+    </select>
+
+    <update id="update" parameterType="tc.model.Bankcard">
+        update bankcard set balance  = #{balance} where id = #{id};
+    </update>
 </mapper>
