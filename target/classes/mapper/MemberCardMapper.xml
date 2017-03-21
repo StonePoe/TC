@@ -20,9 +20,23 @@
         select * from memberCard where id = #{id}
     </select>
 
-    <update id="update" parameterType="tc.model.MemberCard">
+    <update id="updateActive" parameterType="tc.model.MemberCard">
+         update memberCard set balance = #{balance}, state = #{state}, suspenddate = #{suspenddate},
+        destroydate = #{destroydate}, `level` = #{level} where id = #{id}
+    </update>
+
+    <update id="updateBalance" parameterType="tc.model.MemberCard">
+        update memberCard set balance = #{balance} where id = #{id}
+    </update>
+
+    <update id="updateReActive" parameterType="tc.model.MemberCard">
         update memberCard set balance = #{balance}, state = #{state}, suspenddate = #{suspenddate},
-         destroydate = #{destroydate}, `level`= #{level} where id = #{id}
+        destroydate = #{destroydate} where id = #{id}
+    </update>
+
+    <update id="updateState" parameterType="tc.model.MemberCard">
+        update memberCard set state = #{state}, suspenddate = #{suspenddate},
+        destroydate = #{destroydate}, level = #{level} where id = #{id}
     </update>
 
 </mapper>

@@ -18,7 +18,7 @@ public interface InstitutionCourse {
     public void release(String name, int tid, double price, String startdate, String enddate, int field,
                         String imgUrl, int insid, String description, int agree);
 
-    public void update(int tid, String description, String startdate, String enddate, double price);
+    public void update(int cid, String description, double price, String name);
 
-    public void setScore(int cid, double score);
+    public void setScore(int sic, int cid, double score);
 }

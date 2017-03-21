@@ -21,8 +21,9 @@ public class courseTest {
     public void testCourse() {
         System.out.println("#########test#########");
 //        System.out.println(courseDAO.selectById(1));
-        System.out.println(courseDAO.selectByStudent(9));
-        System.out.println(courseDAO.selectInstiCheckingCourse(3));
+//        System.out.println(courseDAO.selectByStudent(9));
+//        System.out.println(courseDAO.selectInstiCheckingCourse(3));
+        System.out.println(courseDAO.selectById(12));
     }
 
     @Test

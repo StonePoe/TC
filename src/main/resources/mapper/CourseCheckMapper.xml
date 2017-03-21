@@ -3,21 +3,152 @@
         PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
         "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 <mapper namespace="tc.dao.CourseCheckDAO">
-    <select id="selectByManager" resultType="tc.model.CourseCheck">
+    <select id="selectReleaseByManager" resultType="tc.model.CourseCheck">
         select courseChecking.id as id, course.id as cid,
         course.insid as insid, institution.name as insName,
         course.tid as tid, course.description as description,
         course.startdate as startdate, course.enddate as enddate,
-        course.price as price, course.agree as agree,
+        course.price as price,
         course.name as name, course.imgUrl as imgUrl,
         teacher.name as teacherName, courseField.type as fieldName,
         course.field as fieldId, courseChecking.mid as mid,
-        manager.name as managerName, courseChecking.comment as comment
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree
         from course, manager, teacher, institution, courseChecking, courseField
         where manager.id = #{mid} and courseChecking.mid = #{mid}
         and course.id = courseChecking.cid and
         institution.id = course.insid and teacher.id = course.tid
-        and courseField.id = course.field
+        and courseField.id = course.field and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectUpdateByManager" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, courseUpdate.cid as cid,
+        course.insid as insid, institution.name as insName,
+        courseUpdate.description as description,
+        courseUpdate.price as price,
+        courseUpdate.cname as name, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree, courseUpdate.id as courseUpdateId
+        from course, manager, institution, courseChecking, courseUpdate
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and courseUpdate.cid = courseChecking.cid and
+        institution.id = course.insid and courseChecking.checkType = 1;
+    </select>
+
+    <select id="selectReleaseUncheck" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, course.id as cid,
+        course.insid as insid, institution.name as insName,
+        course.tid as tid, course.description as description,
+        course.startdate as startdate, course.enddate as enddate,
+        course.price as price,
+        course.name as name, course.imgUrl as imgUrl,
+        teacher.name as teacherName, courseField.type as fieldName,
+        course.field as fieldId, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree
+        from course, manager, teacher, institution, courseChecking, courseField
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and
+        institution.id = course.insid and teacher.id = course.tid
+        and courseField.id = course.field and courseChecking.agree = 0 and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectUpdateUncheck" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, courseUpdate.cid as cid,
+        course.insid as insid, institution.name as insName,
+        courseUpdate.description as description,
+        courseUpdate.price as price,
+        courseUpdate.cname as name, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree, courseUpdate.id as courseUpdateId
+        from course, manager, institution, courseChecking, courseUpdate
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and courseUpdate.cid = courseChecking.cid and
+        institution.id = course.insid and courseChecking.checkType = 1 and courseChecking.agree = 0
+        and courseUpdate.isActive = 1;
+    </select>
+
+    <select id="selectReleasePassed" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, course.id as cid,
+        course.insid as insid, institution.name as insName,
+        course.tid as tid, course.description as description,
+        course.startdate as startdate, course.enddate as enddate,
+        course.price as price,
+        course.name as name, course.imgUrl as imgUrl,
+        teacher.name as teacherName, courseField.type as fieldName,
+        course.field as fieldId, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree
+        from course, manager, teacher, institution, courseChecking, courseField
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and
+        institution.id = course.insid and teacher.id = course.tid
+        and courseField.id = course.field and courseChecking.agree = 1 and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectUpdatePassed" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, courseUpdate.cid as cid,
+        course.insid as insid, institution.name as insName,
+        courseUpdate.description as description,
+        courseUpdate.price as price,
+        courseUpdate.cname as name, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree, courseUpdate.id as courseUpdateId
+        from course, manager, institution, courseChecking, courseUpdate
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and courseUpdate.cid = courseChecking.cid and
+        institution.id = course.insid and courseChecking.checkType = 1 and courseChecking.agree = 1
+        and courseUpdate.isActive = 0;
+    </select>
+
+    <select id="selectReleaseRefused" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, course.id as cid,
+        course.insid as insid, institution.name as insName,
+        course.tid as tid, course.description as description,
+        course.startdate as startdate, course.enddate as enddate,
+        course.price as price,
+        course.name as name, course.imgUrl as imgUrl,
+        teacher.name as teacherName, courseField.type as fieldName,
+        course.field as fieldId, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree
+        from course, manager, teacher, institution, courseChecking, courseField
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and
+        institution.id = course.insid and teacher.id = course.tid
+        and courseField.id = course.field and courseChecking.agree = -1 and courseChecking.checkType = 0
+        and courseUpdate.isActive = 0;
+    </select>
+
+    <select id="selectUpdateRefused" resultType="tc.model.CourseCheck">
+         select courseChecking.id as id, courseUpdate.cid as cid,
+        course.insid as insid, institution.name as insName,
+        courseUpdate.description as description,
+        courseUpdate.price as price,
+        courseUpdate.cname as name, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree, courseUpdate.id as courseUpdateId
+        from course, manager, institution, courseChecking, courseUpdate
+        where manager.id = #{mid} and courseChecking.mid = #{mid}
+        and course.id = courseChecking.cid and courseUpdate.cid = courseChecking.cid and
+        institution.id = course.insid and courseChecking.checkType = 1 and courseChecking.agree = -1
+        and courseUpdate.isActive = 0;
     </select>
 
     <select id="selectByInsti" resultType="tc.model.CourseCheck">
@@ -25,11 +156,14 @@
         course.insid as insid, institution.name as insName,
         course.tid as tid, course.description as description,
         course.startdate as startdate, course.enddate as enddate,
-        course.price as price, course.agree as agree,
+        course.price as price,
         course.name as name, course.imgUrl as imgUrl,
         teacher.name as teacherName, courseField.type as fieldName,
         course.field as fieldId, courseChecking.mid as mid,
-        manager.name as managerName, courseChecking.comment as comment
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree
         from course, manager, teacher, institution, courseChecking, courseField
         where institution.id = #{insid} and course.insid = #{insid} and courseChecking.cid = course.id
         and teacher.id = course.tid
@@ -41,18 +175,62 @@
         course.insid as insid, institution.name as insName,
         course.tid as tid, course.description as description,
         course.startdate as startdate, course.enddate as enddate,
-        course.price as price, course.agree as agree,
+        course.price as price,
         course.name as name, course.imgUrl as imgUrl,
         teacher.name as teacherName, courseField.type as fieldName,
         course.field as fieldId, courseChecking.mid as mid,
-        manager.name as managerName, courseChecking.comment as comment
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree
         from course, manager, teacher, institution, courseChecking, courseField
         where course.id = #{cid} and institution.id = course.insid and courseChecking.cid = course.id
         and teacher.id = course.tid
         and courseField.id = course.field
     </select>
 
+    <select id="selectReleaseById" resultType="tc.model.CourseCheck">
+        select courseChecking.id as id, course.id as cid,
+        course.insid as insid, institution.name as insName,
+        course.tid as tid, course.description as description,
+        course.startdate as startdate, course.enddate as enddate,
+        course.price as price,
+        course.name as name, course.imgUrl as imgUrl,
+        teacher.name as teacherName, courseField.type as fieldName,
+        course.field as fieldId, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree
+        from course, manager, teacher, institution, courseChecking, courseField
+        where courseChecking.id = #{id} and institution.id = course.insid and courseChecking.cid = course.id
+        and teacher.id = course.tid
+        and courseField.id = course.field
+    </select>
+
+    <select id="selectUpdateById" resultType="tc.model.CourseCheck">
+         select courseChecking.id as id, courseUpdate.cid as cid,
+        course.insid as insid, institution.name as insName,
+        courseUpdate.description as description,
+        courseUpdate.price as price,
+        courseUpdate.cname as name, courseChecking.mid as mid,
+        manager.name as managerName, courseChecking.comment as comment,
+        courseChecking.releaseTime as releaseTime,
+        courseChecking.checkTime as checkTime, courseChecking.checkType as checkType,
+        courseChecking.agree as agree, courseUpdate.id as courseUpdateId
+        from course, manager, institution, courseChecking, courseUpdate
+        where courseCheck.id = #{id} and manager.id = courseChecking.mid
+        and course.id = courseChecking.cid and courseUpdate.cid = courseChecking.cid and
+        institution.id = course.insid and courseUpdate.isActive = 1;
+    </select>
+
     <insert id="insert" parameterType="tc.model.CourseCheck">
-        insert into courseChecking (cid, mid, agree, comment) values (#{cid}, #{mid}, #{agree}, #{comment})
+        insert into courseChecking (cid, mid, agree, comment, releaseTime, checkTime, checkType)
+        values (#{cid}, #{mid}, #{agree}, #{comment}, #{releaseTime}, #{checkTime}, #{checkType})
     </insert>
+
+    <update id="update" parameterType="tc.model.CourseCheck">
+        update courseChecking set agree = #{agree}, comment = #{comment}, checkTime = #{checkTime}
+        where id = #{id};
+    </update>
 </mapper>

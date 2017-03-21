@@ -22,4 +22,8 @@ public interface StudentVOManager {
     List<StudentCourseVO> getUnstartCourses(int sid);
 
     List<StudentCourseVO> getFinishedCourses(int sid);
+
+    boolean doCourseQuit(int sid, int cid, int level, double price);
+
+    boolean doCourseEnroll(int sid, int cid, int level, double price);
 }

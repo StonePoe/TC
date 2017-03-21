@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.CourseUpdateDAO">
+    <select id="selectById" resultType="tc.model.CourseUpdate">
+        select * from courseUpdate where id = #{id}
+    </select>
+    <insert id="insert" parameterType="tc.model.CourseUpdate">
+        insert into courseUpdate (cid, cname, price, description, isActive)
+        values (#{cid}, #{cname}, #{price}, #{description}, #{isActive})
+    </insert>
+
+    <update id="update" parameterType="tc.model.CourseUpdate">
+        update courseUpdate set isActive = #{isActive} where id = #{id}
+    </update>
+</mapper>

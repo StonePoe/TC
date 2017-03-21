@@ -4,7 +4,7 @@
   Date: 2017/3/5
   Time: 下午8:20
   To change this template use File | Settings | File Templates.
-  statr = -1:未注册
+  state = -1:未注册
   state = 0：未开始；
   state = 1：正在进行
   state = 2：已完成
@@ -149,16 +149,18 @@
                 <% if(studentCourseVO.getState() != -1) { %> {
                 <li class="active"><a href="/student/homepage"><i class="fa fa-circle-o"></i>已选课程</a></li>
                 <li><a href="/student/coursechoice"><i class="fa fa-circle-o"></i>发现课程</a></li>
-                <li><a href=""><i class="fa fa-circle-o"></i>机构查询</a></li>
+
                 <%} else {%>
                 <li><a href="/student/homepage"><i class="fa fa-circle-o"></i>已选课程</a></li>
                 <li class="active"><a href="/student/coursechoice"><i class="fa fa-circle-o"></i>发现课程</a></li>
-                <li><a href=""><i class="fa fa-circle-o"></i>机构查询</a></li>
+
                 <%}%>
             </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
+
+    <input style="display: none;" value="<%=studentCourseVO.getPrice()%>" id="coursePrice">
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -194,10 +196,14 @@
                         <p class="text-muted">授课老师：
                             <a href="/student/teacher?tid=<%=studentCourseVO.getTid()%>"><%=studentCourseVO.getTName()%></a></p>
                         <!-- /.row -->
-                    </div>
-                    <div>
+                        <p class="text-muted">当前得分： <%=studentCourseVO.getScore()%></p>
+                        <div>
+                            <button type="button" class="btn btn-block btn-warning btn-sm"
+                                    onclick="">前往学习</button>
 
-                        <button type="button" class="btn btn-block btn-warning btn-sm">退课</button>
+                            <button type="button" class="btn btn-block btn-warning btn-sm"
+                                    onclick="quit(<%=studentInfoVO.getId()%>, <%=studentCourseVO.getId()%>)">退课</button>
+                        </div>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -239,7 +245,8 @@
                     </div>
                     <div>
 
-                        <button type="button" class="btn btn-block btn-warning btn-sm">退课</button>
+                        <button type="button" class="btn btn-block btn-warning btn-sm"
+                                onclick="quit(<%=studentInfoVO.getId()%>, <%=studentCourseVO.getId()%>)">退订</button>
                     </div>
                     <!-- /.col -->
                 </div>
@@ -278,7 +285,8 @@
                         </div>
                         <div>
 
-                            <button type="button" class="btn btn-block btn-warning btn-sm">选课</button>
+                            <button type="button" class="btn btn-block btn-warning btn-sm"
+                                    onclick="book(<%=studentInfoVO.getId()%>, <%=studentCourseVO.getId()%>)">选课</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -379,6 +387,8 @@
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/demo.js"></script>
+
+<script src="../../js/studentCourse.js"></script>
 </body>
 </html>
 

@@ -2,6 +2,7 @@ package tc.service.institutionService;
 
 import tc.bean.InstitutionCourseVO;
 import tc.bean.InstitutionInfoVO;
+import tc.bean.InstitutionStudentVO;
 
 import java.util.List;
 
@@ -17,4 +18,8 @@ public interface InstitutionVOManager {
     List<InstitutionCourseVO> getAbandonCourses(int insid);
 
     List<InstitutionCourseVO> getCheckingCourses(int insid);
+
+    InstitutionCourseVO getCourse(int cid);
+
+    List<InstitutionStudentVO> getCourseStudentList(int cid);
 }

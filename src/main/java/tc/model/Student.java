@@ -8,6 +8,7 @@ public class Student {
    private String name;
    private String imgUrl;
    private int level;
+    private double exp;
 
     public int getId() {
         return id;
@@ -69,12 +70,21 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", bankid=" + bankid +
+                ", bankid='" + bankid + '\'' +
                 ", memberid=" + memberid +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
                 ", level=" + level +
+                ", exp=" + exp +
                 '}';
+    }
+
+    public double getExp() {
+        return exp;
+    }
+
+    public void setExp(double exp) {
+        this.exp = exp;
     }
 }

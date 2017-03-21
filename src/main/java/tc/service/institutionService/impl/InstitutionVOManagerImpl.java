@@ -4,10 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tc.bean.InstitutionCourseVO;
 import tc.bean.InstitutionInfoVO;
+import tc.bean.InstitutionStudentVO;
+import tc.dao.AttendingDAO;
 import tc.dao.CourseDAO;
 import tc.dao.InstitutionDAO;
+import tc.dao.StudentDAO;
+import tc.model.Attending;
 import tc.model.Course;
 import tc.model.Institution;
+import tc.model.Student;
 import tc.service.institutionService.InstitutionVOManager;
 
 import java.util.ArrayList;
@@ -23,6 +28,12 @@ public class InstitutionVOManagerImpl implements InstitutionVOManager{
 
     @Autowired
     private CourseDAO courseDAO;
+
+    @Autowired
+    private AttendingDAO attendingDAO;
+
+    @Autowired
+    private StudentDAO studentDAO;
 
     @Override
     public InstitutionInfoVO getInstitutionInfoVO(String name) {
@@ -66,5 +77,30 @@ public class InstitutionVOManagerImpl implements InstitutionVOManager{
             institutionCourseVOS.add(new InstitutionCourseVO(course));
         }
         return institutionCourseVOS;
+    }
+
+    @Override
+    public InstitutionCourseVO getCourse(int cid) {
+        System.out.println("from institutionVOManagerImpl: getMultipleCourse " + cid);
+        return new InstitutionCourseVO(courseDAO.selectById(cid));
+    }
+
+    @Override
+    public List<InstitutionStudentVO> getCourseStudentList(int cid) {
+        List<InstitutionStudentVO> result = new ArrayList<>();
+
+        List<Attending> attendingList = attendingDAO.selectByCid(cid);
+        for(Attending attending: attendingList) {
+            Student student = studentDAO.selectById(attending.getSid());
+            InstitutionStudentVO institutionStudentVO = new InstitutionStudentVO();
+            institutionStudentVO.setId(student.getId());
+            institutionStudentVO.setName(student.getName());
+            institutionStudentVO.setEnrollTime(attending.getEnrollingTime());
+            institutionStudentVO.setScore(attending.getScore());
+            institutionStudentVO.setLearningState(attending.getState());
+
+            result.add(institutionStudentVO);
+        }
+        return result;
     }
 }

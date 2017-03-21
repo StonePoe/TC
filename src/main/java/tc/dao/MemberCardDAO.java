@@ -10,7 +10,13 @@ public interface MemberCardDAO {
 
     MemberCard findByStudent(int sid);
 
-    public void update(MemberCard memberCard);
+    public void updateBalance(MemberCard memberCard);
+
+    void updateReActive(MemberCard memberCard);
+
+    void updateActive(MemberCard memberCard);
+
+    void updateState(MemberCard memberCard);
 
     public int insert(MemberCard memberCard);
 

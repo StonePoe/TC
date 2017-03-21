@@ -56,7 +56,9 @@
 .skin-green .content-header {
   background: transparent;
 }
-.skin-green .wrapper,
+.skin-green .wrapper {
+  background-color: #ecf0f0;
+}
 .skin-green .main-sidebar,
 .skin-green .left-side {
   background-color: #222d32;

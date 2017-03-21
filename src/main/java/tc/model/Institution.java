@@ -3,7 +3,7 @@ package tc.model;
 public class Institution {
     private int id;
     private String password;
-    private int balance;
+    private double balance;
     private String name;
     private String imgUrl;
     private int field;
@@ -25,11 +25,11 @@ public class Institution {
         this.password = password;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.FinanceCheckDAO">
+    <select id="selectById" resultType="tc.model.FinanceCheck">
+        select * from financeCheck where id = #{id};
+    </select>
+
+    <select id="selectITS" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, institution.name as fromName,
+        financeCheck.toS as toS, student.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution, course where financeCheck.type = 1
+        and financeCheck.mid = #{mid} and financeCheck.fromS = institution.id and financeCheck.toS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectUncheckedITS" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, institution.name as fromName,
+        financeCheck.toS as toS, student.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution, course where financeCheck.type = 1 and financeCheck.state = 0
+        and financeCheck.mid = #{mid} and financeCheck.fromS = institution.id and financeCheck.toS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectPassedITS" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, institution.name as fromName,
+        financeCheck.toS as toS, student.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution, course where financeCheck.type = 1 and financeCheck.state = 1
+        and financeCheck.mid = #{mid} and financeCheck.fromS = institution.id and financeCheck.toS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectRefusedITS" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, institution.name as fromName,
+        financeCheck.toS as toS, student.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution, course where financeCheck.type = 1 and financeCheck.state = -1
+        and financeCheck.mid = #{mid} and financeCheck.fromS = institution.id and financeCheck.toS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectSTI" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, student.name as fromName,
+        financeCheck.toS as toS, institution.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution, course where financeCheck.type = 0
+        and financeCheck.mid = #{mid} and financeCheck.toS = institution.id and financeCheck.fromS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectUncheckedSTI" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, student.name as fromName,
+        financeCheck.toS as toS, institution.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution, course where financeCheck.type = 0 and financeCheck.state = 0
+        and financeCheck.mid = #{mid} and financeCheck.toS = institution.id and financeCheck.fromS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectPassedSTI" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, student.name as fromName,
+        financeCheck.toS as toS, institution.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution, course where financeCheck.type = 0 and financeCheck.state = 1
+        and financeCheck.mid = #{mid} and financeCheck.toS = institution.id and financeCheck.fromS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectRefusedSTI" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, student.name as fromName,
+        financeCheck.toS as toS, institution.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution,course where financeCheck.type = 0 and financeCheck.state = -1
+        and financeCheck.mid = #{mid} and financeCheck.toS = institution.id and financeCheck.fromS = student.id
+        and course.id = financeCheck.cid;
+    </select>
+
+    <select id="selectStudent" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, student.name as fromName,
+        financeCheck.toS as toS, institution.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution,course where (financeCheck.type = 0
+        and financeCheck.fromS = #{sid} and financeCheck.toS = institution.id and course.id = financeCheck.cid)
+        or (financeCheck.type = 1
+        and financeCheck.toS = #{sid} and financeCheck.toS = institution.id and course.id = financeCheck.cid);
+    </select>
+
+    <select id="selectInstitution" resultType="tc.model.FinanceCheck">
+        select financeCheck.id as id, financeCheck.fromS as fromS, student.name as fromName,
+        financeCheck.toS as toS, institution.name as toName, financeCheck.money as money,
+        financeCheck.askTime as askTime, financeCheck.checkTime as checkTime, financeCheck.state as state,
+        financeCheck.cid as cid, course.name as cname,
+        financeCheck.type as type from financeCheck, student, institution,course where (financeCheck.type = 0
+        and financeCheck.toS = #{insid} and financeCheck.toS = institution.id and course.id = financeCheck.cid)
+        or (financeCheck.type = 1
+        and financeCheck.fromS = #{insid} and financeCheck.toS = institution.id and course.id = financeCheck.cid)
+    </select>
+
+    <insert id="insert" parameterType="tc.model.FinanceCheck">
+        insert into financeCheck (fromS, toS, money, askTime, state, `type`, mid, cid)
+        values(#{fromS}, #{toS}, #{money}, #{askTime}, #{state}, #{type}, #{mid}, #{cid})
+    </insert>
+
+    <update id="update" parameterType="tc.model.FinanceCheck">
+        update financeCheck set state = #{state}, checkTime = #{checkTime} where id = #{id}
+    </update>
+</mapper>

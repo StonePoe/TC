@@ -8,6 +8,7 @@ import tc.model.CourseCheck;
 public class CourseCheckVO {
     private int id;
     private int insid;
+    private int cid;
     private String insName;
     private int tid;
     private String description;
@@ -23,6 +24,26 @@ public class CourseCheckVO {
     private int mid;
     private String managerName;
     private String comment;
+    private String releaseTime;
+    private String checkTime;
+    private int checkType;
+    private int courseUpdateId;
+
+    public String getReleaseTime() {
+        return releaseTime;
+    }
+
+    public void setReleaseTime(String releaseTime) {
+        this.releaseTime = releaseTime;
+    }
+
+    public String getCheckTime() {
+        return checkTime;
+    }
+
+    public void setCheckTime(String checkTime) {
+        this.checkTime = checkTime;
+    }
 
     public CourseCheckVO() {
 
@@ -45,6 +66,39 @@ public class CourseCheckVO {
         this.mid = courseCheck.getMid();
         this.managerName = courseCheck.getManagerName();
         this.comment = courseCheck.getComment();
+        this.releaseTime = courseCheck.getReleaseTime();
+        this.checkTime = courseCheck.getCheckTime();
+        this.checkType = courseCheck.getCheckType();
+        this.cid = courseCheck.getCid();
+        this.courseUpdateId = courseCheck.getCourseUpdateId();
+    }
+
+    @Override
+    public String toString() {
+        return "CourseCheckVO{" +
+                "id=" + id +
+                ", insid=" + insid +
+                ", cid=" + cid +
+                ", insName='" + insName + '\'' +
+                ", tid=" + tid +
+                ", description='" + description + '\'' +
+                ", startdate='" + startdate + '\'' +
+                ", enddate='" + enddate + '\'' +
+                ", price=" + price +
+                ", agree=" + agree +
+                ", name='" + name + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", teacherName='" + teacherName + '\'' +
+                ", fieldName='" + fieldName + '\'' +
+                ", fieldId=" + fieldId +
+                ", mid=" + mid +
+                ", managerName='" + managerName + '\'' +
+                ", comment='" + comment + '\'' +
+                ", releaseTime='" + releaseTime + '\'' +
+                ", checkTime='" + checkTime + '\'' +
+                ", checkType=" + checkType +
+                ", courseUpdateId=" + courseUpdateId +
+                '}';
     }
 
     public int getId() {
@@ -181,5 +235,29 @@ public class CourseCheckVO {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public int getCheckType() {
+        return checkType;
+    }
+
+    public void setCheckType(int checkType) {
+        this.checkType = checkType;
+    }
+
+    public int getCid() {
+        return cid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
+    public int getCourseUpdateId() {
+        return courseUpdateId;
+    }
+
+    public void setCourseUpdateId(int courseUpdateId) {
+        this.courseUpdateId = courseUpdateId;
     }
 }

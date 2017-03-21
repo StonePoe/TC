@@ -156,7 +156,6 @@
                 <li class="header">课程管理</li>
                 <li class="active"><a href="/institution/homepage"><i class="fa fa-circle-o"></i>课程管理</a></li>
                 <li><a href="/institution/release"><i class="fa fa-circle-o"></i>发布课程</a></li>
-                <li><a href="/institution/courseCheck"><i class="fa fa-circle-o"></i>审批状态</a></li>
             </ul>
         </section>
         <!-- /.sidebar -->

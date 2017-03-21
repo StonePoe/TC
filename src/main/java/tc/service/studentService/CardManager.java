@@ -6,15 +6,15 @@ package tc.service.studentService;
 public interface CardManager {
     void insertBankcard(String bankcardId);
 
-    public boolean active(String bankid, int memberid);
+    public boolean active(String bankid, int memberid, int sid);
 
-    public boolean recharge(int sid, double amount);
+    public boolean recharge(String bankId, int membeId, double amount, int sid);
 
-    public boolean suspend(int sid);
+    public boolean suspend(int memberId, int sid);
 
-    public boolean destroy(int sid);
+    public boolean destroy(int memberId, int sid);
 
-    public boolean hasToSuspend(int sid);
+    public boolean hasToSuspend(int memberId);
 
-    public boolean hasToDestroy(int sid);
+    public boolean hasToDestroy(int memberId);
 }

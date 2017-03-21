@@ -6,13 +6,13 @@
 
     <select id="selectById" resultType="tc.model.Student" >
         select DISTINCT student.id as id, student.bankid as bankid, student.memberid as memberid, student.password
-        as password, student.name as name, student.imgUrl as imgUrl, memberCard.level as level
+        as password, student.name as name, student.imgUrl as imgUrl, memberCard.level as level, student.exp as exp
         from student, memberCard where student.id = #{id} and memberCard.id = student.memberid;
     </select>
 
     <select id="selectByName" resultType="tc.model.Student">
         select DISTINCT student.id as id, student.bankid as bankid, student.memberid as memberid, student.password
-        as password, student.name as name, student.imgUrl as imgUrl, memberCard.level as level
+        as password, student.name as name, student.imgUrl as imgUrl, memberCard.level as level, student.exp as exp
         from student, memberCard where student.name = #{name} and memberCard.id = student.memberid;
     </select>
 
@@ -23,6 +23,11 @@
 
     <update id="updatePassword">
         update student set password = #{password} where id = #{id}
+    </update>
+
+    <update id="updateLevel" parameterType="tc.model.Student">
+        update student, memberCard set student.exp = #{exp}, memberCard.level = #{level}
+        where student.id = #{id} and memberCard.id = student.memberid;
     </update>
 
 </mapper>

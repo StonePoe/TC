@@ -149,7 +149,7 @@
                 <%if(memberCardVO.getState() == 0) {%>
                 <li ><a style="cursor: not-allowed;"><i class="fa fa-circle-o"></i>金额管理</a></li>
                 <%} else {%>
-                <li ><a onclick="showMoney()"><i class="fa fa-circle-o"></i>金额管理</a></li>
+                <li ><a href="/student/member/finance"><i class="fa fa-circle-o"></i>金额管理</a></li>
                 <%}%>
             </ul>
         </section>
@@ -195,8 +195,21 @@
         </div>
 
         <%} else {%>
-        <div>
-            已激活
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h2 class="box-title">会员状态</h2>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+
+                <div class="row margin-bottom">
+                    <p class="text-muted">会员卡余额：<%=memberCardVO.getBalance()%></p>
+                    <p class="text-muted">停用日期：<%=memberCardVO.getSuspenddate()%></p>
+                    <p class="text-muted">注销日期：<%=memberCardVO.getDestroydate()%></p>
+                    <!-- /.col -->
+                </div>
+            </div>
+            <!-- /.box-body -->
         </div>
         <%}%>
         <!-- /.content -->

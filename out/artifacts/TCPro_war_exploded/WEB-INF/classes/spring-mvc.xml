@@ -37,4 +37,9 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
+    <!--<bean id="simpleJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject" ref="myBean" />-->
+        <!--<property name="targetMethod" value="printMessage" />-->
+    <!--</bean>-->
+
 </beans>

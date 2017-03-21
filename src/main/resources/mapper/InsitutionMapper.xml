@@ -8,19 +8,23 @@
         select DISTINCT institution.id as id, institution.password as password, institution.balance as balance,
          institution.name as name, institution.imgUrl as imgUrl, institution.field as field,
          institutionField.type as fieldName from institution, institutionField
-         where id = #{id} and institutionField.id = institution.field;
+         where institution.id = #{id} and institutionField.id = institution.field;
     </select>
 
     <select id="selectByName" resultType="tc.model.Institution">
          select DISTINCT institution.id as id, institution.password as password, institution.balance as balance,
          institution.name as name, institution.imgUrl as imgUrl, institution.field as field,
          institutionField.type as fieldName from institution, institutionField
-         where name = #{name} and institutionField.id = institution.field;
+         where institution.name = #{name} and institutionField.id = institution.field;
     </select>
 
     <insert id="insert" parameterType="tc.model.Institution">
         insert into institution (password, `name`, balance, field, imgUrl)
         values (#{password}, #{name}, #{balance}, #{field}, #{imgUrl})
     </insert>
+
+    <update id="updateBalance" parameterType="tc.model.Institution">
+        update institution set balance = #{balance} where id = #{id}
+    </update>
 
 </mapper>

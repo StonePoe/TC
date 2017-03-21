@@ -7,11 +7,15 @@ import tc.bean.StudentInfoVO;
 import tc.dao.*;
 import tc.model.*;
 import tc.service.studentService.StudentVOManager;
+import tc.service.tools.Discount;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 /**
  * Created by stonezhang on 2017/3/1.
@@ -30,11 +34,20 @@ public class StudentVOManagerImpl implements StudentVOManager {
     @Autowired
     private CourseFieldDAO courseFieldDAO;
 
-//    @Autowired
-//    private InstitutionDAO institutionDAO;
-//
-//    @Autowired
-//    private TeacherDAO teacherDAO;
+    @Autowired
+    private FinanceCheckDAO financeCheckDAO;
+
+    @Autowired
+    private MemberCardDAO memberCardDAO;
+
+    @Autowired
+    private BankCardDAO bankCardDAO;
+
+    @Autowired
+    private ActivityLogDAO activityLogDAO;
+
+    @Autowired
+    private InstitutionDAO institutionDAO;
 
     @Override
     public StudentInfoVO getStudentById(int id) {
@@ -61,49 +74,6 @@ public class StudentVOManagerImpl implements StudentVOManager {
             List<StudentCourseVO> studentCourseVOList = new ArrayList<>();
 
             for (Course course: courseList) {
-
-//                int insid = course.getInsid();
-//                int tid = course.getTid();
-//                int field = course.getFieldId();
-//
-//                String description = course.getDescription();
-//                String startdate = course.getStartdate();
-//                String enddate = course.getEnddate();
-//                double price = course.getPrice();
-//                String name = course.getName();
-//                String imgUrl = "../.." + course.getImgUrl();
-//
-//                Institution institution = institutionDAO.selectById(insid);
-//                String instiName = institution.getName();
-//                String instiImg = institution.getImgUrl();
-//
-//                Teacher teacher = teacherDAO.selectById(tid);
-//                String teacherName = teacher.getName();
-//                String teacherImg = teacher.getImgUrl();
-//
-////                CourseField courseField = courseFieldDAO.selectById(field);
-//                String type = courseField.getType();
-//
-//                courseVO.setId(course.getId());
-//                courseVO.setInsid(insid);
-//                courseVO.setInstiName(instiName);
-//                courseVO.setTid(tid);
-//                courseVO.setTName(teacherName);
-//                courseVO.setState(-1);
-//                courseVO.setIsMember(0);
-//                courseVO.setScore(-100);
-//                courseVO.setDescription(description);
-//                courseVO.setStartdate(startdate);
-//                courseVO.setEnddate(enddate);
-//                courseVO.setPrice(price);
-//                courseVO.setName(name);
-//                courseVO.setImg(imgUrl);
-//                courseVO.setType(field);
-//                courseVO.setTypeName(type);
-//                courseVO.setTeacherImg(teacherImg);
-//                courseVO.setInstitutionImg(instiImg);
-
-
                 studentCourseVOList.add(new StudentCourseVO(course));
             }
 
@@ -111,8 +81,6 @@ public class StudentVOManagerImpl implements StudentVOManager {
         }
 
         return result;
-//        Course course = courseDAO.
-//        return null;
     }
 
     @Override
@@ -121,74 +89,15 @@ public class StudentVOManagerImpl implements StudentVOManager {
         Course course = courseDAO.selectById(cid);
         Attending attending = attendingDAO.selectByBoth(sid, cid);
 
-//        int state;
-//        int isMember;
-//        String enrollingTime;
-//        double score;
-//
-//        if(attending != null) {
-//            state = attending.getState();
-//            isMember = attending.getIsMember();
-//            enrollingTime = attending.getEnrollingTime();
-//            score = attending.getScore();
-//        }
         if(attending == null) {
             attending = new Attending();
             attending.setState(-1);
             attending.setIsMember(-1);
             attending.setEnrollingTime("");
             attending.setScore(-1);
-//            state = -1;
-//            isMember = -1;
-//            enrollingTime = "";
-//            score = -1;
         }
 
         return new StudentCourseVO(course, attending);
-
-//        int insid = course.getInsid();
-//        int tid = course.getTid();
-//        int field = course.getFieldId();
-//
-//        String description = course.getDescription();
-//        String startdate = course.getStartdate();
-//        String enddate = course.getEnddate();
-//        double price = course.getPrice();
-//        String name = course.getName();
-//        String imgUrl = "../.." + course.getImgUrl();
-//
-//        Institution institution = institutionDAO.selectById(insid);
-//        String instiName = institution.getName();
-//        String instiImg = institution.getImgUrl();
-//
-//        Teacher teacher = teacherDAO.selectById(tid);
-//        String teacherName = teacher.getName();
-//        String teacherImg = teacher.getImgUrl();
-//
-//        CourseField courseField = courseFieldDAO.selectById(field);
-//        String type = courseField.getType();
-//
-//        studentCourseVO.setId(cid);
-//        studentCourseVO.setInsid(insid);
-//        studentCourseVO.setInstiName(instiName);
-//        studentCourseVO.setTid(tid);
-//        studentCourseVO.setTName(teacherName);
-//        studentCourseVO.setState(state);
-//        studentCourseVO.setIsMember(isMember);
-//        studentCourseVO.setScore(score);
-//        studentCourseVO.setEnrollingTime(enrollingTime);
-//        studentCourseVO.setDescription(description);
-//        studentCourseVO.setStartdate(startdate);
-//        studentCourseVO.setEnddate(enddate);
-//        studentCourseVO.setPrice(price);
-//        studentCourseVO.setName(name);
-//        studentCourseVO.setImg(imgUrl);
-//        studentCourseVO.setType(field);
-//        studentCourseVO.setTypeName(type);
-//        studentCourseVO.setTeacherImg(teacherImg);
-//        studentCourseVO.setInstitutionImg(instiImg);
-
-//        return studentCourseVO;
     }
 
 
@@ -200,7 +109,7 @@ public class StudentVOManagerImpl implements StudentVOManager {
 
         for(Attending attending: attendings) {
             Course course = courseDAO.selectById(attending.getSid());
-            System.out.println("from service: studentVOmanager-getActiveCourse: " + course +
+            System.out.println("from service: studentVOManager-getActiveCourse: " + course +
                     " where attending: " + attending);
             StudentCourseVO studentCourseVO = new StudentCourseVO(courseDAO.selectById(attending.getCid()), attending);
             if(studentCourseVO.getState() == 1) {
@@ -234,52 +143,6 @@ public class StudentVOManagerImpl implements StudentVOManager {
         List<StudentCourseVO> studentCourseVOList = new ArrayList<>();
 
         for(Attending attending: attendings) {
-//            StudentCourseVO studentCourseVO = new StudentCourseVO();
-//            int cid = attending.getCid();
-//            int state = attending.getState();
-//            int isMember = attending.getIsMember();
-//            String enrollingTime = attending.getEnrollingTime();
-//            double score = attending.getScore();
-//
-//            Course course = courseDAO.selectById(cid);
-//
-//            int insid = course.getInsid();
-//            int tid = course.getTid();
-//            int field = course.getFieldId();
-//
-//            String description = course.getDescription();
-//            String startdate = course.getStartdate();
-//            String enddate = course.getEnddate();
-//            double price = course.getPrice();
-//            String name = course.getName();
-//            String imgUrl = "../.." + course.getImgUrl();
-//
-//            Institution institution = institutionDAO.selectById(insid);
-//            String instiName = institution.getName();
-//
-//            Teacher teacher = teacherDAO.selectById(tid);
-//            String teacherName = teacher.getName();
-//
-//            CourseField courseField = courseFieldDAO.selectById(field);
-//            String type = courseField.getType();
-//
-//            studentCourseVO.setId(cid);
-//            studentCourseVO.setInsid(insid);
-//            studentCourseVO.setInstiName(instiName);
-//            studentCourseVO.setTid(tid);
-//            studentCourseVO.setTName(teacherName);
-//            studentCourseVO.setState(state);
-//            studentCourseVO.setIsMember(isMember);
-//            studentCourseVO.setScore(score);
-//            studentCourseVO.setEnrollingTime(enrollingTime);
-//            studentCourseVO.setDescription(description);
-//            studentCourseVO.setStartdate(startdate);
-//            studentCourseVO.setEnddate(enddate);
-//            studentCourseVO.setPrice(price);
-//            studentCourseVO.setName(name);
-//            studentCourseVO.setImg(imgUrl);
-//            studentCourseVO.setType(field);
-//            studentCourseVO.setTypeName(type);
             StudentCourseVO studentCourseVO = new StudentCourseVO(courseDAO.selectById(attending.getCid()), attending);
             if(studentCourseVO.getState() == 0) {
                 studentCourseVOList.add(studentCourseVO);
@@ -287,5 +150,230 @@ public class StudentVOManagerImpl implements StudentVOManager {
         }
 
         return studentCourseVOList;
+    }
+
+    @Override
+    public boolean doCourseQuit(int sid, int cid, int level, double price) {
+        // 需要干的事：从attend表里删除；发送一个退款请求给经理；加在学生log里；
+        // 等审批结果下来以后加在institution的log里
+        // 所以经理的审批那里也要加入机构log和学生log的插入
+        // 经理审批之后从哪扣钱也在经理那边实现吧
+
+        // 另外一个别忘了的事就是要在这里加上institution用的log 里的相关记录
+
+        MemberCard memberCard = memberCardDAO.findByStudent(sid);
+
+        double actualPrice = Discount.calculateQuitMoney(level, price);
+
+        Attending attending = new Attending();
+        attending.setCid(cid);
+        attending.setSid(sid);
+        attendingDAO.delete(attending);
+
+        FinanceCheck financeCheck = new FinanceCheck();
+
+
+        Course course = courseDAO.selectById(cid);
+        financeCheck.setFromS(course.getInsid());
+
+        financeCheck.setToS(sid);
+
+        LocalDateTime askTime = LocalDateTime.now();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm a");
+        String askTimeStr = askTime.format(format);
+
+        financeCheck.setAskTime(askTimeStr);
+        financeCheck.setState(0);
+        financeCheck.setType(1);
+        financeCheck.setCid(cid);
+        financeCheck.setMoney(actualPrice);
+        financeCheck.setMid(1);
+
+        financeCheckDAO.insert(financeCheck);
+
+        ActivityLog activityLog = new ActivityLog();
+        activityLog.setSid(sid);
+        activityLog.setCid(cid);
+        activityLog.setInsid(course.getInsid());
+        activityLog.setMoney(actualPrice);
+        activityLog.setBehaviour("course quit");
+        activityLog.setDescription("");
+        activityLog.setType(0);
+        activityLogDAO.insert(activityLog);
+
+//        StudentLog studentLog = new StudentLog();
+//        studentLog.setSid(sid);
+//        studentLog.setCid(cid);
+//        studentLog.setMoney(actualPrice);
+//        studentLog.setBehavior("course quit");
+//        studentLog.setDescription("quit class: " + cid + " with name: " +
+//                course.getName() + " with actual price: " + actualPrice +
+//                " while origin price: " + price);
+//
+//        studentLogDAO.insert(studentLog);
+//
+//        Student student = studentDAO.selectById(sid);
+//        InstitutionLog institutionLog = new InstitutionLog();
+//        institutionLog.setCid(cid);
+//        institutionLog.setInsid(course.getInsid());
+//        institutionLog.setMoney(actualPrice);
+//        institutionLog.setBehavior("course quit");
+//        institutionLog.setDescription("quit class " + cid + " with name: " +
+//                course.getName() + " with student: " + sid + " with name: " +
+//                student.getName());
+//        institutionLogDAO.insert(institutionLog);
+
+        if(actualPrice > memberCard.getBalance()) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+    @Override
+    public boolean doCourseEnroll(int sid, int cid, int level, double price) {
+        LocalDateTime askTime = LocalDateTime.now();
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm a");
+        String askTimeStr = askTime.format(format);
+
+        Bankcard bankcard = bankCardDAO.findByStudent(sid);
+        MemberCard memberCard = memberCardDAO.findByStudent(sid);
+        double actualPrice = Discount.calculateEnrollMoney(level, price);
+
+        Course course = courseDAO.selectById(cid);
+
+        if(actualPrice >= memberCard.getBalance()) {
+            double balance = bankcard.getBalance();
+            bankcard.setBalance(balance - actualPrice);
+            if(balance - actualPrice < 0) {
+                return false;
+            }
+            System.out.println("from StudentVOManager: pay the bill from bank: " + bankcard);
+            bankCardDAO.update(bankcard);
+
+            Institution institution = institutionDAO.selectById(course.getInsid());
+            double insBalance = institution.getBalance();
+            institution.setBalance(insBalance + actualPrice);
+            institutionDAO.updateBalance(institution);
+        }
+        else {
+            double balance = memberCard.getBalance();
+            memberCard.setBalance(balance - actualPrice);
+            memberCardDAO.updateBalance(memberCard);
+            System.out.println("from StudentVOManager: pay the bill from memberCard: " + memberCard);
+
+            FinanceCheck financeCheck = new FinanceCheck();
+            financeCheck.setType(0);
+            financeCheck.setState(0);
+            financeCheck.setFromS(sid);
+            financeCheck.setCid(cid);
+            financeCheck.setToS(course.getInsid());
+            financeCheck.setMoney(actualPrice);
+
+            financeCheck.setAskTime(askTimeStr);
+            financeCheck.setMid(1);
+
+            financeCheckDAO.insert(financeCheck);
+
+        }
+
+        Attending attending = new Attending();
+        attending.setCid(cid);
+        attending.setSid(sid);
+
+        String startdate = course.getStartdate();
+        String enddate = course.getEnddate();
+
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date ask = sdf.parse(askTimeStr);
+            Date start = sdf.parse(startdate);
+            Date end = sdf.parse(enddate);
+            if(ask.before(start)) {
+                attending.setState(2);
+            }
+            else if(ask.after(end)) {
+                attending.setState(0);
+            }
+            else if (ask.after(start) && ask.before(end) || ask.equals(start) || ask.equals(end)) {
+                attending.setState(1);
+            }
+            else {
+                attending.setState(-1);
+            }
+        } catch (ParseException e) {
+            attending.setState(-1);
+            e.printStackTrace();
+        }
+
+        if(level == 0) {
+            attending.setIsMember(0);
+        }
+        else {
+            attending.setIsMember(1);
+        }
+
+
+        attendingDAO.insert(attending);
+
+        ActivityLog activityLog = new ActivityLog();
+        activityLog.setSid(sid);
+        activityLog.setCid(cid);
+        activityLog.setInsid(course.getInsid());
+        activityLog.setMoney(actualPrice);
+        activityLog.setBehaviour("course enroll");
+        activityLog.setDescription("");
+        activityLog.setType(0);
+        activityLogDAO.insert(activityLog);
+
+//
+//        StudentLog studentLog = new StudentLog();
+//        studentLog.setCid(cid);
+//        studentLog.setSid(sid);
+//        studentLog.setBehavior("course enroll");
+//        studentLog.setDescription("enroll class " + cid + " with name: " +
+//                course.getName() + " with actual price: " + actualPrice +
+//                " while origin price: " + price);
+//        studentLog.setMoney(actualPrice);
+//        studentLogDAO.insert(studentLog);
+//
+        Student student = studentDAO.selectById(sid);
+//
+//        InstitutionLog institutionLog = new InstitutionLog();
+//        institutionLog.setCid(cid);
+//        institutionLog.setInsid(course.getInsid());
+//        institutionLog.setBehavior("course enroll");
+//        institutionLog.setDescription("enroll class " + cid + " with name: " +
+//                course.getName() + " with student: " + sid + " with name: " +
+//                student.getName());
+//        institutionLog.setMoney(actualPrice);
+//        institutionLogDAO.insert(institutionLog);
+
+        double exp = student.getExp() + actualPrice;
+        student.setExp(exp);
+
+        if(Discount.canUpdate(student)) {
+            level = student.getLevel() + 1;
+            student.setLevel(level);
+            student.setExp(0);
+            System.out.println("from StudentVOManager: update the exp: " + student);
+            ActivityLog activityLogS = new ActivityLog();
+            activityLogS.setSid(sid);
+            activityLogS.setCid(cid);
+            activityLogS.setInsid(course.getInsid());
+            activityLogS.setMoney(0);
+            activityLogS.setBehaviour("update");
+            activityLogS.setDescription("update to level " + level);
+            activityLogS.setType(1);
+            activityLogDAO.insert(activityLog);
+            studentDAO.updateLevel(student);
+        }
+        else {
+            student.setExp(exp);
+            System.out.println("from StudentVOManager: accumulate the exp: " + student);
+            studentDAO.updateLevel(student);
+        }
+        return true;
     }
 }

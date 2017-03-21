@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="cont_btn">
-                        <button class="btn_sign_in btn_sign" type="submit">登录</button>
+                        <button class="btn_sign_in btn_sign" type="button" onclick="login()">登录</button>
                     </div>
                     <div class="cont_btn">
                         <button class="btn_sign_up btn_sign" type="button" style="display: none"

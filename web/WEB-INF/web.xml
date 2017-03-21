@@ -3,6 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <el-ignored>false</el-ignored>
+        </jsp-property-group>
+    </jsp-config>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -53,6 +59,45 @@
         <session-timeout>15</session-timeout>
     </session-config>
 
+    <filter>
+        <filter-name>studentAuth</filter-name>
+        <filter-class>tc.view.filter.StudentAuthFilter</filter-class>
+
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>studentAuth</filter-name>
+        <url-pattern>/student/*</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>institutionAuth</filter-name>
+        <filter-class>tc.view.filter.InstitutionAuthFilter</filter-class>
+
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>institutionAuth</filter-name>
+        <url-pattern>/institution/*</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>managerAuth</filter-name>
+        <filter-class>tc.view.filter.ManagerAuthFilter</filter-class>
+
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>managerAuth</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+
     <!--<filter>-->
         <!--<filter-name>encoding</filter-name>-->
         <!--<filter-class>tc.view.filter.EncodeFilter</filter-class>-->
@@ -70,7 +115,7 @@
 
     <!--<filter>-->
         <!--<filter-name>auth</filter-name>-->
-        <!--<filter-class>tc.view.filter.AuthFilter</filter-class>-->
+        <!--<filter-class>tc.view.filter.StudentAuthFilterhFilter</filter-class>-->
     <!--</filter>-->
 
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.InstitutionLogDAO">
+    <select id="selectByInsti" resultType="tc.model.InstitutionLog">
+        select * from institutionLog where insid = #{insid}
+    </select>
+
+    <insert id="insert" parameterType="tc.model.InstitutionLog">
+        insert into institutionLog (insid, cid, behavior, description, money)
+        VALUE (#{insid}, #{cid}, #{behavior}, #{description}, #{money})
+    </insert>
+
+</mapper>

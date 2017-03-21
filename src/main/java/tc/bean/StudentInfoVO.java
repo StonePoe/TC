@@ -19,6 +19,22 @@ public class StudentInfoVO implements Serializable {
 
     private int level;
 
+    @Override
+    public String toString() {
+        return "StudentInfoVO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", img='" + img + '\'' +
+                ", bankCard='" + bankCard + '\'' +
+                ", memberId=" + memberId +
+                ", level=" + level +
+                ", exp=" + exp +
+                '}';
+    }
+
+    private double exp;
+
     public StudentInfoVO() {
 
     }
@@ -31,6 +47,7 @@ public class StudentInfoVO implements Serializable {
         this.bankCard = String.valueOf(student.getBankid());
         this.memberId = student.getMemberid();
         this.level = student.getLevel();
+        this.exp = student.getExp();
     }
 
 
@@ -90,16 +107,11 @@ public class StudentInfoVO implements Serializable {
         this.memberId = memberId;
     }
 
-    @Override
-    public String toString() {
-        return "StudentInfoVO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", img='" + img + '\'' +
-                ", bankCard='" + bankCard + '\'' +
-                ", memberId=" + memberId +
-                ", level=" + level +
-                '}';
+    public double getExp() {
+        return exp;
+    }
+
+    public void setExp(double exp) {
+        this.exp = exp;
     }
 }

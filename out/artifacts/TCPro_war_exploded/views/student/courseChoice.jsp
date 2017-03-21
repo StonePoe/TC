@@ -145,7 +145,6 @@
     <li class="header">课程管理</li>
     <li><a href="/student/homepage"><i class="fa fa-circle-o"></i>已选课程</a></li>
     <li class="active"><a href="/student/coursechoice"><i class="fa fa-circle-o"></i>发现课程</a></li>
-    <li><a href=""><i class="fa fa-circle-o"></i>机构查询</a></li>
    </ul>
   </section>
   <!-- /.sidebar -->

@@ -9,8 +9,10 @@ import tc.service.studentService.CardVOManager;
 import tc.service.studentService.StudentVOManager;
 import tc.service.studentService.StudentVerify;
 
+import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.DoubleSummaryStatistics;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,11 +42,12 @@ public class StudentController {
     @RequestMapping(value = "/register/info", method = RequestMethod.POST)
     public @ResponseBody
     Map<String, Object> doRegister(HttpServletRequest request) {
+        System.out.println("student register");
         String username = request.getParameter("username");
         String bank = request.getParameter("bank");
-        System.out.println("from student controller: " + bank);
+        System.out.println("from student controller: register " + bank);
         String password = request.getParameter("password");
-        System.out.println("from student controller " + username);
+        System.out.println("from student controller: register  " + username);
         System.out.println("from student controller " + password);
         Map<String, Object> map = new HashMap<>();
         if (studentVerifyImpl.existName(username)) {
@@ -69,82 +72,38 @@ public class StudentController {
             }
         }
         return map;
-//        String studentName = request.getParameter("studentname");
-//        String studentPass = request.getParameter("studentpassword");
-//        String bankCard = request.getParameter("bankCard");
-//
-//        final String beanName = "StudentVerify";
-//        final String viewClassName = StudentVerify.class.getName();
-//
-//        String namespace = EJBFactory.getJNDIPath() + beanName + "!" + viewClassName;
-//        StudentVerify studentVerify = (StudentVerify)EJBFactory.getEjb(namespace);
-//
-//        studentVerify.register(studentName, studentPass, bankCard);
-//
+
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String getLoginPage(HttpServletRequest request) {
         System.out.println("student login");
-//        HttpSession session = request.getSession();
-//        if(session == null) {
-//            return "/student/StudentLogin";
-//        }
-//        else {
-//            if (session.getAttribute("studentinfo") != null) {
-//                String fromURL = (String)session.getAttribute("fromURL");
-//                return "redirect:" + fromURL;
-//            }
-//            else {
-//                return "/student/StudentLogin";
-//            }
-//        }
         return "student/studentLogin";
     }
 
     @RequestMapping(value = "/login/info", method = RequestMethod.POST)
 //    @ResponseStatus(value= HttpStatus.OK)
-    public String doLogin(HttpServletRequest request) {
-        String studentName = request.getParameter("name");
-        String studentPass = request.getParameter("password");
-        String bankId = request.getParameter("bankid");
-        boolean isId = false;
-        int sid = 0;
-        boolean isValid = false;
-        try {
-            sid = Integer.parseInt(studentName);
-            isId = studentVerifyImpl.existId(sid);
-        } catch (Exception e) {
-            isId = false;Map<String, Object> map = new HashMap<>();
-        }Map<String, Object> map = new HashMap<>();
+    public @ResponseBody Map<String, Object> doLogin(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+        String userame = request.getParameter("username");
+        String password = request.getParameter("password");
 
-        if(isId) {
-            isValid = studentVerifyImpl.existId(sid);
+        if(studentVerifyImpl.existName(userame) &&
+                studentVerifyImpl.isCorrectPsw(userame, password)){
+            StudentInfoVO studentInfoVO = studentVOManagerImpl.getStudentByName(userame);
+            HttpSession session = request.getSession(false);
+            if (session == null) {
+                map.put("success", false);
+            }
+            else {
+                session.setAttribute("studentInfoVO", studentInfoVO);
+            }
+            map.put("success", true);
         }
         else {
-            isValid = studentVerifyImpl.existName(studentName);
+            map.put("success", false);
         }
-
-        if (!isValid) {
-            return "redirect: /student/login";
-        }
-
-        StudentInfoVO studentInfoVO;
-
-        if(isId) {
-            studentInfoVO = studentVOManagerImpl.getStudentById(Integer.parseInt(studentName));
-        }
-        else {
-           studentInfoVO = studentVOManagerImpl.getStudentByName(studentName);
-        }
-
-        HttpSession session = request.getSession(false);
-        if (session == null) {
-            return "/student/StudentLogin";
-        }
-        session.setAttribute("studentInfoVO", studentInfoVO);
-        session.setAttribute("fromURL", "/student/login");
-        return "redirect:/student/homepage";
+        return map;
     }
 
     @RequestMapping(value = "/homepage", method = RequestMethod.GET)
@@ -223,17 +182,17 @@ public class StudentController {
         return "/student/memberInfo";
     }
 
-    @RequestMapping(value = "member/active", method = RequestMethod.POST)
+    @RequestMapping(value = "/member/active", method = RequestMethod.POST)
     public @ResponseBody
     Map<String, Object> doActiveMember(HttpServletRequest request) {
         String bankid = request.getParameter("bankcardID");
         int memberid = Integer.parseInt(request.getParameter("memberCardID"));
 
-        cardManagerImpl.active(bankid, memberid);
         HttpSession session = request.getSession(false);
-
+//        int sid = ((StudentInfoVO) session.getAttribute("studentInfoVO")).getId();
         StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
         int sid = studentInfoVO.getId();
+        cardManagerImpl.active(bankid, memberid, sid);
         StudentInfoVO newStudentInfo = studentVOManagerImpl.getStudentById(sid);
         session.setAttribute("studentInfoVO", newStudentInfo);
 
@@ -242,4 +201,122 @@ public class StudentController {
 
         return map;
     }
+
+    @RequestMapping(value = "/course/quit", method = RequestMethod.POST)
+    public @ResponseBody
+    Map<String, Object> doCourseQuit(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+
+        int sid = Integer.parseInt(request.getParameter("sid"));
+        int cid = Integer.parseInt(request.getParameter("cid"));
+        double price = Double.parseDouble(request.getParameter("price"));
+
+        System.out.println("from studentController: quit class " + cid + " with sid: " + sid);
+
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            map.put("success", false);
+        }
+        else {
+
+            StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+            studentVOManagerImpl.doCourseQuit(sid, cid, studentInfoVO.getLevel(), price);
+            map.put("success", true);
+        }
+        return map;
+
+    }
+
+    @RequestMapping(value = "/course/book", method = RequestMethod.POST)
+    public @ResponseBody
+    Map<String, Object> doCourseEnroll(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+
+        int sid = Integer.parseInt(request.getParameter("sid"));
+        int cid = Integer.parseInt(request.getParameter("cid"));
+        double price = Double.parseDouble(request.getParameter("price"));
+
+        HttpSession  session = request.getSession(false);
+        if(session == null) {
+            map.put("success", false);
+        }
+        else {
+
+            StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+            boolean success = studentVOManagerImpl.doCourseEnroll(sid, cid, studentInfoVO.getLevel(), price);
+            if(success) {
+                map.put("success", true);
+            }
+            else {
+                map.put("success", false);
+            }
+        }
+        return map;
+    }
+
+    @RequestMapping(value = "/member/finance", method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> doCharge(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+        String bankId = (request.getParameter("bankId"));
+        int memberId = Integer.parseInt(request.getParameter("memberId"));
+        double money = Double.parseDouble(request.getParameter("money"));
+        HttpSession session = request.getSession(false);
+//        int sid = ((StudentInfoVO) session.getAttribute("studentInfoVO")).getId();
+        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+        int sid = studentInfoVO.getId();
+        boolean success = cardManagerImpl.recharge(bankId, memberId, money, sid);
+
+        if(success) {
+            map.put("success", true);
+        }
+        else {
+            map.put("success", false);
+        }
+        return map;
+    }
+
+
+    @RequestMapping(value = "/member/destroy", method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> doDestroy(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+
+        int memberId = Integer.parseInt(request.getParameter("memberId"));
+
+        HttpSession session = request.getSession(false);
+//        int sid = ((StudentInfoVO) session.getAttribute("studentInfoVO")).getId();
+        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+        int sid = studentInfoVO.getId();
+
+        boolean success = cardManagerImpl.destroy(memberId, sid);
+
+//        HttpSession session = (HttpSession) request.getSession(false);
+//        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+        studentInfoVO.setLevel(0);
+        session.setAttribute("studentInfoVO", studentInfoVO);
+        if(success) {
+            map.put("success", true);
+        }
+        else {
+            map.put("success", false);
+        }
+        return map;
+    }
+
+
+
+    @RequestMapping(value = "/member/finance", method = RequestMethod.GET)
+    public String getMemberFinance(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+        BankcardVO bankcardVO = cardVOManagerImpl.getBankcardVO(studentInfoVO.getId());
+        MemberCardVO memberCardVO = cardVOManagerImpl.getMemberCardVO(studentInfoVO.getId());
+
+        System.out.println("from memberFinancePage: getNumberId:" + studentInfoVO.getMemberId());
+
+        request.setAttribute("bankcardVO", bankcardVO);
+        request.setAttribute("memberCardVO", memberCardVO);
+
+        return "/student/memberFinance";
+    }
 }
+

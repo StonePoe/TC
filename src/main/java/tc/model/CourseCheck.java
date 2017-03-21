@@ -22,6 +22,26 @@ public class CourseCheck {
     private int mid;
     private String managerName;
     private String comment;
+    private String releaseTime;
+    private String checkTime;
+    private int checkType;
+    private int courseUpdateId;
+
+    public String getReleaseTime() {
+        return releaseTime;
+    }
+
+    public void setReleaseTime(String releaseTime) {
+        this.releaseTime = releaseTime;
+    }
+
+    public String getCheckTime() {
+        return checkTime;
+    }
+
+    public void setCheckTime(String checkTime) {
+        this.checkTime = checkTime;
+    }
 
     public int getId() {
         return id;
@@ -167,6 +187,7 @@ public class CourseCheck {
         this.cid = cid;
     }
 
+
     @Override
     public String toString() {
         return "CourseCheck{" +
@@ -186,8 +207,26 @@ public class CourseCheck {
                 ", fieldName='" + fieldName + '\'' +
                 ", fieldId=" + fieldId +
                 ", mid=" + mid +
-                ", managerName=" + managerName +
+                ", managerName='" + managerName + '\'' +
                 ", comment='" + comment + '\'' +
+                ", releaseTime='" + releaseTime + '\'' +
+                ", checkTime='" + checkTime + '\'' +
                 '}';
+    }
+
+    public int getCheckType() {
+        return checkType;
+    }
+
+    public void setCheckType(int checkType) {
+        this.checkType = checkType;
+    }
+
+    public int getCourseUpdateId() {
+        return courseUpdateId;
+    }
+
+    public void setCourseUpdateId(int courseUpdateId) {
+        this.courseUpdateId = courseUpdateId;
     }
 }

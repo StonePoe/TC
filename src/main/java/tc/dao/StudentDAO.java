@@ -18,4 +18,6 @@ public interface StudentDAO {
     public Student selectByName(String name);
 
     void updatePassword(@Param("id") int id, @Param("password") String password);
+
+    void updateLevel(Student student);
 }

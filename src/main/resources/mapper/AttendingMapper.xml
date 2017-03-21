@@ -24,4 +24,16 @@
     <select id="selectByBoth" resultType="tc.model.Attending">
         select * from attending where sid = #{sid} and cid = #{cid}
     </select>
+
+    <delete id="delete" parameterType="tc.model.Attending">
+        delete from attending where sid = #{sid} and cid = #{cid}
+    </delete>
+
+    <update id="updateScore" parameterType="tc.model.Attending">
+        update attending set score = #{score} where sid = #{sid} and cid = #{cid}
+    </update>
+
+    <update id="updateState" parameterType="tc.model.Attending">
+        update attending set state = #{state} where sid = #{sid} and cid = #{cid}
+    </update>
 </mapper>

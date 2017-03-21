@@ -130,6 +130,40 @@ function sign_in(){
     document.querySelector(".btn_sign_up").style.display = "none";
 }
 
+function login() {
+    console.log(username.value);
+    console.log(password.value);
+    document.querySelector(".error-name").className = "control-label error-name d_none";
+    document.querySelector(".error-ps").className = "control-label error-ps d_none";
+    setTimeout(function () {
+
+            $.ajax({
+                type: 'post',
+                url: '/student/login/info',
+                data: 'username=' + username.value + "&password=" + password.value,
+                // success: function (url) {
+                //     if(url != null) {
+                //         // window.location.reload();
+                //         window.location.href = url;
+                //     } else {
+                //         alert('network error!!!!!!');
+                //
+                // },
+                success: function (data) {
+                    if(data.success == true) {
+                        // window.location.reload();
+                        window.location.href = "/student/homepage";
+                    } else {
+                        document.querySelector(".error-name").className = "control-label error-ps";
+                    }
+                },
+                error: function () {
+                    alert('network error !!!!!!!!!!!!');
+                }
+            })
+    }, 500);
+}
+
 function studentRegisterWithCheck() {
     console.log(username.value);
     console.log(password.value);

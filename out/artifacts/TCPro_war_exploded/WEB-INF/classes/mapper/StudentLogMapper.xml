@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.StudentLogDAO">
+    <select id="selectByStudent" resultType="tc.model.StudentLog">
+        select * from studentLog where sid = #{sid}
+    </select>
+
+    <insert id="insert" parameterType="tc.model.StudentLog">
+        insert into studentLog (sid, cid, behavior, description, money)
+        VALUE (#{sid}, #{cid}, #{behavior}, #{description}, #{money})
+    </insert>
+</mapper>

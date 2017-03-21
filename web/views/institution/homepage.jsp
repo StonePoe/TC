@@ -156,7 +156,6 @@
                 <li class="header">课程管理</li>
                 <li class="active"><a href="/institution/homepage"><i class="fa fa-circle-o"></i>课程管理</a></li>
                 <li><a href="/institution/release"><i class="fa fa-circle-o"></i>发布课程</a></li>
-                <li><a href="/institution/courseCheck"><i class="fa fa-circle-o"></i>审批状态</a></li>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -178,16 +177,16 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <ul class="products-list product-list-in-box">
-                    <c:forEach var="institutionInfoVO" items="<%= activeList %>">
+                    <c:forEach var="institutionCourseVO" items="<%= activeList %>">
                         <li class="item">
                             <div class="product-img">
-                                <img src="<c:out value="${institutionInfoVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
+                                <img src="<c:out value="${institutionCourseVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
                             </div>
                             <div class="product-info">
-                                <a href="//course?cid=<c:out value="${institutionInfoVO.getId()}"/>" class="product-title"><c:out value="${institutionInfoVO.getName()}"/>
-                                    <span class="label label-warning pull-right">¥<c:out value="${institutionInfoVO.getPrice()}"/></span></a>
+                                <a href="/institution/course?cid=<c:out value="${institutionCourseVO.getId()}"/>" class="product-title"><c:out value="${institutionCourseVO.getName()}"/>
+                                    <span class="label label-warning pull-right">¥<c:out value="${institutionCourseVO.getPrice()}"/></span></a>
                                 <span class="product-description">
-                        <c:out value="${institutionInfoVO.getDescription()}"/>
+                        <c:out value="${institutionCourseVO.getDescription()}"/>
                         </span>
                             </div>
                         </li>
@@ -214,16 +213,16 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <ul class="products-list product-list-in-box">
-                    <c:forEach var="institutionInfoVO" items="<%= abandonList %>">
+                    <c:forEach var="institutionCourseVO" items="<%= abandonList %>">
                         <li class="item">
                             <div class="product-img">
-                                <img src="<c:out value="${institutionInfoVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
+                                <img src="<c:out value="${institutionCourseVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
                             </div>
                             <div class="product-info">
-                                <a href="/institution/course?cid=<c:out value="${institutionInfoVO.getId()}"/>" class="product-title"><c:out value="${institutionInfoVO.getName()}"/>
-                                    <span class="label label-warning pull-right">¥<c:out value="${institutionInfoVO.getPrice()}"/></span></a>
+                                <a href="/institution/course?cid=<c:out value="${institutionCourseVO.getId()}"/>" class="product-title"><c:out value="${institutionCourseVO.getName()}"/>
+                                    <span class="label label-warning pull-right">¥<c:out value="${institutionCourseVO.getPrice()}"/></span></a>
                                 <span class="product-description">
-                        <c:out value="${institutionInfoVO.getDescription()}"/>
+                        <c:out value="${institutionCourseVO.getDescription()}"/>
                         </span>
                             </div>
                         </li>
@@ -250,16 +249,16 @@
             <!-- /.box-header -->
             <div class="box-body">
                 <ul class="products-list product-list-in-box">
-                    <c:forEach var="institutionInfoVO" items="<%= checkingList %>">
+                    <c:forEach var="institutionCourseVO" items="<%= checkingList %>">
                         <li class="item">
                             <div class="product-img">
-                                <img src="<c:out value="${institutionInfoVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
+                                <img src="<c:out value="${institutionCourseVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
                             </div>
                             <div class="product-info">
-                                <a href="/institution/course?cid=<c:out value="${institutionInfoVO.getId()}"/>" class="product-title"><c:out value="${institutionInfoVO.getName()}"/>
-                                    <span class="label label-warning pull-right">¥<c:out value="${institutionInfoVO.getPrice()}"/></span></a>
+                                <a href="/institution/course?cid=<c:out value="${institutionCourseVO.getId()}"/>" class="product-title"><c:out value="${institutionCourseVO.getName()}"/>
+                                    <span class="label label-warning pull-right">¥<c:out value="${institutionCourseVO.getPrice()}"/></span></a>
                                 <span class="product-description">
-                        <c:out value="${institutionInfoVO.getDescription()}"/>
+                        <c:out value="${institutionCourseVO.getDescription()}"/>
                         </span>
                             </div>
                         </li>

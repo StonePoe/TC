@@ -18,9 +18,11 @@ public interface AttendingDAO {
 
     public Attending selectByBoth(@Param("sid") int sid, @Param("cid") int cid);
 
-    public void update(Attending attending);
+    public void updateScore(Attending attending);
+
+    void updateState(Attending attending);
 
     public void insert(Attending attending);
 
-    public void delete(int id);
+    public void delete(Attending attending);
 }
