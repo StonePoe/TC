@@ -133,7 +133,7 @@ function sign_in(){
 function login() {
     console.log(username.value);
     console.log(password.value);
-    document.querySelector(".error-name").className = "control-label error-name d_none";
+    // document.querySelector(".error-name").className = "control-label error-name d_none";
     document.querySelector(".error-ps").className = "control-label error-ps d_none";
     setTimeout(function () {
 

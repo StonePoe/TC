@@ -72,6 +72,11 @@
              type="tc.bean.InstitutionInfoVO"
              scope="session"></jsp:useBean>
 
+<jsp:useBean id="institutionCourseVO"
+             type="tc.bean.InstitutionCourseVO"
+             scope="request"></jsp:useBean>
+
+
 <header class="main-header skin-purple" style="background-color: #605ca8">
     <!-- Logo -->
 
@@ -152,8 +157,8 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="header">课程管理</li>
-                <li><a href="/institution/homepage"><i class="fa fa-circle-o"></i>课程管理</a></li>
-                <li class="active"><a href="/institution/release"><i class="fa fa-circle-o"></i>发布课程</a></li>
+                <li class="active"><a href="/institution/homepage"><i class="fa fa-circle-o"></i>课程管理</a></li>
+                <li><a href="/institution/release"><i class="fa fa-circle-o"></i>发布课程</a></li>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -169,7 +174,8 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-sm-6">
-                        <img class="img-responsive src="${institutionCourseVO.imgUrl}">
+                        <%--<img class="img-responsive src="${institutionCourseVO.imgUrl}">--%>
+                        <img class="img-responsive" src="<%=institutionCourseVO.getImgUrl()%>">
                     </div>
 
                     <div class="col-sm-6">

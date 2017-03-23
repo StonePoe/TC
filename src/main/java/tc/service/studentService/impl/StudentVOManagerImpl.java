@@ -2,6 +2,7 @@ package tc.service.studentService.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tc.bean.ActivityLogVO;
 import tc.bean.StudentCourseVO;
 import tc.bean.StudentInfoVO;
 import tc.dao.*;
@@ -237,13 +238,15 @@ public class StudentVOManagerImpl implements StudentVOManager {
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm a");
         String askTimeStr = askTime.format(format);
 
+        Student student = studentDAO.selectById(sid);
+
         Bankcard bankcard = bankCardDAO.findByStudent(sid);
         MemberCard memberCard = memberCardDAO.findByStudent(sid);
         double actualPrice = Discount.calculateEnrollMoney(level, price);
 
         Course course = courseDAO.selectById(cid);
 
-        if(actualPrice >= memberCard.getBalance()) {
+        if(actualPrice > memberCard.getBalance() || student.getLevel() == 0) {
             double balance = bankcard.getBalance();
             bankcard.setBalance(balance - actualPrice);
             if(balance - actualPrice < 0) {
@@ -251,6 +254,16 @@ public class StudentVOManagerImpl implements StudentVOManager {
             }
             System.out.println("from StudentVOManager: pay the bill from bank: " + bankcard);
             bankCardDAO.update(bankcard);
+
+            ActivityLog activityLog = new ActivityLog();
+            activityLog.setSid(sid);
+            activityLog.setCid(cid);
+            activityLog.setInsid(course.getInsid());
+            activityLog.setMoney(actualPrice);
+            activityLog.setBehaviour("course enroll bankcard");
+            activityLog.setDescription("");
+            activityLog.setType(0);
+            activityLogDAO.insert(activityLog);
 
             Institution institution = institutionDAO.selectById(course.getInsid());
             double insBalance = institution.getBalance();
@@ -262,6 +275,16 @@ public class StudentVOManagerImpl implements StudentVOManager {
             memberCard.setBalance(balance - actualPrice);
             memberCardDAO.updateBalance(memberCard);
             System.out.println("from StudentVOManager: pay the bill from memberCard: " + memberCard);
+
+            ActivityLog activityLog = new ActivityLog();
+            activityLog.setSid(sid);
+            activityLog.setCid(cid);
+            activityLog.setInsid(course.getInsid());
+            activityLog.setMoney(actualPrice);
+            activityLog.setBehaviour("course enroll membercard");
+            activityLog.setDescription("");
+            activityLog.setType(0);
+            activityLogDAO.insert(activityLog);
 
             FinanceCheck financeCheck = new FinanceCheck();
             financeCheck.setType(0);
@@ -275,6 +298,31 @@ public class StudentVOManagerImpl implements StudentVOManager {
             financeCheck.setMid(1);
 
             financeCheckDAO.insert(financeCheck);
+
+            double exp = student.getExp() + actualPrice;
+            student.setExp(exp);
+
+            if(Discount.canUpdate(student)) {
+                level = student.getLevel() + 1;
+                student.setLevel(level);
+                student.setExp(0);
+                System.out.println("from StudentVOManager: update the exp: " + student);
+                ActivityLog activityLogS = new ActivityLog();
+                activityLogS.setSid(sid);
+                activityLogS.setCid(cid);
+                activityLogS.setInsid(course.getInsid());
+                activityLogS.setMoney(0);
+                activityLogS.setBehaviour("update");
+                activityLogS.setDescription("update to level " + level);
+                activityLogS.setType(1);
+                activityLogDAO.insert(activityLogS);
+                studentDAO.updateLevel(student);
+            }
+            else {
+                student.setExp(exp);
+                System.out.println("from StudentVOManager: accumulate the exp: " + student);
+                studentDAO.updateLevel(student);
+            }
 
         }
 
@@ -317,15 +365,6 @@ public class StudentVOManagerImpl implements StudentVOManager {
 
         attendingDAO.insert(attending);
 
-        ActivityLog activityLog = new ActivityLog();
-        activityLog.setSid(sid);
-        activityLog.setCid(cid);
-        activityLog.setInsid(course.getInsid());
-        activityLog.setMoney(actualPrice);
-        activityLog.setBehaviour("course enroll");
-        activityLog.setDescription("");
-        activityLog.setType(0);
-        activityLogDAO.insert(activityLog);
 
 //
 //        StudentLog studentLog = new StudentLog();
@@ -338,7 +377,7 @@ public class StudentVOManagerImpl implements StudentVOManager {
 //        studentLog.setMoney(actualPrice);
 //        studentLogDAO.insert(studentLog);
 //
-        Student student = studentDAO.selectById(sid);
+
 //
 //        InstitutionLog institutionLog = new InstitutionLog();
 //        institutionLog.setCid(cid);
@@ -350,30 +389,50 @@ public class StudentVOManagerImpl implements StudentVOManager {
 //        institutionLog.setMoney(actualPrice);
 //        institutionLogDAO.insert(institutionLog);
 
-        double exp = student.getExp() + actualPrice;
-        student.setExp(exp);
+        return true;
+    }
 
-        if(Discount.canUpdate(student)) {
-            level = student.getLevel() + 1;
-            student.setLevel(level);
-            student.setExp(0);
-            System.out.println("from StudentVOManager: update the exp: " + student);
-            ActivityLog activityLogS = new ActivityLog();
-            activityLogS.setSid(sid);
-            activityLogS.setCid(cid);
-            activityLogS.setInsid(course.getInsid());
-            activityLogS.setMoney(0);
-            activityLogS.setBehaviour("update");
-            activityLogS.setDescription("update to level " + level);
-            activityLogS.setType(1);
-            activityLogDAO.insert(activityLog);
-            studentDAO.updateLevel(student);
+    @Override
+    public List<ActivityLogVO> getFinanceLogs(int sid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectStudentCourse(sid);
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
         }
-        else {
-            student.setExp(exp);
-            System.out.println("from StudentVOManager: accumulate the exp: " + student);
-            studentDAO.updateLevel(student);
+
+        return activityLogVOList;
+    }
+
+    @Override
+    public List<ActivityLogVO> getStudentLogs(int sid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectStudentOtherConsume(sid);
+        List<ActivityLog> activityLogList1 = activityLogDAO.selectStudentLog(sid);
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
         }
+        for(ActivityLog activityLog: activityLogList1) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
+    }
+
+    @Override
+    public boolean study(int sid, int cid) {
+        ActivityLog activityLog = new ActivityLog();
+        activityLog.setCid(cid);
+        activityLog.setSid(sid);
+        activityLog.setBehaviour("study course");
+        Course course = courseDAO.selectById(cid);
+        activityLog.setDescription("study course " + course.getName());
+        activityLog.setType(1);
+        activityLogDAO.insert(activityLog);
         return true;
     }
 }

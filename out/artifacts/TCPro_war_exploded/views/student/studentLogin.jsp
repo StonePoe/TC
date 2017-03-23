@@ -103,6 +103,7 @@
 <!-- Bootstrap 3.3.6 -->
 <script src="../../plugin/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../js/studentLogin.js"></script>
+
 <%--<script src="../../js/navbar.js"></script>--%>
 </body>
 </html>

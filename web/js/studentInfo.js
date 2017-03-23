@@ -89,7 +89,7 @@ function showBank() {
     document.querySelector(".bankLink").className = "bankLink active";
 }
 
-function consistency() {
+function updatePs() {
     // console.log(password.value);
     // console.log(confirmPs.value);
     if(password.value != confirmPs.value) {
@@ -122,6 +122,88 @@ function consistency() {
                         // window.location.href = url;
                     } else {
                         alert('network error!!!!!!');
+                    }
+                },
+                error: function () {
+                    alert('network error !!!!!!!!!!!!');
+                }
+            })
+        }, 100);
+    }
+}
+
+function updateName() {
+    // console.log(password.value);
+    // console.log(confirmPs.value);
+    var newName = document.getElementById("inputName").value;
+    if(newName == '') {
+        document.querySelector(".error-empty").className = "control-label error-empty";
+    }
+
+    else {
+        console.log("equal");
+        // document.querySelector(".error-ps").className = "control-label error-ps d-none";
+        document.querySelector(".psGroup").className = "form-group psGroup";
+        setTimeout(function () {
+            $.ajax({
+                type: 'post',
+                url: '/student/info/name',
+                data: 'name=' + newName,
+                // success: function (url) {
+                //     if(url != null) {
+                //         // window.location.reload();
+                //         window.location.href = url;
+                //     } else {
+                //         alert('network error!!!!!!');
+                //     }
+                // },
+                success: function (data) {
+                    if(data.success == true) {
+                        window.location.reload();
+                        // window.location.href = url;
+                    } else {
+                        document.querySelector(".error-name").className = "control-label error-name";
+                    }
+                },
+                error: function () {
+                    alert('network error !!!!!!!!!!!!');
+                }
+            })
+        }, 100);
+    }
+}
+
+function updateBank() {
+    // console.log(password.value);
+    // console.log(confirmPs.value);
+    var bankId = document.getElementById("bankcard").value;
+    if(bankId == '') {
+        document.querySelector(".error-empty").className = "control-label error-empty";
+    }
+
+    else {
+        console.log("equal");
+        // document.querySelector(".error-ps").className = "control-label error-ps d-none";
+        document.querySelector(".psGroup").className = "form-group psGroup";
+        setTimeout(function () {
+            $.ajax({
+                type: 'post',
+                url: '/student/info/bank',
+                data: 'bankId=' + bankId,
+                // success: function (url) {
+                //     if(url != null) {
+                //         // window.location.reload();
+                //         window.location.href = url;
+                //     } else {
+                //         alert('network error!!!!!!');
+                //     }
+                // },
+                success: function (data) {
+                    if(data.success == true) {
+                        window.location.reload();
+                        // window.location.href = url;
+                    } else {
+                        // document.querySelector(".error-name").className = "control-label error-name";
                     }
                 },
                 error: function () {

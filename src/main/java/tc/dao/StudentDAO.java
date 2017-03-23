@@ -19,5 +19,9 @@ public interface StudentDAO {
 
     void updatePassword(@Param("id") int id, @Param("password") String password);
 
+    void updateName(Student student);
+
+    void updateBank(Student student);
+
     void updateLevel(Student student);
 }

@@ -45,3 +45,23 @@ function book(sid, cid) {
         }
     })
 }
+
+function study(sid, cid) {
+    $.ajax({
+        type: 'post',
+        url: '/student/course/study',
+        data: 'sid=' + sid  + '&cid=' + cid,
+        success: function (data) {
+            if(data.success == true) {
+                // window.location.reload();
+                window.location.href = "https://www.coursera.org";
+            } else {
+                // document.querySelector(".error-name").className = "control-label error-
+                alert("出现了错误！！");
+            }
+        },
+        error: function () {
+            alert('network error !!!!!!!!!!!!');
+        }
+    })
+}

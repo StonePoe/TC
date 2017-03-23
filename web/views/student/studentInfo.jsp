@@ -162,6 +162,8 @@
                             <input type="text" class="form-control inputName" id="inputName" placeholder="<%=studentInfoVO.getName()%>">
                             <label class="control-label error-name d-none" for="inputName">
                                 <i class="fa fa-times-circle-o"></i>这个名字已经被别人使用了 >_< </label>
+                            <label class="control-label error-empty d-none" for="inputName">
+                                <i class="fa fa-times-circle-o"></i>名字为空</label>
                         </div>
                         <%--<div class="form-group">--%>
                             <%--<label for="exampleInputFile">File input</label>--%>
@@ -177,7 +179,7 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-primary" onclick="inspect()">提交</button>
+                        <button type="button" class="btn btn-primary" onclick="updateName()">提交</button>
                     </div>
                 </form>
             </div>
@@ -209,14 +211,41 @@
                     <!-- /.box-body -->
 
                     <div class="box-footer">
-                        <button type="button" class="btn btn-primary" onclick="consistency()">提交</button>
+                        <button type="button" class="btn btn-primary" onclick="updatePs()">提交</button>
                     </div>
                 </form>
             </div>
         </div>
 
         <div class="bankInfo" style="display: none">
-            bank
+            <div class="box box-solid">
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form role="form">
+                    <div class="box-body psGroup">
+                        <div class="form-group psGroup">
+                            <span>当前银行卡：<%=studentInfoVO.getBankCard()%></span>
+
+                        </div>
+                        <%--<div class="form-group">--%>
+                        <%--<label for="exampleInputFile">File input</label>--%>
+                        <%--<input type="file" id="exampleInputFile">--%>
+
+                        <%--<p class="help-block">Example block-level help text here.</p>--%>
+                        <%--</div>--%>
+                        <div class="form-group psGroup">
+                            <span>新的银行卡：</span><input type="text" id="bankcard">
+                        </div>
+                        <label class="control-label error-empty d-none" for="inputName">
+                            <i class="fa fa-times-circle-o"></i>为空!!</label>
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                        <button type="button" class="btn btn-primary" onclick="updateBank()">提交</button>
+                    </div>
+                </form>
+            </div>
         </div>
 
         <!-- /.content -->

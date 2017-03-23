@@ -26,4 +26,10 @@ public interface StudentVOManager {
     boolean doCourseQuit(int sid, int cid, int level, double price);
 
     boolean doCourseEnroll(int sid, int cid, int level, double price);
+
+    List<ActivityLogVO> getFinanceLogs(int sid);
+
+    List<ActivityLogVO> getStudentLogs(int sid);
+
+    boolean study(int sid, int cid);
 }

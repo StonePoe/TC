@@ -15,4 +15,12 @@
         insert into manager (`name`, password, imgUrl)
         values (#{name}, #{password}, #{imgUrl})
     </insert>
+
+    <update id="updateName" parameterType="tc.model.Manager">
+        update manager set name = #{name} where id = #{id};
+    </update>
+
+    <update id="updatePassword" parameterType="tc.model.Manager">
+        update manager set password = #{password} where id = #{id};
+    </update>
 </mapper>

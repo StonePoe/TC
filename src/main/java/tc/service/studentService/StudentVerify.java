@@ -19,4 +19,8 @@ public interface StudentVerify {
     public void update(String name, String bankId, String password);
 
     void updatePassword(int id, String password);
+
+    void updateName(int id, String name);
+
+    void updateBank(int id, String bank);
 }

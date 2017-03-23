@@ -11,6 +11,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,6 +65,7 @@
 <jsp:useBean id="studentInfoVO"
              type="tc.bean.StudentInfoVO"
              scope="session"></jsp:useBean>
+
 
 <header class="main-header skin-yellow" style="background-color:  #f39c12">
     <!-- Logo -->
@@ -199,7 +201,7 @@
                         <p class="text-muted">当前得分： <%=studentCourseVO.getScore()%></p>
                         <div>
                             <button type="button" class="btn btn-block btn-warning btn-sm"
-                                    onclick="">前往学习</button>
+                                    onclick="study(<%=studentInfoVO.getId()%>, <%=studentCourseVO.getId()%>)">前往学习</button>
 
                             <button type="button" class="btn btn-block btn-warning btn-sm"
                                     onclick="quit(<%=studentInfoVO.getId()%>, <%=studentCourseVO.getId()%>)">退课</button>

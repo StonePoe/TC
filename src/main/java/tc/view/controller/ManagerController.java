@@ -1,5 +1,6 @@
 package tc.view.controller;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import javafx.collections.ObservableArrayBase;
 import org.apache.commons.collections.FastHashMap;
 import org.apache.ibatis.annotations.Param;
@@ -9,10 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import tc.bean.CourseCheckVO;
-import tc.bean.FinanceCheckVO;
-import tc.bean.ManagerInfoVO;
+import tc.bean.*;
+import tc.model.ActivityLog;
 import tc.model.CourseUpdate;
+import tc.model.Manager;
 import tc.service.managerService.ManagerVOManger;
 import tc.service.managerService.ManagerVerify;
 
@@ -199,6 +200,76 @@ public class ManagerController {
         Map<String, Object> map = new HashMap<>();
         managerVOMangerImpl.disagreeUpdate(checkId, updateId, cid );
         map.put("success", true);
+        return map;
+    }
+
+    @RequestMapping(value = "/log", method = RequestMethod.GET)
+    public String getLogPage(HttpServletRequest request, Model model) {
+        HttpSession session = request.getSession();
+        ManagerInfoVO managerInfoVO = (ManagerInfoVO) session.getAttribute("managerInfoVO");
+
+        System.out.println("from managerController: managetInfo " + managerInfoVO);
+
+        List<ActivityLogVO> courseFinances = managerVOMangerImpl.geCourseFinanceLogs(managerInfoVO.getId());
+
+        List<ActivityLogVO> otherFinances =  managerVOMangerImpl.getOtherFinanceLogs(managerInfoVO.getId());
+
+        List<ActivityLogVO> studentLogs = managerVOMangerImpl.getStudentLogs(managerInfoVO.getId());
+
+        List<ActivityLogVO> institutionLogs = managerVOMangerImpl.getInstitutionLogs(managerInfoVO.getId());
+
+        model.addAttribute("courseFinances", courseFinances);
+        model.addAttribute("otherFinances", otherFinances);
+        model.addAttribute("studentLogs", studentLogs);
+        model.addAttribute("institutionLogs", institutionLogs);
+
+        return "/manager/logPage";
+    }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logout(HttpServletRequest request)  {
+        HttpSession session = request.getSession(false);
+        session.invalidate();
+        return "redirect:/admin/login";
+    }
+
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public String getInfoPage(HttpServletRequest request) {
+        return "/manager/managerInfo";
+    }
+
+    @RequestMapping(value = "/info/name", method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> updateName(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+        String name = request.getParameter("name");
+        System.out.println("from info/name: " + name);
+        if(managerVerifyImpl.exist(name)) {
+            map.put("success", false);
+        }
+        else {
+            HttpSession session = request.getSession(false);
+            ManagerInfoVO managerInfoVO = (ManagerInfoVO) session.getAttribute("managerInfoVO");
+            managerVerifyImpl.updateName(managerInfoVO.getId(), name);
+            map.put("success", true);
+
+            ManagerInfoVO newManagerInfoVO = managerVOMangerImpl.getManagerInfoVO(managerInfoVO.getId());
+            session.setAttribute("managerInfoVO", newManagerInfoVO);
+        }
+        return map;
+    }
+
+    @RequestMapping(value = "/info/password", method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> updatePassword(HttpServletRequest request) {
+        String password = request.getParameter("password");
+        System.out.println("from info/password: " + password);
+
+        HttpSession session = request.getSession(false);
+        ManagerInfoVO managerInfoVO = (ManagerInfoVO) session.getAttribute("managerInfoVO");
+        managerVerifyImpl.updatePassword(managerInfoVO.getId(), password);
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("success", true);
+
         return map;
     }
 }

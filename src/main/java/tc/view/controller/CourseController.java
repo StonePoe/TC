@@ -67,11 +67,14 @@ public class CourseController {
 
         InstitutionCourseVO institutionCourseVO = institutionVOManagerImpl.getCourse(cid);
 
+        System.out.println("from institutionController: " + institutionCourseVO);
+
         List<InstitutionStudentVO> institutionStudentVOList = institutionVOManagerImpl.getCourseStudentList(cid);
 
         List<TeacherInfoVO> teacherInfoVOList = teacherVOManagerImpl.getTeacherVOList();
 
         model.addAttribute("institutionCourseVO", institutionCourseVO);
+        request.setAttribute("institutionCourseVO", institutionCourseVO);
         model.addAttribute("institutionStudentVOList", institutionStudentVOList);
         model.addAttribute("teacherInfoVOList", teacherInfoVOList);
 

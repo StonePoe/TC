@@ -68,4 +68,27 @@ public class ManagerVerifyImpl implements ManagerVerify {
     public void update(String name, String password) {
 
     }
+
+    @Override
+    public boolean updateName(int id, String name) {
+        if(exist(name)) {
+            return false;
+        }
+        else {
+            Manager manager = new Manager();
+            manager.setId(id);
+            manager.setName(name);
+            managerDAO.updateName(manager);
+            return true;
+        }
+    }
+
+    @Override
+    public boolean updatePassword(int id, String password) {
+        Manager manager = new Manager();
+        manager.setId(id);
+        manager.setPassword(password);
+        managerDAO.updatePassword(manager);
+        return true;
+    }
 }

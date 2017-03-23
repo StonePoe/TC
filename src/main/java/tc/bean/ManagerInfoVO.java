@@ -16,6 +16,16 @@ public class ManagerInfoVO {
 
     }
 
+    @Override
+    public String toString() {
+        return "ManagerInfoVO{" +
+                "id=" + id +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                '}';
+    }
+
     public ManagerInfoVO(Manager manager) {
         this.id = manager.getId();
         this.password = manager.getPassword();

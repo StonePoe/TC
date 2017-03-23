@@ -2,6 +2,7 @@ package tc.service.managerService.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tc.bean.ActivityLogVO;
 import tc.bean.CourseCheckVO;
 import tc.bean.FinanceCheckVO;
 import tc.bean.ManagerInfoVO;
@@ -487,5 +488,58 @@ public class ManagerVOManagerImpl implements ManagerVOManger {
         CourseUpdate courseUpdate = courseUpdateDAO.selectById(courseUpdateId);
         courseUpdate.setIsActive(0);
         courseUpdateDAO.update(courseUpdate);
+    }
+
+    @Override
+    public List<ActivityLogVO> geCourseFinanceLogs(int mid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectCourseFinances();
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
+    }
+
+    @Override
+    public List<ActivityLogVO> getOtherFinanceLogs(int mid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectOtherFinances();
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
+    }
+
+
+    @Override
+    public List<ActivityLogVO> getInstitutionLogs(int mid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectInstitutionLogs();
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
+    }
+
+    @Override
+    public List<ActivityLogVO> getStudentLogs(int mid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectStudentLogs();
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
     }
 }

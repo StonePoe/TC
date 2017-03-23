@@ -14,17 +14,9 @@
 --%>
 <%@ page import="java.util.List" %>
 <%@ page import="tc.bean.InstitutionCourseVO" %>
+<%@ page import="tc.bean.ActivityLogVO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% List<InstitutionCourseVO> activeList =
-        (List<InstitutionCourseVO>)request.getAttribute("activeCourses");
-    List<InstitutionCourseVO> abandonList =
-            (List<InstitutionCourseVO>)request.getAttribute("abandonCourses");
-    List<InstitutionCourseVO> checkingList =
-            (List<InstitutionCourseVO>)request.getAttribute("checkingCourses");
-%>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -153,9 +145,9 @@
             <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="header">课程管理</li>
-                <li class="active"><a href="/institution/homepage"><i class="fa fa-circle-o"></i>课程管理</a></li>
-                <li><a href="/institution/release"><i class="fa fa-circle-o"></i>发布课程</a></li>
+                <li class="header">记录查看</li>
+                <li><a href="/institution/log"><i class="fa fa-circle-o"></i>资金日志</a></li>
+                <li class="active"><a href="/institution/courseLog"><i class="fa fa-circle-o"></i>课程日志</a></li>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -163,116 +155,68 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">动态</h3>
+            </div>
+            <div class="box-body">
+                <div id="example2_wrapper" class="classdataTables_wrapper form-inline dt-bootstrap">
+                    <div class="row">
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="example2" class="table table-bordered table-hover dataTable"
+                                   role="grid" aria-describedby="example2_info">
+                                <thead>
+                                <tr role="row">
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="课程: activate to sort column ascending">
+                                        课程
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="类别: activate to sort column ascending">
+                                        类别
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="描述: activate to sort column ascending">
+                                        描述
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="类别: activate to sort column ascending">
+                                        时间
+                                    </th>
 
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">正在进行</h3>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <%--<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>--%>
+                                <c:forEach var="courseLog" items="${courseLogList}">
+                                <tr onclick="">
+                                    <td>
+                                            ${courseLog.cid}
+                                    </td>
+                                    <td>
+                                            ${courseLog.behaviour}
+                                    </td>
+                                    <td>
+                                            ${courseLog.description}
+                                    </td>
+                                    <td>
+                                            ${courseLog.modifyTime}
+                                    </td>
+
+
+                                    </c:forEach>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-                <ul class="products-list product-list-in-box">
-                    <c:forEach var="institutionCourseVO" items="<%= activeList %>">
-                        <li class="item">
-                            <div class="product-img">
-                                <img src="<c:out value="${institutionCourseVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
-                            </div>
-                            <div class="product-info">
-                                <a href="/institution/course?cid=<c:out value="${institutionCourseVO.getId()}"/>" class="product-title"><c:out value="${institutionCourseVO.getName()}"/>
-                                    <span class="label label-warning pull-right">¥<c:out value="${institutionCourseVO.getPrice()}"/></span></a>
-                                <span class="product-description">
-                        <c:out value="${institutionCourseVO.getDescription()}"/>
-                        </span>
-                            </div>
-                        </li>
-                    </c:forEach>
-                </ul>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-center">
-                <a href="javascript:void(0)" class="uppercase">View All Products</a>
-            </div>
-            <!-- /.box-footer -->
         </div>
-
-
-        <div class="box box-warning">
-            <div class="box-header with-border">
-                <h3 class="box-title">停止开课</h3>
-
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-                <ul class="products-list product-list-in-box">
-                    <c:forEach var="institutionCourseVO" items="<%= abandonList %>">
-                        <li class="item">
-                            <div class="product-img">
-                                <img src="<c:out value="${institutionCourseVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
-                            </div>
-                            <div class="product-info">
-                                <a href="/institution/course?cid=<c:out value="${institutionCourseVO.getId()}"/>" class="product-title"><c:out value="${institutionCourseVO.getName()}"/>
-                                    <span class="label label-warning pull-right">¥<c:out value="${institutionCourseVO.getPrice()}"/></span></a>
-                                <span class="product-description">
-                        <c:out value="${institutionCourseVO.getDescription()}"/>
-                        </span>
-                            </div>
-                        </li>
-                    </c:forEach>
-                </ul>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-center">
-                <a href="javascript:void(0)" class="uppercase">View All Products</a>
-            </div>
-            <!-- /.box-footer -->
-        </div>
-
-
-        <div class="box box-success">
-            <div class="box-header with-border">
-                <h3 class="box-title">正在审批</h3>
-
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-                <ul class="products-list product-list-in-box">
-                    <c:forEach var="institutionCourseVO" items="<%= checkingList %>">
-                        <li class="item">
-                            <div class="product-img">
-                                <img src="<c:out value="${institutionCourseVO.getImgUrl()}"/>" class="courseImg" alt="Product Image">
-                            </div>
-                            <div class="product-info">
-                                <a href="/institution/course?cid=<c:out value="${institutionCourseVO.getId()}"/>" class="product-title"><c:out value="${institutionCourseVO.getName()}"/>
-                                    <span class="label label-warning pull-right">¥<c:out value="${institutionCourseVO.getPrice()}"/></span></a>
-                                <span class="product-description">
-                        <c:out value="${institutionCourseVO.getDescription()}"/>
-                        </span>
-                            </div>
-                        </li>
-                    </c:forEach>
-                </ul>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-center">
-                <a href="javascript:void(0)" class="uppercase">View All Products</a>
-            </div>
-            <!-- /.box-footer -->
-        </div>
-
-
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -324,6 +268,23 @@
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/demo.js"></script>
+
+<!-- jQuery 2.2.3 -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../plugin/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../plugin/AdminLTE-2.3.11/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../plugin/AdminLTE-2.3.11/dist/js/demo.js"></script>
+
 <script src="../../js/institutionLog.js"></script>
 </body>
 </html>

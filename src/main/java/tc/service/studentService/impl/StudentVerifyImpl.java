@@ -3,9 +3,11 @@ package tc.service.studentService.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tc.bean.StudentInfoVO;
+import tc.dao.ActivityLogDAO;
 import tc.dao.BankCardDAO;
 import tc.dao.MemberCardDAO;
 import tc.dao.StudentDAO;
+import tc.model.ActivityLog;
 import tc.model.Bankcard;
 import tc.model.MemberCard;
 import tc.model.Student;
@@ -28,6 +30,9 @@ public class StudentVerifyImpl implements StudentVerify {
 
     @Autowired
     private MemberCardDAO memberCardDAO;
+
+    @Autowired
+    private ActivityLogDAO activityLogDAO;
 
     @Override
     public boolean register(String name, String password, String bankid) {
@@ -53,7 +58,14 @@ public class StudentVerifyImpl implements StudentVerify {
         student.setMemberid(memberId);
         student.setImgUrl("/img/student/default.png");
         if (!existName(name)) {
+
             studentDAO.insert(student);
+
+            ActivityLog activityLog = new ActivityLog();
+            activityLog.setType(1);
+            activityLog.setBehaviour("register");
+            activityLog.setSid(student.getId());
+            activityLogDAO.insert(activityLog);
             return true;
         }
         else {
@@ -117,5 +129,21 @@ public class StudentVerifyImpl implements StudentVerify {
     @Override
     public void updatePassword(int id, String password) {
         studentDAO.updatePassword(id, password);
+    }
+
+    @Override
+    public void updateName(int id, String name) {
+        Student student = new Student();
+        student.setId(id);
+        student.setName(name);
+        studentDAO.updateName(student);
+    }
+
+    @Override
+    public void updateBank(int id, String bank) {
+        Student student = new Student();
+        student.setId(id);
+        student.setBankid(bank);
+        studentDAO.updateBank(student);
     }
 }

@@ -17,4 +17,6 @@ public interface InstitutionVerify {
     public void update(String name, String bankId, String password);
 
     void updatePassword(int id, String password);
+
+    void updateName(int id, String name);
 }

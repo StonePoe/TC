@@ -2,7 +2,9 @@ package tc.service.institutionService.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tc.dao.ActivityLogDAO;
 import tc.dao.InstitutionDAO;
+import tc.model.ActivityLog;
 import tc.model.Institution;
 import tc.service.institutionService.InstitutionVerify;
 
@@ -15,6 +17,9 @@ public class InstitutionVerifyImpl implements InstitutionVerify {
     @Autowired
     private InstitutionDAO institutionDAO;
 
+    @Autowired
+    private ActivityLogDAO activityLogDAO;
+
     @Override
     public boolean register(String name, String password) {
         Institution institution = new Institution();
@@ -24,9 +29,20 @@ public class InstitutionVerifyImpl implements InstitutionVerify {
         institution.setImgUrl("/institution/default.png");
         institution.setField(4);
 
-        institutionDAO.insert(institution);
+        if (existName(name)) {
 
-        return true;
+            return false;
+        }
+        else {
+
+            institutionDAO.insert(institution);
+
+            ActivityLog activityLog = new ActivityLog();
+            activityLog.setType(3);
+            activityLog.setBehaviour("register");
+            activityLogDAO.insert(activityLog);
+            return true;
+        }
     }
 
     @Override
@@ -76,6 +92,18 @@ public class InstitutionVerifyImpl implements InstitutionVerify {
 
     @Override
     public void updatePassword(int id, String password) {
+        Institution institution = new Institution();
+        institution.setId(id);
+        institution.setPassword(password);
+        institutionDAO.updatePassword(institution);
+    }
+
+    @Override
+    public void updateName(int id, String name) {
+        Institution institution = new Institution();
+        institution.setId(id);
+        institution.setName(name);
+        institutionDAO.updateName(institution);
 
     }
 }

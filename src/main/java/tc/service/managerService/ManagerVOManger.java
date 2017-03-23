@@ -1,8 +1,10 @@
 package tc.service.managerService;
 
+import tc.bean.ActivityLogVO;
 import tc.bean.CourseCheckVO;
 import tc.bean.FinanceCheckVO;
 import tc.bean.ManagerInfoVO;
+import tc.model.ActivityLog;
 import tc.model.CourseUpdate;
 import tc.model.FinanceCheck;
 
@@ -49,4 +51,14 @@ public interface ManagerVOManger {
                      int cid, String cname, String description, double price);
 
     void disagreeUpdate(int courseCheckId, int courseUpdateId, int cid);
+
+    List<ActivityLogVO> geCourseFinanceLogs(int mid);
+
+    List<ActivityLogVO> getOtherFinanceLogs(int mid);
+
+    List<ActivityLogVO> getInstitutionLogs(int mid);
+
+    List<ActivityLogVO> getStudentLogs(int mid);
+
+
 }

@@ -68,6 +68,53 @@
         where activityLog.insid = #{insid} and activityLog.type = 4;
     </select>
 
+    <select id="selectCourseFinances" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid, course.name as cname,
+        institution.name as instiName, student.name as sname
+        from activityLog, course, institution, student
+        where activityLog.type = 0 and course.id = activityLog.cid
+        and institution.id = activityLog.insid and student.id = activityLog.sid;
+    </select>
+
+    <select id="selectInstitutionLogs" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.type = 3;
+    </select>
+
+    <select id="selectStudentLogs" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.type = 1
+</select>
+    <!---->
+    <!--<select id="selectInstitutionLogs" resultType="tc.model.ActivityLog">-->
+        <!--select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,-->
+        <!--activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,-->
+        <!--activityLog.description as description, activityLog.money as money,-->
+        <!--activityLog.cid as cid, activityLog.insid as insid-->
+        <!--from activityLog-->
+        <!--where activityLog.type = 3;-->
+    <!--</select>-->
+
+    <select id="selectOtherFinances" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.type = 2 or activityLog.type = 4;
+    </select>
+
     <insert id="insert" parameterType="tc.model.ActivityLog">
         insert into activityLog (type, sid, behaviour, description, money, cid, insid)
         values (#{type}, #{sid}, #{behaviour}, #{description}, #{money}, #{cid}, #{insid})

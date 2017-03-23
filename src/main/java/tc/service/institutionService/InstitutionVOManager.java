@@ -1,8 +1,10 @@
 package tc.service.institutionService;
 
+import tc.bean.ActivityLogVO;
 import tc.bean.InstitutionCourseVO;
 import tc.bean.InstitutionInfoVO;
 import tc.bean.InstitutionStudentVO;
+import tc.model.ActivityLog;
 
 import java.util.List;
 
@@ -22,4 +24,10 @@ public interface InstitutionVOManager {
     InstitutionCourseVO getCourse(int cid);
 
     List<InstitutionStudentVO> getCourseStudentList(int cid);
+
+    List<ActivityLogVO> getCourseLog(int insid);
+
+    List<ActivityLogVO> getInstitutionLog(int insid);
+
+    List<ActivityLogVO> getInstitutionOtherConsume(int insid);
 }

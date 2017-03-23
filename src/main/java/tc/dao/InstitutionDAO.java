@@ -14,6 +14,10 @@ public interface InstitutionDAO {
 
     void updateBalance(Institution institution);
 
+    void updateName(Institution institution);
+
+    void updatePassword(Institution institution);
+
     public void insert(Institution institution);
 
     public void delete(int id);

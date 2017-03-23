@@ -32,6 +32,9 @@ public class InstitutionCourseImpl implements InstitutionCourse{
     @Autowired
     private ActivityLogDAO activityLogDAO;
 
+    @Autowired
+    private StudentDAO studentDAO;
+
     @Override
     public void release(String name, int tid, double price, String startdate, String enddate, int field,
                         String imgUrl, int insid, String description, int agree) {
@@ -144,9 +147,11 @@ public class InstitutionCourseImpl implements InstitutionCourse{
         activityLog.setInsid(course.getInsid());
         activityLogDAO.insert(activityLog);
 
+        Student student = studentDAO.selectById(sid);
+
         ActivityLog activityLogS = new ActivityLog();
         activityLogS.setBehaviour("course score");
-        activityLogS.setDescription("得分：" + score);
+        activityLogS.setDescription("得分：" + score + "; 学生: " + student.getName());
         activityLogS.setCid(cid);
         activityLogS.setMoney(0);
         activityLogS.setSid(sid);

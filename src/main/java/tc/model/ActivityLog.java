@@ -15,6 +15,9 @@ public class ActivityLog {
     private double money;
     private int cid;
     private int insid;
+    private String sname;
+    private String cname;
+    private String instiName;
 
     @Override
     public String toString() {
@@ -28,6 +31,9 @@ public class ActivityLog {
                 ", money=" + money +
                 ", cid=" + cid +
                 ", insid=" + insid +
+                ", sname='" + sname + '\'' +
+                ", cname='" + cname + '\'' +
+                ", instiName='" + instiName + '\'' +
                 '}';
     }
 
@@ -101,5 +107,29 @@ public class ActivityLog {
 
     public void setInsid(int insid) {
         this.insid = insid;
+    }
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+    public String getCname() {
+        return cname;
+    }
+
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
+
+    public String getInstiName() {
+        return instiName;
+    }
+
+    public void setInstiName(String instiName) {
+        this.instiName = instiName;
     }
 }

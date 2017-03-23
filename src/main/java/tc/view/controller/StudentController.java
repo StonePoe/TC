@@ -2,6 +2,7 @@ package tc.view.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import tc.bean.*;
 import tc.service.studentService.CardManager;
@@ -150,6 +151,48 @@ public class StudentController {
         Map<String, Object> map = new HashMap<>();
         map.put("success", true);
 
+        return map;
+    }
+
+    @RequestMapping(value = "/info/name", method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> updateName(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+        String name = request.getParameter("name");
+        System.out.println("from info/name: " + name);
+        if(studentVerifyImpl.existName(name)) {
+            map.put("success", false);
+        }
+        else {
+            HttpSession session = request.getSession(false);
+            StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+
+            studentVerifyImpl.updateName(studentInfoVO.getId(), name);
+
+            map.put("success", true);
+
+            StudentInfoVO newStudentInfoVO = studentVOManagerImpl.getStudentById(studentInfoVO.getId());
+            session.setAttribute("studentInfoVO", newStudentInfoVO);
+        }
+
+
+
+        return map;
+    }
+
+    @RequestMapping(value = "/info/bank", method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> updateBank(HttpServletRequest request) {
+        Map<String, Object> map = new HashMap<>();
+        String bank = request.getParameter("bank");
+        System.out.println("from info/bank: " + bank);
+
+
+        HttpSession session = request.getSession(false);
+        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+
+        studentVerifyImpl.updateBank(studentInfoVO.getId(), bank);
+        StudentInfoVO newStudentInfoVO = studentVOManagerImpl.getStudentById(studentInfoVO.getId());
+        session.setAttribute("studentInfoVO", newStudentInfoVO);
+        map.put("success", true);
         return map;
     }
 //
@@ -317,6 +360,40 @@ public class StudentController {
         request.setAttribute("memberCardVO", memberCardVO);
 
         return "/student/memberFinance";
+    }
+
+    @RequestMapping(value = "/log", method = RequestMethod.GET)
+    public String getFinanceLog(HttpServletRequest request, Model model) {
+        HttpSession session = request.getSession(false);
+        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+
+        List<ActivityLogVO> activityLogVOList = studentVOManagerImpl.getFinanceLogs(studentInfoVO.getId());
+
+        model.addAttribute("courseLogList", activityLogVOList);
+
+        return "/student/financeLog";
+    }
+
+    @RequestMapping(value = "/studentLog", method = RequestMethod.GET)
+    public String getStudentLog(HttpServletRequest request, Model model) {
+        HttpSession session = request.getSession(false);
+        StudentInfoVO studentInfoVO = (StudentInfoVO) session.getAttribute("studentInfoVO");
+
+        List<ActivityLogVO> activityLogVOList = studentVOManagerImpl.getStudentLogs(studentInfoVO.getId());
+
+        model.addAttribute("courseLogList", activityLogVOList);
+
+        return "/student/studentLog";
+    }
+
+    @RequestMapping(value = "/course/study", method = RequestMethod.POST)
+    public @ResponseBody Map<String, Object> doStudy(HttpServletRequest request) {
+        int sid = Integer.parseInt(request.getParameter("sid"));
+        int cid = Integer.parseInt(request.getParameter("cid"));
+        studentVOManagerImpl.study(sid, cid);
+        Map<String, Object> map = new HashMap<>();
+        map.put("success", true);
+        return map;
     }
 }
 

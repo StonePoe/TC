@@ -15,4 +15,8 @@ public interface ManagerVerify {
     public boolean isCorrectPsw(int id, String password);
 
     public void update(String name, String password);
+
+    boolean updateName(int id, String name);
+
+    boolean updatePassword(int id, String password);
 }

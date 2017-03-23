@@ -2,17 +2,12 @@ package tc.service.institutionService.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tc.bean.ActivityLogVO;
 import tc.bean.InstitutionCourseVO;
 import tc.bean.InstitutionInfoVO;
 import tc.bean.InstitutionStudentVO;
-import tc.dao.AttendingDAO;
-import tc.dao.CourseDAO;
-import tc.dao.InstitutionDAO;
-import tc.dao.StudentDAO;
-import tc.model.Attending;
-import tc.model.Course;
-import tc.model.Institution;
-import tc.model.Student;
+import tc.dao.*;
+import tc.model.*;
 import tc.service.institutionService.InstitutionVOManager;
 
 import java.util.ArrayList;
@@ -34,6 +29,9 @@ public class InstitutionVOManagerImpl implements InstitutionVOManager{
 
     @Autowired
     private StudentDAO studentDAO;
+
+    @Autowired
+    private ActivityLogDAO activityLogDAO;
 
     @Override
     public InstitutionInfoVO getInstitutionInfoVO(String name) {
@@ -102,5 +100,44 @@ public class InstitutionVOManagerImpl implements InstitutionVOManager{
             result.add(institutionStudentVO);
         }
         return result;
+    }
+
+    @Override
+    public List<ActivityLogVO> getCourseLog(int insid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectInstitutionCourse(insid);
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
+    }
+
+    @Override
+    public List<ActivityLogVO> getInstitutionLog(int insid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectInstitutionLog(insid);
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
+    }
+
+    @Override
+    public List<ActivityLogVO> getInstitutionOtherConsume(int insid) {
+        List<ActivityLog> activityLogList = activityLogDAO.selectInstitutionOtherConsume(insid);
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogList) {
+            ActivityLogVO activityLogVO = new ActivityLogVO(activityLog);
+            activityLogVOList.add(activityLogVO);
+        }
+
+        return activityLogVOList;
     }
 }

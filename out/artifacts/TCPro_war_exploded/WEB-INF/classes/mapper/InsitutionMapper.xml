@@ -18,13 +18,21 @@
          where institution.name = #{name} and institutionField.id = institution.field;
     </select>
 
-    <insert id="insert" parameterType="tc.model.Institution">
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="tc.model.Institution">
         insert into institution (password, `name`, balance, field, imgUrl)
         values (#{password}, #{name}, #{balance}, #{field}, #{imgUrl})
     </insert>
 
     <update id="updateBalance" parameterType="tc.model.Institution">
         update institution set balance = #{balance} where id = #{id}
+    </update>
+
+    <update id="updateName" parameterType="tc.model.Institution">
+        update institution set name = #{name} where id = #{id};
+    </update>
+
+    <update id="updatePassword" parameterType="tc.model.Institution">
+        update institution set password = #{password} where id = #{id};
     </update>
 
 </mapper>

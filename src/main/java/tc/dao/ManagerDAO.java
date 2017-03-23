@@ -14,4 +14,7 @@ public interface ManagerDAO {
 
     void insert(Manager manager);
 
+    void updateName(Manager manager);
+
+    void updatePassword(Manager manager);
 }
