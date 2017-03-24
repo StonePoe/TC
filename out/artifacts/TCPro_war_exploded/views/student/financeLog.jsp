@@ -230,6 +230,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Line Chart</h3>
+
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="chart">
+                    <canvas id="lineChart" style="height: 287px; width: 639px;" height="574" width="1278"></canvas>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
         <!-- /.content -->
 
     </div>
@@ -294,30 +311,11 @@
 <script src="../../plugin/AdminLTE-2.3.11/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../../plugin/AdminLTE-2.3.11/plugins/fastclick/fastclick.js"></script>
+<!-- ChartJS 1.0.1 -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/chartjs/Chart.min.js"></script>
 
 <script src="../../js/studentCourse.js"></script>
-<script>
-    $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false
-        });
-
-        $('#example3').DataTable({
-            "paging": true,
-            "lengthChange": false,
-            "searching": false,
-            "ordering": true,
-            "info": true,
-            "autoWidth": false
-        });
-    });
-</script>
+<script src="../../js/studentGraph.js"></script>
 </body>
 </html>
 

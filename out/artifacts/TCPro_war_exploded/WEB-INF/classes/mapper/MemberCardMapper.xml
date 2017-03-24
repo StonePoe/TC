@@ -26,7 +26,8 @@
     </update>
 
     <update id="updateBalance" parameterType="tc.model.MemberCard">
-        update memberCard set balance = #{balance} where id = #{id}
+        update memberCard set balance = #{balance}, suspenddate = #{suspenddate},
+        destroydate = #{destroydate} where id = #{id}
     </update>
 
     <update id="updateReActive" parameterType="tc.model.MemberCard">
@@ -39,4 +40,9 @@
         destroydate = #{destroydate}, level = #{level} where id = #{id}
     </update>
 
+    <select id="selectAllActive" resultType="tc.model.MemberCard">
+        select memberCard.id as id, memberCard.state as state, memberCard.suspenddate as suspenddate,
+        memberCard.destroydate as destroydate, student.id as sid
+        from memberCard, student where state = 1 and student.memberid = membrCard.id;
+    </select>
 </mapper>

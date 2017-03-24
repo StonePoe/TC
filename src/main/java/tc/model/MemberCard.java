@@ -10,6 +10,7 @@ public class MemberCard {
     private String bankid;
     private String suspenddate;
     private String destroydate;
+    private int sid;
 
     public int getId() {
         return id;
@@ -78,5 +79,13 @@ public class MemberCard {
                 ", suspenddate='" + suspenddate + '\'' +
                 ", destroydate='" + destroydate + '\'' +
                 '}';
+    }
+
+    public int getSid() {
+        return sid;
+    }
+
+    public void setSid(int sid) {
+        this.sid = sid;
     }
 }

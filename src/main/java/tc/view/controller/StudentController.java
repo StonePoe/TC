@@ -369,7 +369,10 @@ public class StudentController {
 
         List<ActivityLogVO> activityLogVOList = studentVOManagerImpl.getFinanceLogs(studentInfoVO.getId());
 
+        List<ActivityLogVO> graphDataList = studentVOManagerImpl.getFinanceForGraph(studentInfoVO.getId());
+
         model.addAttribute("courseLogList", activityLogVOList);
+        model.addAttribute("graphDataList", graphDataList);
 
         return "/student/financeLog";
     }

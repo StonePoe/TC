@@ -435,4 +435,16 @@ public class StudentVOManagerImpl implements StudentVOManager {
         activityLogDAO.insert(activityLog);
         return true;
     }
+
+    @Override
+    public List<ActivityLogVO> getFinanceForGraph(int sid) {
+        List<ActivityLog> activityLogs = activityLogDAO.selectStudentFinance(sid);
+
+        List<ActivityLogVO> activityLogVOList = new ArrayList<>();
+        for(ActivityLog activityLog: activityLogs) {
+            activityLogVOList.add(new ActivityLogVO(activityLog));
+        }
+
+        return activityLogVOList;
+    }
 }

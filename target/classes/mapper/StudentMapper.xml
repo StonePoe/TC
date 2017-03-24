@@ -38,4 +38,5 @@
         update student set bankid = #{bankid} where id = #{id};
     </update>
 
+
 </mapper>

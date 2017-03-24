@@ -119,4 +119,36 @@
         insert into activityLog (type, sid, behaviour, description, money, cid, insid)
         values (#{type}, #{sid}, #{behaviour}, #{description}, #{money}, #{cid}, #{insid})
     </insert>
+
+    <select id="selectStudentFinance" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where activityLog.sid = #{sid} and (activityLog.type = 0 or activityLog.type = 2);
+    </select>
+
+    <select id="selectInstitutionFinance" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where activityLog.insid = #{insid} and (activityLog.type = 0 or activityLog.type = 4);
+    </select>
+
+    <select id="selectStudentFinanceList" resultType="tc.model.ActivityLog">
+         select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where (activityLog.type = 0 or activityLog.type = 2);
+    </select>
+
+    <select id="selectInstitutionFinanceList" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where (activityLog.type = 0 or activityLog.type = 4);
+    </select>
 </mapper>

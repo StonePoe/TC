@@ -32,4 +32,6 @@ public interface StudentVOManager {
     List<ActivityLogVO> getStudentLogs(int sid);
 
     boolean study(int sid, int cid);
+
+    List<ActivityLogVO> getFinanceForGraph(int sid);
 }

@@ -7,120 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b52e1bf-439b-40eb-a748-7a13b0bbc42f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/manager/default.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tc/bean/ActivityLogVO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/DAOTest/ActivityLogTest/ActivityLogTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/institutionInfo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/managerInfo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/institution/financeLog.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/institution/institutionInfo.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/student/financeLog.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/student/studentLog.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/bean/ManagerInfoVO.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/bean/ManagerInfoVO.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/studentGraph.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/trigger/TestJob.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tc/trigger/TestJob.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tc/trigger/TestJob.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/ActivityLogDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/ActivityLogDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/InstitutionDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/InstitutionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/ManagerDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/ManagerDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/StudentDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/StudentDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/model/ActivityLog.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/model/ActivityLog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/InstitutionVOManager.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/InstitutionVOManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/InstitutionVerify.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/InstitutionVerify.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionCourseImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionCourseImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionVerifyImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionVerifyImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/ManagerVOManger.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/ManagerVOManger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/ManagerVerify.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/ManagerVerify.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/impl/ManagerVerifyImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/impl/ManagerVerifyImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/StudentVOManager.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/StudentVOManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/StudentVerify.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/StudentVerify.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/StudentVerifyImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/StudentVerifyImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/CourseController.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/CourseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/InstitutionController.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/InstitutionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/ManagerController.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/ManagerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/StudentController.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/StudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/bean/ManagerInfoVO.class" afterPath="$PROJECT_DIR$/target/classes/tc/bean/ManagerInfoVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/dao/ActivityLogDAO.class" afterPath="$PROJECT_DIR$/target/classes/tc/dao/ActivityLogDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/dao/InstitutionDAO.class" afterPath="$PROJECT_DIR$/target/classes/tc/dao/InstitutionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/dao/ManagerDAO.class" afterPath="$PROJECT_DIR$/target/classes/tc/dao/ManagerDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/dao/StudentDAO.class" afterPath="$PROJECT_DIR$/target/classes/tc/dao/StudentDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/model/ActivityLog.class" afterPath="$PROJECT_DIR$/target/classes/tc/model/ActivityLog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/institutionService/InstitutionVOManager.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/institutionService/InstitutionVOManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/institutionService/InstitutionVerify.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/institutionService/InstitutionVerify.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionCourseImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionCourseImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionVerifyImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionVerifyImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/managerService/ManagerVOManger.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/managerService/ManagerVOManger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/managerService/ManagerVerify.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/managerService/ManagerVerify.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/managerService/impl/ManagerVerifyImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/managerService/impl/ManagerVerifyImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/studentService/StudentVOManager.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/studentService/StudentVOManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/studentService/StudentVerify.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/studentService/StudentVerify.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/StudentVerifyImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/StudentVerifyImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/view/controller/CourseController.class" afterPath="$PROJECT_DIR$/target/classes/tc/view/controller/CourseController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/view/controller/InstitutionController.class" afterPath="$PROJECT_DIR$/target/classes/tc/view/controller/InstitutionController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/view/controller/ManagerController.class" afterPath="$PROJECT_DIR$/target/classes/tc/view/controller/ManagerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/view/controller/StudentController.class" afterPath="$PROJECT_DIR$/target/classes/tc/view/controller/StudentController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/ssm.log" afterPath="$PROJECT_DIR$/logs/ssm.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/ActivityLogMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/ActivityLogMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/InsitutionMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/InsitutionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/ManagerMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/ManagerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/StudentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/managerCourse.js" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/managerCourse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentCourse.js" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentCourse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentInfo.js" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentLogin.js" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentLogin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/courseDetail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/courseDetail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/institutionLog.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/institutionLog.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/manager/logPage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/manager/logPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/manager/managerInfo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/manager/managerInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/courseDetail.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/courseDetail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/studentInfo.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/studentInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/studentLogin.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/studentLogin.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/bean/ManagerInfoVO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/bean/ManagerInfoVO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/financeLog.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/financeLog.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/InstitutionDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/InstitutionDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/ManagerDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/ManagerDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/model/ActivityLog.java" afterPath="$PROJECT_DIR$/src/main/java/tc/model/ActivityLog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVOManager.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVOManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVerify.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVerify.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVerifyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVerifyImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVerify.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVerify.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVerifyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVerifyImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java" afterPath="$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVerify.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVerify.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/view/controller/CourseController.java" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/CourseController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/view/controller/InstitutionController.java" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/InstitutionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/InsitutionMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/InsitutionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ActivityLogMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ActivityLogMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/InsitutionMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/InsitutionMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ManagerMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ManagerMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/StudentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/managerCourse.js" afterPath="$PROJECT_DIR$/web/js/managerCourse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/studentCourse.js" afterPath="$PROJECT_DIR$/web/js/studentCourse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/studentInfo.js" afterPath="$PROJECT_DIR$/web/js/studentInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/studentLogin.js" afterPath="$PROJECT_DIR$/web/js/studentLogin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/institution/courseDetail.jsp" afterPath="$PROJECT_DIR$/web/views/institution/courseDetail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/institution/institutionLog.jsp" afterPath="$PROJECT_DIR$/web/views/institution/institutionLog.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/manager/logPage.jsp" afterPath="$PROJECT_DIR$/web/views/manager/logPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/manager/managerInfo.jsp" afterPath="$PROJECT_DIR$/web/views/manager/managerInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/student/courseDetail.jsp" afterPath="$PROJECT_DIR$/web/views/student/courseDetail.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/student/studentInfo.jsp" afterPath="$PROJECT_DIR$/web/views/student/studentInfo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/student/studentLogin.jsp" afterPath="$PROJECT_DIR$/web/views/student/studentLogin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/student/financeLog.jsp" afterPath="$PROJECT_DIR$/web/views/student/financeLog.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -242,62 +158,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StudentVOManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java">
+      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="575">
+              <caret line="63" column="19" lean-forward="false" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+              <folding>
+                <marker date="1490278414000" expanded="true" signature="97:3246" ph="..." />
+                <marker date="1490278414000" expanded="true" signature="2950:3237" ph="..." />
+                <marker date="1490278414000" expanded="true" signature="2987:3087" ph="..." />
+                <marker date="1490278414000" expanded="true" signature="3006:3067" ph="..." />
+                <marker date="1490278414000" expanded="true" signature="3123:3225" ph="..." />
+                <marker date="1490278414000" expanded="true" signature="3142:3205" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckMember.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentVOManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java">
+      <file leaf-file-name="CardManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="432" column="69" lean-forward="false" selection-start-line="432" selection-start-column="69" selection-end-line="432" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CourseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/CourseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="76" column="72" lean-forward="false" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courseDetail.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/views/institution/courseDetail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="175" column="42" lean-forward="true" selection-start-line="175" selection-start-column="42" selection-end-line="175" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstitutionCourseVO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/InstitutionCourseVO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-430">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="institutionCourse.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/institutionCourse.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="260">
+              <caret line="102" column="69" lean-forward="false" selection-start-line="102" selection-start-column="69" selection-end-line="102" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#5269#5270#0" expanded="false" />
+                <element signature="e#5297#5298#0" expanded="false" />
+                <element signature="e#5355#5356#0" expanded="false" />
+                <element signature="e#5383#5384#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -305,24 +204,91 @@
       <file leaf-file-name="InstitutionCourseImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="153" column="57" lean-forward="false" selection-start-line="153" selection-start-column="57" selection-end-line="153" selection-end-column="57" />
+            <state relative-caret-position="240">
+              <caret line="64" column="59" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="64" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberCardDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tc.activityLog" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.activityLog">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="MemberCardMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+              <folding>
+                <marker date="1490278414000" expanded="true" signature="328:454" ph="insert into memberCard... " />
+                <marker date="1490278414000" expanded="true" signature="544:874" ph="select membe... memberCard" />
+                <marker date="1490278414000" expanded="true" signature="955:996" ph="select * fro... memberCard" />
+                <marker date="1490278414000" expanded="true" signature="1088:1253" ph="update membe... " />
+                <marker date="1490278414000" expanded="true" signature="1345:1472" ph="update membe... " />
+                <marker date="1490278414000" expanded="true" signature="1565:1710" ph="update membe... " />
+                <marker date="1490278414000" expanded="true" signature="1800:1941" ph="update membe... " />
+                <marker date="1490278414000" expanded="true" signature="2032:2239" ph="select membe... memberCard" />
+                <marker date="1490278414000" expanded="true" signature="2032:2275" ph="select membe... memberCard" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+        </entry>
+      </file>
+      <file leaf-file-name="financeLog.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/student/financeLog.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="261" column="6" lean-forward="false" selection-start-line="261" selection-start-column="6" selection-end-line="261" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1490276122000" expanded="true" signature="373:15319" ph="..." />
+                <marker date="1490276122000" expanded="true" signature="2871:15311" ph="..." />
+                <marker date="1490276122000" expanded="true" signature="6072:12278" ph="..." />
+                <marker date="1490276122000" expanded="true" signature="7314:11966" ph="..." />
+                <marker date="1490276122000" expanded="true" signature="11306:11927" ph="..." />
+                <marker date="1490276122000" expanded="true" signature="11355:11651" ph="..." />
+                <marker date="1490276122000" expanded="true" signature="11461:11632" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <marker date="1490278414000" expanded="true" signature="212:1919" ph="..." />
+                <marker date="1490278414000" expanded="true" signature="283:599" ph="select DISTI... student" />
+                <marker date="1490278414000" expanded="true" signature="685:1005" ph="select DISTI... student" />
+                <marker date="1490278414000" expanded="true" signature="1129:1267" ph="insert into student... " />
+                <marker date="1490278414000" expanded="true" signature="1324:1382" ph="update stude... " />
+                <marker date="1490278414000" expanded="true" signature="1469:1619" ph="update stude... " />
+                <marker date="1490278414000" expanded="true" signature="1706:1756" ph="update stude... " />
+                <marker date="1490278414000" expanded="true" signature="1839:1893" ph="update stude... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -377,31 +343,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/dao/CourseCheckDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/CourseCheckMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/model/ActivityLog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVOManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java" />
-        <option value="$PROJECT_DIR$/web/js/courseRelease.js" />
-        <option value="$PROJECT_DIR$/src/test/java/DAOTest/ActivityLogTest/ActivityLogTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/bean/ActivityLogVO.java" />
         <option value="$PROJECT_DIR$/web/views/institution/institutionLog.jsp" />
         <option value="$PROJECT_DIR$/web/views/institution/financeLog.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java" />
         <option value="$PROJECT_DIR$/web/views/student/studentLogin.jsp" />
         <option value="$PROJECT_DIR$/web/views/student/studentLog.jsp" />
         <option value="$PROJECT_DIR$/web/js/studentLogin.js" />
-        <option value="$PROJECT_DIR$/web/views/student/financeLog.jsp" />
         <option value="$PROJECT_DIR$/web/js/managerCourse.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml" />
         <option value="$PROJECT_DIR$/web/views/manager/logPage.jsp" />
         <option value="$PROJECT_DIR$/web/views/manager/managerLogin.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/tc/bean/ManagerInfoVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVerify.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
         <option value="$PROJECT_DIR$/web/views/student/studentInfo.jsp" />
         <option value="$PROJECT_DIR$/web/js/studentInfo.js" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java" />
@@ -421,13 +374,26 @@
         <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/web/views/manager/managerInfo.jsp" />
         <option value="$PROJECT_DIR$/web/js/studentCourse.js" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java" />
         <option value="$PROJECT_DIR$/web/views/student/courseDetail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/CourseController.java" />
         <option value="$PROJECT_DIR$/web/views/institution/courseDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml" />
+        <option value="$PROJECT_DIR$/web/views/student/financeLog.jsp" />
+        <option value="$PROJECT_DIR$/web/js/studentGraph.js" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/trigger/TestJob.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml" />
       </list>
     </option>
   </component>
@@ -1234,44 +1200,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="managerService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managerService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2149,7 +2077,7 @@
       <workItem from="1489143197718" duration="71264000" />
       <workItem from="1489452827648" duration="99048000" />
       <workItem from="1489848192975" duration="44801000" />
-      <workItem from="1490021233862" duration="45219000" />
+      <workItem from="1490021233862" duration="52425000" />
     </task>
     <servers />
   </component>
@@ -2186,7 +2114,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401511000" />
+    <option name="totallyTimeSpent" value="408717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2257,166 +2185,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/managerCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="30" lean-forward="true" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/manager/managerLogin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1010">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/ActivityLogVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="56" lean-forward="false" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/model/ActivityLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InstitutionFieldMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1489457559000" expanded="true" signature="299:346" ph="select * fro... institutionField" />
-            <marker date="1489457559000" expanded="true" signature="440:491" ph="select * fro... institutionField" />
-            <marker date="1489457559000" expanded="true" signature="579:609" ph="select * fro... institutionField" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CourseMappr.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="64" />
-          <folding>
-            <marker date="1489920507000" expanded="true" signature="320:540" ph="insert into course... " />
-            <marker date="1489920507000" expanded="true" signature="624:1453" ph="select cours... course" />
-            <marker date="1489920507000" expanded="true" signature="1539:2382" ph="select DISTI... course" />
-            <marker date="1489920507000" expanded="true" signature="2474:3371" ph="select DISTI... course" />
-            <marker date="1489920507000" expanded="true" signature="3456:4343" ph="select DISTI... course" />
-            <marker date="1489920507000" expanded="true" signature="4440:5275" ph="select DISTI... course" />
-            <marker date="1489920507000" expanded="true" signature="5372:6216" ph="select DISTI... course" />
-            <marker date="1489920507000" expanded="true" signature="6314:7150" ph="select DISTI... course" />
-            <marker date="1489920507000" expanded="true" signature="7232:7337" ph="update cours... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.institution">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/ManagerInfoVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/model/Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/manager/financePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="288" column="46" lean-forward="true" selection-start-line="288" selection-start-column="46" selection-end-line="288" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/studentLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-841">
-          <caret line="136" column="84" lean-forward="true" selection-start-line="136" selection-start-column="84" selection-end-line="136" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/InstitutionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="143" column="40" lean-forward="true" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.student">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/institutionLog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -2430,22 +2198,6 @@
         <state relative-caret-position="375">
           <caret line="25" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-          <folding>
-            <marker date="1490187932000" expanded="true" signature="283:599" ph="select DISTI... student" />
-            <marker date="1490187932000" expanded="true" signature="685:1005" ph="select DISTI... student" />
-            <marker date="1490187932000" expanded="true" signature="1129:1267" ph="insert into student... " />
-            <marker date="1490187932000" expanded="true" signature="1324:1382" ph="update stude... " />
-            <marker date="1490187932000" expanded="true" signature="1469:1619" ph="update stude... " />
-            <marker date="1490187932000" expanded="true" signature="1706:1756" ph="update stude... " />
-            <marker date="1490187932000" expanded="true" signature="1839:1893" ph="update stude... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2592,19 +2344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.memberCard">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/manager/managerInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -2621,14 +2360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="395" column="19" lean-forward="false" selection-start-line="395" selection-start-column="19" selection-end-line="395" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.activityLog">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -2638,14 +2369,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -2664,14 +2387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="153" column="57" lean-forward="false" selection-start-line="153" selection-start-column="57" selection-end-line="153" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -2705,18 +2420,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="432" column="69" lean-forward="false" selection-start-line="432" selection-start-column="69" selection-end-line="432" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/views/student/courseDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-975">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2731,9 +2446,262 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/institution/courseDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="175" column="42" lean-forward="true" selection-start-line="175" selection-start-column="42" selection-end-line="175" selection-end-column="42" />
+        <state relative-caret-position="-1590">
+          <caret line="171" column="18" lean-forward="false" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/student/studentLog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2160">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="374" column="59" lean-forward="false" selection-start-line="374" selection-start-column="59" selection-end-line="374" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/studentGraph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+            <marker date="1490276643000" expanded="true" signature="3503:3546" ph="..." />
+            <marker date="1490276643000" expanded="true" signature="6751:6794" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="63" column="19" lean-forward="false" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+          <folding>
+            <marker date="1490278414000" expanded="true" signature="97:3246" ph="..." />
+            <marker date="1490278414000" expanded="true" signature="2950:3237" ph="..." />
+            <marker date="1490278414000" expanded="true" signature="2987:3087" ph="..." />
+            <marker date="1490278414000" expanded="true" signature="3006:3067" ph="..." />
+            <marker date="1490278414000" expanded="true" signature="3123:3225" ph="..." />
+            <marker date="1490278414000" expanded="true" signature="3142:3205" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="151" column="76" lean-forward="false" selection-start-line="151" selection-start-column="76" selection-end-line="151" selection-end-column="76" />
+          <folding>
+            <marker date="1490275463000" expanded="true" signature="289:618" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="715:1325" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="1419:1803" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="1907:2291" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="2392:3006" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="3104:3492" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="3599:3987" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="4085:4666" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="4765:5120" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="5215:5570" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="5686:6076" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="6183:6562" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="6649:6818" ph="insert into activityLog... " />
+            <marker date="1490275463000" expanded="true" signature="6915:7317" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="7419:7825" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="7928:8301" ph="select activ... activityLog" />
+            <marker date="1490275463000" expanded="true" signature="8407:8780" ph="select activ... activityLog" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/model/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.memberCard">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-895">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="64" column="59" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="64" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="e#1707#1708#0" expanded="false" />
+            <element signature="e#1733#1734#0" expanded="false" />
+            <element signature="e#1768#1769#0" expanded="false" />
+            <element signature="e#1798#1799#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6005">
+          <caret line="432" column="23" lean-forward="false" selection-start-line="432" selection-start-column="23" selection-end-line="432" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1715">
+          <caret line="143" column="40" lean-forward="true" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardVOManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/student/financeLog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="261" column="6" lean-forward="false" selection-start-line="261" selection-start-column="6" selection-end-line="261" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1490276122000" expanded="true" signature="373:15319" ph="..." />
+            <marker date="1490276122000" expanded="true" signature="2871:15311" ph="..." />
+            <marker date="1490276122000" expanded="true" signature="6072:12278" ph="..." />
+            <marker date="1490276122000" expanded="true" signature="7314:11966" ph="..." />
+            <marker date="1490276122000" expanded="true" signature="11306:11927" ph="..." />
+            <marker date="1490276122000" expanded="true" signature="11355:11651" ph="..." />
+            <marker date="1490276122000" expanded="true" signature="11461:11632" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="102" column="69" lean-forward="false" selection-start-line="102" selection-start-column="69" selection-end-line="102" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5269#5270#0" expanded="false" />
+            <element signature="e#5297#5298#0" expanded="false" />
+            <element signature="e#5355#5356#0" expanded="false" />
+            <element signature="e#5383#5384#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1490278414000" expanded="true" signature="212:1919" ph="..." />
+            <marker date="1490278414000" expanded="true" signature="283:599" ph="select DISTI... student" />
+            <marker date="1490278414000" expanded="true" signature="685:1005" ph="select DISTI... student" />
+            <marker date="1490278414000" expanded="true" signature="1129:1267" ph="insert into student... " />
+            <marker date="1490278414000" expanded="true" signature="1324:1382" ph="update stude... " />
+            <marker date="1490278414000" expanded="true" signature="1469:1619" ph="update stude... " />
+            <marker date="1490278414000" expanded="true" signature="1706:1756" ph="update stude... " />
+            <marker date="1490278414000" expanded="true" signature="1839:1893" ph="update stude... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+          <folding>
+            <marker date="1490278414000" expanded="true" signature="328:454" ph="insert into memberCard... " />
+            <marker date="1490278414000" expanded="true" signature="544:874" ph="select membe... memberCard" />
+            <marker date="1490278414000" expanded="true" signature="955:996" ph="select * fro... memberCard" />
+            <marker date="1490278414000" expanded="true" signature="1088:1253" ph="update membe... " />
+            <marker date="1490278414000" expanded="true" signature="1345:1472" ph="update membe... " />
+            <marker date="1490278414000" expanded="true" signature="1565:1710" ph="update membe... " />
+            <marker date="1490278414000" expanded="true" signature="1800:1941" ph="update membe... " />
+            <marker date="1490278414000" expanded="true" signature="2032:2239" ph="select membe... memberCard" />
+            <marker date="1490278414000" expanded="true" signature="2032:2275" ph="select membe... memberCard" />
+          </folding>
         </state>
       </provider>
     </entry>

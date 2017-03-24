@@ -31,4 +31,12 @@ public interface ActivityLogDAO {
     List<ActivityLog> selectInstitutionLogs();
 
     void insert(ActivityLog activityLog);
+
+    List<ActivityLog> selectStudentFinanceList();
+
+    List<ActivityLog> selectInstitutionFinanceList();
+
+    List<ActivityLog> selectStudentFinance(int sid);
+
+    List<ActivityLog> selectInstitutionFinance(int insid);
 }

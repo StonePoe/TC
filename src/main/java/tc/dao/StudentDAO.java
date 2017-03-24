@@ -3,6 +3,8 @@ package tc.dao;
 import org.apache.ibatis.annotations.Param;
 import tc.model.Student;
 
+import java.util.List;
+
 /**
  * Created by stonezhang on 2017/2/20.
  */

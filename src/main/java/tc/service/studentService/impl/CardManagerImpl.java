@@ -94,6 +94,13 @@ public class CardManagerImpl implements CardManager{
 
             double memberBalance = memberCard.getBalance() + amount;
             memberCard.setBalance(memberBalance);
+            LocalDate today = LocalDate.now();
+            LocalDate suspendDate = today.plusYears(1);
+            LocalDate destroyDate = today.plusYears(2);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+            memberCard.setSuspenddate(suspendDate.format(formatter));
+            memberCard.setDestroydate(destroyDate.format(formatter));
 
             memberCardDAO.updateBalance(memberCard);
 
