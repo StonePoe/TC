@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.CourseDAO">
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="tc.model.Course">
+        insert into course (insid, tid, description, startdate, enddate, price, `name`, imgUrl, field)
+        values (#{insid}, #{tid}, #{description}, #{startdate}, #{enddate}, #{price}, #{name}, #{imgUrl},
+        #{fieldId});
+    </insert>
+
+    <select id="selectById" resultType="tc.model.Course" >
+        select course.id as id, course.insid as insid,
+            institution.name as insName, course.tid as tid,
+            course.description as description, course.startdate
+            as startdate, course.enddate as enddate, course.price
+            as price, courseChecking.agree as agree, course.name as name,
+            course.imgUrl as imgUrl, teacher.name as teacherName,
+            teacher.imgUrl as teacherImg, institution.imgUrl as insImg,
+            course.field as fieldId, courseField.type as fieldName
+            from course,institution, courseField, teacher, courseChecking
+             where course.id = #{id}
+             and institution.id = course.insid and teacher.id = course.tid
+             and courseField.id = course.field and courseChecking.cid = course.id
+             and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectByName" resultType="tc.model.Course">
+         select DISTINCT course.id as id, course.insid as insid,
+            institution.name as insName, course.tid as tid,
+            course.description as description, course.startdate
+            as startdate, course.enddate as enddate, course.price
+            as price, courseChecking.agree as agree, course.name as name,
+            course.imgUrl as imgUrl, teacher.name as teacherName,
+            teacher.imgUrl as teacherImg, institution.imgUrl as insImg,
+            course.field as fieldId, courseField.type as fieldName
+            from course,institution, courseField, teacher, courseChecking
+             where course.name = #{name}
+             and institution.id = course.insid and teacher.id = course.tid
+             and courseField.id = course.field and courseChecking.cid = course.id
+              and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectByStudent" resultType="tc.model.Course">
+            select DISTINCT course.id as id, course.insid as insid,
+            institution.name as insName, course.tid as tid,
+            course.description as description, course.startdate
+            as startdate, course.enddate as enddate, course.price
+            as price, courseChecking.agree as agree, course.name as name,
+            course.imgUrl as imgUrl, teacher.name as teacherName,
+            teacher.imgUrl as teacherImg, institution.imgUrl as insImg,
+            course.field as fieldId, courseField.type as fieldName
+            from course, attending, institution, courseField,
+            teacher, courseChecking
+             where attending.sid = #{sid} and course.id = attending.cid
+             and institution.id = course.insid and teacher.id = course.tid
+             and courseField.id = course.field and courseChecking.cid = course.id
+             and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectByType" resultType="tc.model.Course">
+        select DISTINCT course.id as id, course.insid as insid,
+            institution.name as insName, course.tid as tid,
+            course.description as description, course.startdate
+            as startdate, course.enddate as enddate, course.price
+            as price, courseChecking.agree as agree, course.name as name,
+            course.imgUrl as imgUrl, teacher.name as teacherName,
+            teacher.imgUrl as teacherImg, institution.imgUrl as insImg,
+            course.field as fieldId, courseField.type as fieldName
+            from course, institution, courseField,
+            teacher, courseChecking
+             where course.field = #{typeId}
+             and institution.id = course.insid and teacher.id = course.tid
+             and courseField.id = course.field and courseChecking.cid = course.id
+             and courseChecking.agree = 1 and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectInstiActiveCourse" resultType="tc.model.Course">
+         select DISTINCT course.id as id, course.insid as insid,
+            institution.name as insName, course.tid as tid,
+            course.description as description, course.startdate
+            as startdate, course.enddate as enddate, course.price
+            as price, courseChecking.agree as agree, course.name as name,
+            course.imgUrl as imgUrl, teacher.name as teacherName,
+            teacher.imgUrl as teacherImg, institution.imgUrl as insImg,
+            course.field as fieldId, courseField.type as fieldName
+            from course,institution, courseField, teacher, courseChecking
+        where course.insid = #{insid} and courseChecking.cid = course.id and
+        courseChecking.agree = 1 and course.tid = teacher.id and course.field = courseField.id
+and institution.id=course.insid and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectInstiAbandonCourse" resultType="tc.model.Course">
+        select DISTINCT course.id as id, course.insid as insid,
+            institution.name as insName, course.tid as tid,
+            course.description as description, course.startdate
+            as startdate, course.enddate as enddate, course.price
+            as price, courseChecking.agree as agree, course.name as name,
+            course.imgUrl as imgUrl, teacher.name as teacherName,
+            teacher.imgUrl as teacherImg, institution.imgUrl as insImg,
+            course.field as fieldId, courseField.type as fieldName
+            from course,institution, courseField, teacher, courseChecking
+        where course.insid = #{insid} and courseChecking.agree = -1
+        and courseChecking.cid = course.id
+        and course.tid = teacher.id and course.field = courseField.id
+and institution.id=course.insid and courseChecking.checkType = 0;
+    </select>
+
+    <select id="selectInstiCheckingCourse" resultType="tc.model.Course">
+        select DISTINCT course.id as id, course.insid as insid,
+            institution.name as insName, course.tid as tid,
+            course.description as description, course.startdate
+            as startdate, course.enddate as enddate, course.price
+            as price, courseChecking.agree as agree, course.name as name,
+            course.imgUrl as imgUrl, teacher.name as teacherName,
+            teacher.imgUrl as teacherImg, institution.imgUrl as insImg,
+            course.field as fieldId, courseField.type as fieldName
+            from course,institution, courseField, teacher, courseChecking
+        where course.insid = #{insid} and courseChecking.cid = course.id
+        and courseChecking.agree = 0 and course.tid = teacher.id and course.field = courseField.id
+and institution.id=course.insid  and courseChecking.checkType = 0;
+    </select>
+
+    <update id="update" parameterType="tc.model.Course">
+        update course set name = #{name}, description = #{description}, price = #{price}
+        where id = #{id}
+    </update>
+</mapper>

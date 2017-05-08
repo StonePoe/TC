@@ -7,36 +7,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b52e1bf-439b-40eb-a748-7a13b0bbc42f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/studentGraph.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/trigger/TestJob.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/tc/trigger/TestJob.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/tc/trigger/TestJob.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/ActivityLogDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/dao/ActivityLogDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/StudentVOManager.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/StudentVOManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/img/R&amp;L/manager.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tc/bean/InstitutionCourseStatisticsVO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/InstitutionCourseStatisticsDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tc/model/InstitutionCourseStatistics.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/TeacherController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/InstitutionCourseStatisticsMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/teacherLogin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/institution/teacherHome.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/views/institution/teacherReg.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/InstitutionVOManager.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/InstitutionVOManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/ManagerVOManger.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/ManagerVOManger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/CardManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/CardManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/teacherService/TeacherVOManager.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/teacherService/TeacherVOManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/teacherService/impl/TeacherVOManagerImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/service/teacherService/impl/TeacherVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/InstitutionController.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/InstitutionController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/ManagerController.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/ManagerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/StudentController.class" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/tc/view/controller/StudentController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/dao/ActivityLogDAO.class" afterPath="$PROJECT_DIR$/target/classes/tc/dao/ActivityLogDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/studentService/StudentVOManager.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/studentService/StudentVOManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/institutionService/InstitutionVOManager.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/institutionService/InstitutionVOManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/institutionService/impl/InstitutionVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/managerService/ManagerVOManger.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/managerService/ManagerVOManger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/managerService/impl/ManagerVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/CardManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/CardManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/studentService/impl/StudentVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/teacherService/TeacherVOManager.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/teacherService/TeacherVOManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/service/teacherService/impl/TeacherVOManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/tc/service/teacherService/impl/TeacherVOManagerImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/view/controller/InstitutionController.class" afterPath="$PROJECT_DIR$/target/classes/tc/view/controller/InstitutionController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/view/controller/ManagerController.class" afterPath="$PROJECT_DIR$/target/classes/tc/view/controller/ManagerController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tc/view/controller/StudentController.class" afterPath="$PROJECT_DIR$/target/classes/tc/view/controller/StudentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/ActivityLogMapper.xml" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/WEB-INF/classes/mapper/ActivityLogMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentGraph.js" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/js/studentGraph.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/financeLog.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/financeLog.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/institutionLog.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/institution/institutionLog.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/manager/logPage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/manager/logPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/financeLog.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/financeLog.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java" afterPath="$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java" afterPath="$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/studentLog.jsp" afterPath="$PROJECT_DIR$/out/artifacts/TCPro_war_exploded/views/student/studentLog.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVOManager.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVOManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/teacherService/TeacherVOManager.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/teacherService/TeacherVOManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/service/teacherService/impl/TeacherVOManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/tc/service/teacherService/impl/TeacherVOManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/view/controller/InstitutionController.java" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/InstitutionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" afterPath="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ActivityLogMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ActivityLogMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/studentGraph.js" afterPath="$PROJECT_DIR$/web/js/studentGraph.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/institution/financeLog.jsp" afterPath="$PROJECT_DIR$/web/views/institution/financeLog.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/institution/institutionLog.jsp" afterPath="$PROJECT_DIR$/web/views/institution/institutionLog.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/manager/logPage.jsp" afterPath="$PROJECT_DIR$/web/views/manager/logPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/student/financeLog.jsp" afterPath="$PROJECT_DIR$/web/views/student/financeLog.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/student/studentLog.jsp" afterPath="$PROJECT_DIR$/web/views/student/studentLog.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,6 +90,20 @@
       </PATH_ELEMENT>
       <PATH_ELEMENT>
         <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="teacher" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -105,6 +145,34 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="manager" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="institutionField" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="institution" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -119,7 +187,77 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="financeCheck" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="courseUpdate" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="courseField" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="courseChecking" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="course" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="tc@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="bankcard" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -158,29 +296,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <file leaf-file-name="ManagerVerify.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVerify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="63" column="19" lean-forward="false" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-              <folding>
-                <marker date="1490278414000" expanded="true" signature="97:3246" ph="..." />
-                <marker date="1490278414000" expanded="true" signature="2950:3237" ph="..." />
-                <marker date="1490278414000" expanded="true" signature="2987:3087" ph="..." />
-                <marker date="1490278414000" expanded="true" signature="3006:3067" ph="..." />
-                <marker date="1490278414000" expanded="true" signature="3123:3225" ph="..." />
-                <marker date="1490278414000" expanded="true" signature="3142:3205" ph="..." />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckMember.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java">
+      <file leaf-file-name="ManagerVOManger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="105">
+              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -188,107 +321,91 @@
       <file leaf-file-name="CardManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="102" column="69" lean-forward="false" selection-start-line="102" selection-start-column="69" selection-end-line="102" selection-end-column="69" />
+            <state relative-caret-position="120">
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="e#5269#5270#0" expanded="false" />
-                <element signature="e#5297#5298#0" expanded="false" />
-                <element signature="e#5355#5356#0" expanded="false" />
-                <element signature="e#5383#5384#0" expanded="false" />
+                <element signature="e#5278#5279#0" expanded="false" />
+                <element signature="e#5306#5307#0" expanded="false" />
+                <element signature="e#5364#5365#0" expanded="false" />
+                <element signature="e#5392#5393#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstitutionCourseImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java">
+      <file leaf-file-name="CardManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/CardManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="64" column="59" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="64" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MemberCardDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="75">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MemberCardMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml">
+      <file leaf-file-name="CardVOManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/CardVOManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+            <state relative-caret-position="105">
+              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
-                <marker date="1490278414000" expanded="true" signature="328:454" ph="insert into memberCard... " />
-                <marker date="1490278414000" expanded="true" signature="544:874" ph="select membe... memberCard" />
-                <marker date="1490278414000" expanded="true" signature="955:996" ph="select * fro... memberCard" />
-                <marker date="1490278414000" expanded="true" signature="1088:1253" ph="update membe... " />
-                <marker date="1490278414000" expanded="true" signature="1345:1472" ph="update membe... " />
-                <marker date="1490278414000" expanded="true" signature="1565:1710" ph="update membe... " />
-                <marker date="1490278414000" expanded="true" signature="1800:1941" ph="update membe... " />
-                <marker date="1490278414000" expanded="true" signature="2032:2239" ph="select membe... memberCard" />
-                <marker date="1490278414000" expanded="true" signature="2032:2275" ph="select membe... memberCard" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="financeLog.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/student/financeLog.jsp">
+      <file leaf-file-name="StudentVerify.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVerify.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="261" column="6" lean-forward="false" selection-start-line="261" selection-start-column="6" selection-end-line="261" selection-end-column="6" />
+            <state relative-caret-position="105">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentVOManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
-                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1490276122000" expanded="true" signature="373:15319" ph="..." />
-                <marker date="1490276122000" expanded="true" signature="2871:15311" ph="..." />
-                <marker date="1490276122000" expanded="true" signature="6072:12278" ph="..." />
-                <marker date="1490276122000" expanded="true" signature="7314:11966" ph="..." />
-                <marker date="1490276122000" expanded="true" signature="11306:11927" ph="..." />
-                <marker date="1490276122000" expanded="true" signature="11355:11651" ph="..." />
-                <marker date="1490276122000" expanded="true" signature="11461:11632" ph="..." />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
+      <file leaf-file-name="CourseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/CourseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
-                <marker date="1490278414000" expanded="true" signature="212:1919" ph="..." />
-                <marker date="1490278414000" expanded="true" signature="283:599" ph="select DISTI... student" />
-                <marker date="1490278414000" expanded="true" signature="685:1005" ph="select DISTI... student" />
-                <marker date="1490278414000" expanded="true" signature="1129:1267" ph="insert into student... " />
-                <marker date="1490278414000" expanded="true" signature="1324:1382" ph="update stude... " />
-                <marker date="1490278414000" expanded="true" signature="1469:1619" ph="update stude... " />
-                <marker date="1490278414000" expanded="true" signature="1706:1756" ph="update stude... " />
-                <marker date="1490278414000" expanded="true" signature="1839:1893" ph="update stude... " />
+                <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="institutionChecking.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views/institution/institutionChecking.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courseChoice.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/views/student/courseChoice.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="182" column="17" lean-forward="true" selection-start-line="182" selection-start-column="17" selection-end-line="182" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -304,9 +421,9 @@
         <option value="CSS File" />
         <option value="Singleton" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
         <option value="Jsp File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -343,35 +460,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tc/bean/ActivityLogVO.java" />
-        <option value="$PROJECT_DIR$/web/views/institution/institutionLog.jsp" />
-        <option value="$PROJECT_DIR$/web/views/institution/financeLog.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java" />
-        <option value="$PROJECT_DIR$/web/views/student/studentLogin.jsp" />
-        <option value="$PROJECT_DIR$/web/views/student/studentLog.jsp" />
-        <option value="$PROJECT_DIR$/web/js/studentLogin.js" />
-        <option value="$PROJECT_DIR$/web/js/managerCourse.js" />
-        <option value="$PROJECT_DIR$/web/views/manager/logPage.jsp" />
-        <option value="$PROJECT_DIR$/web/views/manager/managerLogin.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/bean/ManagerInfoVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVerify.java" />
-        <option value="$PROJECT_DIR$/web/views/student/studentInfo.jsp" />
-        <option value="$PROJECT_DIR$/web/js/studentInfo.js" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVerify.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/dao/InstitutionDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVerifyImpl.java" />
-        <option value="$PROJECT_DIR$/web/js/institutionInfo.js" />
-        <option value="$PROJECT_DIR$/web/views/institution/institutionInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/InsitutionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/InstitutionController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/tc/dao/ManagerDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVerify.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVerifyImpl.java" />
         <option value="$PROJECT_DIR$/web/js/managerInfo.js" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java" />
         <option value="$PROJECT_DIR$/web/views/manager/managerInfo.jsp" />
         <option value="$PROJECT_DIR$/web/js/studentCourse.js" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java" />
@@ -380,11 +472,7 @@
         <option value="$PROJECT_DIR$/web/views/institution/courseDetail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml" />
-        <option value="$PROJECT_DIR$/web/views/student/financeLog.jsp" />
-        <option value="$PROJECT_DIR$/web/js/studentGraph.js" />
         <option value="$PROJECT_DIR$/src/main/java/tc/trigger/TestJob.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" />
@@ -392,8 +480,37 @@
         <option value="$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java" />
         <option value="$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/model/institutionStatitics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/model/institutionCourseStatitics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/bean/institutionCourseStatisticsVO.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVOManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/dao/InstitutionCourseStatisticsDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/bean/InstitutionCourseStatisticsVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/InstitutionCourseStatisticsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/InstitutionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java" />
+        <option value="$PROJECT_DIR$/web/js/studentGraph.js" />
+        <option value="$PROJECT_DIR$/web/views/manager/logPage.jsp" />
+        <option value="$PROJECT_DIR$/web/views/institution/institutionLog.jsp" />
+        <option value="$PROJECT_DIR$/web/views/institution/financeLog.jsp" />
+        <option value="$PROJECT_DIR$/web/views/student/studentLog.jsp" />
+        <option value="$PROJECT_DIR$/web/views/student/financeLog.jsp" />
+        <option value="$PROJECT_DIR$/web/views/manager/managerLogin.jsp" />
+        <option value="$PROJECT_DIR$/web/js/teacherLogin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/teacherService/TeacherVOManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/service/teacherService/impl/TeacherVOManagerImpl.java" />
+        <option value="$PROJECT_DIR$/web/js/teacherLogin.js" />
+        <option value="$PROJECT_DIR$/src/main/java/tc/view/controller/TeacherController.java" />
+        <option value="$PROJECT_DIR$/web/views/institution/teacherHome.jsp" />
+        <option value="$PROJECT_DIR$/web/views/institution/teacherReg.jsp" />
       </list>
     </option>
   </component>
@@ -489,7 +606,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches">
         <subPane>
@@ -527,6 +643,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -669,51 +786,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="student" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="R&amp;L" />
+              <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -745,179 +818,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAOTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAOTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="financeTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAOTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAOTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CourseCheckTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DAOTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActivityLogTest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1096,6 +997,82 @@
               <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacherService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="teacherService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1233,6 +1210,44 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="managerService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="institutionService" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1268,6 +1283,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="institutionService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fieldService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCPro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fieldService" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1365,20 +1452,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCPro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1394,29 +1467,30 @@
     <property name="nodejs_interpreter_path" value="/opt/local/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/opt/local/bin/node" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="FullScreen" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/stonezhang/code/java/TCPro/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-      <recent name="tc" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/web/img/manager" />
-      <recent name="$PROJECT_DIR$/web/img/R&amp;L" />
-      <recent name="$PROJECT_DIR$/web/img/course" />
-      <recent name="$PROJECT_DIR$/web/img/institution" />
-      <recent name="$PROJECT_DIR$/web/img/student" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web/views/student" />
       <recent name="$PROJECT_DIR$/web/plugin" />
       <recent name="$PROJECT_DIR$/web/test" />
       <recent name="$PROJECT_DIR$/web/views/test" />
       <recent name="$PROJECT_DIR$/web" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="tc" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/img/R&amp;L" />
+      <recent name="$PROJECT_DIR$/web/img/manager" />
+      <recent name="$PROJECT_DIR$/web/img/course" />
+      <recent name="$PROJECT_DIR$/web/img/institution" />
+      <recent name="$PROJECT_DIR$/web/img/student" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.0.M13">
@@ -2077,7 +2151,12 @@
       <workItem from="1489143197718" duration="71264000" />
       <workItem from="1489452827648" duration="99048000" />
       <workItem from="1489848192975" duration="44801000" />
-      <workItem from="1490021233862" duration="52425000" />
+      <workItem from="1490021233862" duration="62707000" />
+      <workItem from="1490525640246" duration="6608000" />
+      <workItem from="1490887425742" duration="51000" />
+      <workItem from="1491033558633" duration="505000" />
+      <workItem from="1491034214276" duration="4637000" />
+      <workItem from="1491550660638" duration="850000" />
     </task>
     <servers />
   </component>
@@ -2114,7 +2193,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408717000" />
+    <option name="totallyTimeSpent" value="431650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2131,14 +2210,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36385542" sideWeight="0.5028612" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35301206" sideWeight="0.50572246" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17596567" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17596567" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2150,14 +2229,13 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35301206" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31445783" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2167382" sideWeight="0.48863637" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25751072" sideWeight="0.48863637" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2160229" sideWeight="0.5113636" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3180723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2160229" sideWeight="0.5113636" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2166,6 +2244,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3180723" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2185,292 +2264,109 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/institutionLog.js">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/institution/homepage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
+        <state relative-caret-position="455">
+          <caret line="65" column="34" lean-forward="true" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/managerFinance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-541">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.memberCard">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/managerLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/student/financeLog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="233" column="36" lean-forward="true" selection-start-line="233" selection-start-column="36" selection-end-line="233" selection-end-column="36" />
+          <folding>
+            <element signature="e#12309#12315#0#HTML" expanded="false" />
+            <marker date="1490689479000" expanded="false" signature="11894:11922" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/manager/logPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2924">
+          <caret line="501" column="37" lean-forward="false" selection-start-line="501" selection-start-column="37" selection-end-line="501" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/institutionInfo.js">
+    <entry file="file://$PROJECT_DIR$/web/views/manager/managerLogin.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="178" column="51" lean-forward="true" selection-start-line="178" selection-start-column="51" selection-end-line="178" selection-end-column="51" />
+        <state relative-caret-position="270">
+          <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/institution/institutionLog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="210" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/teacherLogin.jsp" />
+    <entry file="file://$PROJECT_DIR$/web/js/studentLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="207" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/student/studentLog.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="206" column="32" lean-forward="true" selection-start-line="206" selection-start-column="32" selection-end-line="206" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/student/studentLogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-555">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/institution/institutionInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2195">
-          <caret line="293" column="42" lean-forward="false" selection-start-line="293" selection-start-column="42" selection-end-line="293" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/InsitutionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="34" column="71" lean-forward="false" selection-start-line="34" selection-start-column="71" selection-end-line="34" selection-end-column="71" />
-          <folding>
-            <marker date="1490233420000" expanded="true" signature="291:648" ph="select DISTI... institution" />
-            <marker date="1490233420000" expanded="true" signature="739:1100" ph="select DISTI... institution" />
-            <marker date="1490233420000" expanded="true" signature="1228:1365" ph="insert into institution... " />
-            <marker date="1490233420000" expanded="true" signature="1458:1518" ph="update insti... " />
-            <marker date="1490233420000" expanded="true" signature="1608:1662" ph="update insti... " />
-            <marker date="1490233420000" expanded="true" signature="1757:1819" ph="update insti... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ManagerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="67" lean-forward="false" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
-          <folding>
-            <marker date="1490237791000" expanded="true" signature="281:319" ph="select * fro... manager" />
-            <marker date="1490237791000" expanded="true" signature="404:446" ph="select * fro... manager" />
-            <marker date="1490237791000" expanded="true" signature="528:623" ph="insert into manager... " />
-            <marker date="1490237791000" expanded="true" signature="709:759" ph="update manag... " />
-            <marker date="1490237791000" expanded="true" signature="850:908" ph="update manag... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/ManagerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVerify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVerifyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1115">
-          <caret line="101" column="43" lean-forward="false" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVerifyImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-349">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/manager/logPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="247" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="529" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/student/studentInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="249" column="0" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="249" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/studentInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="172" column="5" lean-forward="true" selection-start-line="137" selection-start-column="3" selection-end-line="172" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/managerInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="29" lean-forward="true" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="n#!!doc;n#updateName#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="237" column="32" lean-forward="false" selection-start-line="237" selection-start-column="32" selection-end-line="237" selection-end-column="32" />
-          <folding>
-            <element signature="e#9796#9797#0" expanded="true" />
-            <element signature="e#9841#9842#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.manager">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/manager/managerInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="158" column="34" lean-forward="false" selection-start-line="158" selection-start-column="34" selection-end-line="158" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/studentCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.activityLog">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/impl/ManagerVOManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5420">
-          <caret line="521" column="0" lean-forward="false" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/institutionCourse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.course">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/InstitutionCourseVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-430">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/InstitutionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1655">
-          <caret line="202" column="50" lean-forward="false" selection-start-line="202" selection-start-column="50" selection-end-line="202" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/student/courseDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-975">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/CourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="76" column="72" lean-forward="false" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/institution/courseDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1590">
-          <caret line="171" column="18" lean-forward="false" selection-start-line="171" selection-start-column="18" selection-end-line="171" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/ActivityLogDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="52" selection-end-line="35" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/student/studentLog.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2160">
+        <state relative-caret-position="-780">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -2478,230 +2374,491 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/StudentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="374" column="59" lean-forward="false" selection-start-line="374" selection-start-column="59" selection-end-line="374" selection-end-column="59" />
+        <state relative-caret-position="425">
+          <caret line="73" column="5" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="73" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/studentGraph.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/TeacherInfoVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="41" column="25" lean-forward="true" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-            <marker date="1490276643000" expanded="true" signature="3503:3546" ph="..." />
-            <marker date="1490276643000" expanded="true" signature="6751:6794" ph="..." />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/teacherService/TeacherVOManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="63" column="19" lean-forward="false" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-          <folding>
-            <marker date="1490278414000" expanded="true" signature="97:3246" ph="..." />
-            <marker date="1490278414000" expanded="true" signature="2950:3237" ph="..." />
-            <marker date="1490278414000" expanded="true" signature="2987:3087" ph="..." />
-            <marker date="1490278414000" expanded="true" signature="3006:3067" ph="..." />
-            <marker date="1490278414000" expanded="true" signature="3123:3225" ph="..." />
-            <marker date="1490278414000" expanded="true" signature="3142:3205" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ActivityLogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="151" column="76" lean-forward="false" selection-start-line="151" selection-start-column="76" selection-end-line="151" selection-end-column="76" />
-          <folding>
-            <marker date="1490275463000" expanded="true" signature="289:618" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="715:1325" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="1419:1803" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="1907:2291" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="2392:3006" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="3104:3492" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="3599:3987" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="4085:4666" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="4765:5120" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="5215:5570" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="5686:6076" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="6183:6562" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="6649:6818" ph="insert into activityLog... " />
-            <marker date="1490275463000" expanded="true" signature="6915:7317" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="7419:7825" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="7928:8301" ph="select activ... activityLog" />
-            <marker date="1490275463000" expanded="true" signature="8407:8780" ph="select activ... activityLog" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/model/Student.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/StudentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.memberCard">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TeacherMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1489457559000" expanded="true" signature="283:321" ph="select * fro... teacher" />
+            <marker date="1489457559000" expanded="true" signature="406:448" ph="select * fro... teacher" />
+            <marker date="1489457559000" expanded="true" signature="527:548" ph="select * fro... teacher" />
+            <marker date="1489457559000" expanded="true" signature="631:699" ph="insert into teacher... " />
+          </folding>
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionVOManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/teacherService/impl/TeacherVOManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-895">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/impl/InstitutionCourseImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="64" column="59" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="64" selection-end-column="59" />
+        <state relative-caret-position="570">
+          <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="false" />
+            <element signature="e#623#624#0" expanded="false" />
+            <element signature="e#690#691#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/model/MemberCard.java">
+    <entry file="file://$PROJECT_DIR$/web/views/institution/teacherHome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-355">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/TeacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
           <folding>
-            <element signature="e#1707#1708#0" expanded="false" />
-            <element signature="e#1733#1734#0" expanded="false" />
-            <element signature="e#1768#1769#0" expanded="false" />
-            <element signature="e#1798#1799#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#890#891#0" expanded="false" />
+            <element signature="e#938#939#0" expanded="false" />
+            <element signature="e#1759#1760#0" expanded="false" />
+            <element signature="e#1808#1809#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/trigger/CheckMember.java">
+    <entry file="file://$PROJECT_DIR$/web/js/teacherLogin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="34" column="64" lean-forward="false" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="64" />
+        <state relative-caret-position="570">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.student">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.bankcard">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/348ada41/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb/tc.teacher">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/7f39ee2f-464e-4e8a-b435-5ac5ed26beeb">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>7f39ee2f-464e-4e8a-b435-5ac5ed26beeb</OriginalElement>
+          <nodes>
+            <node x="67.5" y="391.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.student</node>
+            <node x="1003.125" y="658.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.financeCheck</node>
+            <node x="321.875" y="0.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.institutionField</node>
+            <node x="453.32142857142856" y="702.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.courseUpdate</node>
+            <node x="719.839947089947" y="684.7777777777778">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.courseChecking</node>
+            <node x="699.875" y="157.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.teacher</node>
+            <node x="450.875" y="358.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.course</node>
+            <node x="942.25" y="424.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.manager</node>
+            <node x="129.75" y="691.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.attending</node>
+            <node x="0.0" y="124.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.memberCard</node>
+            <node x="99.57142857142856" y="0.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.bankcard</node>
+            <node x="281.875" y="135.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.institution</node>
+            <node x="530.875" y="179.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.courseField</node>
+            <node x="0.0" y="953.0">7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.activityLog</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.student" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.memberCard">
+              <point x="-62.25" y="-92.0" />
+              <point x="129.75" y="333.0" />
+              <point x="124.5" y="333.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.memberCard" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.bankcard">
+              <point x="0.0" y="-92.0" />
+              <point x="124.5" y="99.0" />
+              <point x="141.57142857142856" y="99.0" />
+              <point x="-42.0" y="37.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.course" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.teacher">
+              <point x="103.0" y="-125.0" />
+              <point x="708.375" y="333.0" />
+              <point x="794.375" y="333.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.student" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.bankcard">
+              <point x="62.25" y="-92.0" />
+              <point x="254.25" y="333.0" />
+              <point x="259.5" y="333.0" />
+              <point x="259.5" y="99.0" />
+              <point x="225.57142857142856" y="99.0" />
+              <point x="42.0" y="37.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.courseChecking" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.manager">
+              <point x="67.25" y="-103.0" />
+              <point x="904.0714285714286" y="633.0" />
+              <point x="989.5" y="633.0" />
+              <point x="-47.25" y="59.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.institution" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.institutionField">
+              <point x="0.0" y="-81.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.courseUpdate" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.course">
+              <point x="0.0" y="-81.0" />
+              <point x="567.8214285714286" y="633.0" />
+              <point x="605.375" y="633.0" />
+              <point x="0.0" y="125.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.course" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.institution">
+              <point x="-103.0" y="-125.0" />
+              <point x="502.375" y="333.0" />
+              <point x="396.375" y="333.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.financeCheck" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.manager">
+              <point x="0.0" y="-125.0" />
+              <point x="1157.625" y="633.0" />
+              <point x="1084.0" y="633.0" />
+              <point x="47.25" y="59.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.course" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.courseField">
+              <point x="0.0" y="-125.0" />
+              <point x="0.0" y="37.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.attending" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.course">
+              <point x="62.25" y="-92.0" />
+              <point x="316.5" y="633.0" />
+              <point x="502.375" y="633.0" />
+              <point x="-103.0" y="125.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.courseChecking" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.course">
+              <point x="-67.25" y="-103.0" />
+              <point x="769.5714285714286" y="633.0" />
+              <point x="708.375" y="633.0" />
+              <point x="103.0" y="125.0" />
+            </edge>
+            <edge source="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.attending" target="7f39ee2f-464e-4e8a-b435-5ac5ed26beeb.TABLE:tc.student">
+              <point x="-62.25" y="-92.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.627906976744186" x="657.0" y="479.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tc.bean">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tc.bean</OriginalElement>
+          <nodes>
+            <node x="" y="">tc.bean.FinanceCheckVO</node>
+            <node x="" y="">tc.bean.InstitutionStudentVO</node>
+            <node x="" y="">tc.bean.InstitutionCourseStatisticsVO</node>
+            <node x="" y="">tc.bean.TeacherInfoVO</node>
+            <node x="" y="">tc.bean.BankcardVO</node>
+            <node x="" y="">tc.bean.CourseFieldVO</node>
+            <node x="" y="">tc.bean.InstitutionFieldVO</node>
+            <node x="" y="">tc.bean.ManagerInfoVO</node>
+            <node x="" y="">tc.bean.InstitutionInfoVO</node>
+            <node x="" y="">tc.bean.CourseCheckVO</node>
+            <node x="" y="">tc.bean.StudentInfoVO</node>
+            <node x="" y="">tc.bean.ActivityLogVO</node>
+            <node x="" y="">tc.bean.courseWrapperVO</node>
+            <node x="" y="">tc.bean.InstitutionCourseVO</node>
+            <node x="" y="">tc.bean.StudentCourseVO</node>
+            <node x="" y="">tc.bean.MemberCardVO</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="233.0" y="237.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/institution/teacherReg.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="69" column="42" lean-forward="true" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVOManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/CourseFieldVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6005">
-          <caret line="432" column="23" lean-forward="false" selection-start-line="432" selection-start-column="23" selection-end-line="432" selection-end-column="23" />
+        <state relative-caret-position="105">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/StudentVerifyImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/courseWrapperVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1715">
-          <caret line="143" column="40" lean-forward="true" selection-start-line="143" selection-start-column="40" selection-end-line="143" selection-end-column="40" />
+        <state relative-caret-position="105">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardVOManagerImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/bean/InstitutionStudentVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/tc.dao">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>tc.dao</OriginalElement>
+          <nodes>
+            <node x="0.0" y="1264.0">tc.dao.InstitutionFieldDAO</node>
+            <node x="929.0" y="426.0">tc.dao.MemberCardDAO</node>
+            <node x="671.0" y="1264.0">tc.dao.CourseUpdateDAO</node>
+            <node x="381.0" y="786.0">tc.dao.InstitutionDAO</node>
+            <node x="0.0" y="0.0">tc.dao.ActivityLogDAO</node>
+            <node x="0.0" y="1058.0">tc.dao.CourseFieldDAO</node>
+            <node x="515.0" y="426.0">tc.dao.CourseDAO</node>
+            <node x="361.0" y="1264.0">tc.dao.BankCardDAO</node>
+            <node x="705.0" y="1058.0">tc.dao.TeacherDAO</node>
+            <node x="0.0" y="786.0">tc.dao.StudentDAO</node>
+            <node x="0.0" y="426.0">tc.dao.FinanceCheckDAO</node>
+            <node x="774.0" y="786.0">tc.dao.AttendingDAO</node>
+            <node x="990.0" y="1264.0">tc.dao.InstitutionCourseStatisticsDAO</node>
+            <node x="559.0" y="0.0">tc.dao.CourseCheckDAO</node>
+            <node x="362.0" y="1058.0">tc.dao.ManagerDAO</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8786644276904985" x="132.0" y="277.0" />
+          <SelectedNodes>
+            <node>tc.dao.CourseCheckDAO</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/fieldService/impl/CourseFieldVOManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/student/financeLog.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/model/Institution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="261" column="6" lean-forward="false" selection-start-line="261" selection-start-column="6" selection-end-line="261" selection-end-column="6" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/fieldService/impl/InstitutionFieldVOManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/fieldService/InstitutionFieldVOManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/fieldService/CourseFieldVOManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionCourse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVerify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/institutionService/InstitutionVOManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVerify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/managerService/ManagerVOManger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1490276122000" expanded="true" signature="373:15319" ph="..." />
-            <marker date="1490276122000" expanded="true" signature="2871:15311" ph="..." />
-            <marker date="1490276122000" expanded="true" signature="6072:12278" ph="..." />
-            <marker date="1490276122000" expanded="true" signature="7314:11966" ph="..." />
-            <marker date="1490276122000" expanded="true" signature="11306:11927" ph="..." />
-            <marker date="1490276122000" expanded="true" signature="11355:11651" ph="..." />
-            <marker date="1490276122000" expanded="true" signature="11461:11632" ph="..." />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/impl/CardManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="102" column="69" lean-forward="false" selection-start-line="102" selection-start-column="69" selection-end-line="102" selection-end-column="69" />
+        <state relative-caret-position="120">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#5269#5270#0" expanded="false" />
-            <element signature="e#5297#5298#0" expanded="false" />
-            <element signature="e#5355#5356#0" expanded="false" />
-            <element signature="e#5383#5384#0" expanded="false" />
+            <element signature="e#5278#5279#0" expanded="false" />
+            <element signature="e#5306#5307#0" expanded="false" />
+            <element signature="e#5364#5365#0" expanded="false" />
+            <element signature="e#5392#5393#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tc/dao/MemberCardDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/CardManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="75">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/CardVOManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
-            <marker date="1490278414000" expanded="true" signature="212:1919" ph="..." />
-            <marker date="1490278414000" expanded="true" signature="283:599" ph="select DISTI... student" />
-            <marker date="1490278414000" expanded="true" signature="685:1005" ph="select DISTI... student" />
-            <marker date="1490278414000" expanded="true" signature="1129:1267" ph="insert into student... " />
-            <marker date="1490278414000" expanded="true" signature="1324:1382" ph="update stude... " />
-            <marker date="1490278414000" expanded="true" signature="1469:1619" ph="update stude... " />
-            <marker date="1490278414000" expanded="true" signature="1706:1756" ph="update stude... " />
-            <marker date="1490278414000" expanded="true" signature="1839:1893" ph="update stude... " />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MemberCardMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVerify.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="32" column="68" lean-forward="false" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+        <state relative-caret-position="105">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/service/studentService/StudentVOManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
-            <marker date="1490278414000" expanded="true" signature="328:454" ph="insert into memberCard... " />
-            <marker date="1490278414000" expanded="true" signature="544:874" ph="select membe... memberCard" />
-            <marker date="1490278414000" expanded="true" signature="955:996" ph="select * fro... memberCard" />
-            <marker date="1490278414000" expanded="true" signature="1088:1253" ph="update membe... " />
-            <marker date="1490278414000" expanded="true" signature="1345:1472" ph="update membe... " />
-            <marker date="1490278414000" expanded="true" signature="1565:1710" ph="update membe... " />
-            <marker date="1490278414000" expanded="true" signature="1800:1941" ph="update membe... " />
-            <marker date="1490278414000" expanded="true" signature="2032:2239" ph="select membe... memberCard" />
-            <marker date="1490278414000" expanded="true" signature="2032:2275" ph="select membe... memberCard" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tc/view/controller/CourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/institution/institutionChecking.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/student/courseChoice.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="182" column="17" lean-forward="true" selection-start-line="182" selection-start-column="17" selection-end-line="182" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

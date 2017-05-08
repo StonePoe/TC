@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.MemberCardDAO">
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="tc.model.MemberCard">
+        insert into memberCard (id, balance, state, `level`, bankid) values
+        (#{id}, #{balance}, #{state}, #{level}, #{bankid});
+    </insert>
+
+    <select id="findByStudent" resultType="tc.model.MemberCard">
+        select memberCard.id as id, memberCard.balance as balance, memberCard.state as state,
+        memberCard.level as level, memberCard.bankid as bankid, memberCard.suspenddate as suspenddate,
+        memberCard.destroydate as destroydate from memberCard, student
+        where student.id = #{sid} and memberCard.id = student.memberid;
+    </select>
+
+    <select id="find" resultType="tc.model.MemberCard">
+        select * from memberCard where id = #{id}
+    </select>
+
+    <update id="updateActive" parameterType="tc.model.MemberCard">
+         update memberCard set balance = #{balance}, state = #{state}, suspenddate = #{suspenddate},
+        destroydate = #{destroydate}, `level` = #{level} where id = #{id}
+    </update>
+
+    <update id="updateBalance" parameterType="tc.model.MemberCard">
+        update memberCard set balance = #{balance}, suspenddate = #{suspenddate},
+        destroydate = #{destroydate} where id = #{id}
+    </update>
+
+    <update id="updateReActive" parameterType="tc.model.MemberCard">
+        update memberCard set balance = #{balance}, state = #{state}, suspenddate = #{suspenddate},
+        destroydate = #{destroydate} where id = #{id}
+    </update>
+
+    <update id="updateState" parameterType="tc.model.MemberCard">
+        update memberCard set state = #{state}, suspenddate = #{suspenddate},
+        destroydate = #{destroydate}, level = #{level} where id = #{id}
+    </update>
+
+    <select id="selectAllActive" resultType="tc.model.MemberCard">
+        select memberCard.id as id, memberCard.state as state, memberCard.suspenddate as suspenddate,
+        memberCard.destroydate as destroydate, student.id as sid
+        from memberCard, student where state = 1 and student.memberid = membrCard.id;
+    </select>
+</mapper>

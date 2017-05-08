@@ -220,9 +220,8 @@
                                             ${courseLog.modifyTime}
                                     </td>
 
-
+                                </tr>
                                     </c:forEach>
-
                                 </tbody>
                             </table>
                         </div>
@@ -231,22 +230,22 @@
             </div>
         </div>
 
-        <div class="box box-info">
-            <div class="box-header with-border">
-                <h3 class="box-title">Line Chart</h3>
+        <%--<div class="box box-info">--%>
+            <%--<div class="box-header with-border">--%>
+                <%--<h3 class="box-title">Line Chart</h3>--%>
 
-                <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="box-body">
-                <div class="chart">
-                    <canvas id="lineChart" style="height: 287px; width: 639px;" height="574" width="1278"></canvas>
-                </div>
-            </div>
-            <!-- /.box-body -->
-        </div>
+                <%--<div class="box-tools pull-right">--%>
+                    <%--<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>--%>
+                    <%--</button>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<div class="box-body">--%>
+                <%--<div class="chart">--%>
+                    <%--<canvas id="lineChart" style="height: 287px; width: 639px;" height="574" width="1278"></canvas>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--<!-- /.box-body -->--%>
+        <%--</div>--%>
         <!-- /.content -->
 
     </div>
@@ -261,6 +260,71 @@
 
 </div>
 <!-- ./wrapper -->
+
+<script>
+
+    /* ChartJS
+     * -------
+     * Here we will create a few charts using ChartJS
+     */
+
+    //--------------
+    //- AREA CHART -
+    //--------------
+
+    // Get context with jQuery - using jQuery's .get() method.
+    // var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
+    // // This will get the first returned node in the jQuery collection.
+    // var areaChart = new Chart(areaChartCanvas);
+    var time = ${time};
+    var statistics = ${statisticsData};
+
+    console.log(time);
+    console.log(statistics);
+
+    var areaChartData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "Electronics",
+                fillColor: "rgba(210, 214, 222, 1)",
+                strokeColor: "rgba(210, 214, 222, 1)",
+                pointColor: "rgba(210, 214, 222, 1)",
+                pointStrokeColor: "#c1c7d1",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: time
+            },
+            {
+                label: "Digital Goods",
+                fillColor: "rgba(60,141,188,0.9)",
+                strokeColor: "rgba(60,141,188,0.8)",
+                pointColor: "#3b8bba",
+                pointStrokeColor: "rgba(60,141,188,1)",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(60,141,188,1)",
+                data: statistics
+            }
+        ]
+    };
+
+
+    //Create the line chart
+    // areaChart.Line(areaChartData, areaChartOptions);
+    //-------------
+    //- LINE CHART -
+    //--------------
+    var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
+    var lineChart = new Chart(lineChartCanvas);
+    var lineChartOptions = areaChartOptions;
+    lineChartOptions.datasetFill = false;
+    lineChart.Line(areaChartData, lineChartOptions);
+
+
+    //Create pie or douhnut chart
+    // You can switch between pie and douhnut using the method below.
+    // pieChart.Doughnut(PieData, pieOptions);
+</script>
 
 <!-- jQuery 2.2.3 -->
 <script src="../../plugin/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js"></script>
@@ -300,10 +364,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/demo.js"></script>
 
-<!-- jQuery 2.2.3 -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="../../plugin/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js"></script>
 <!-- DataTables -->
 <script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/dataTables.bootstrap.min.js"></script>
@@ -316,6 +376,7 @@
 
 <script src="../../js/studentCourse.js"></script>
 <script src="../../js/studentGraph.js"></script>
+
 </body>
 </html>
 

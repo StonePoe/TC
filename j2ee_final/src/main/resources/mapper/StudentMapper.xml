@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.StudentDAO">
+
+    <select id="selectById" resultType="tc.model.Student" >
+        select DISTINCT student.id as id, student.bankid as bankid, student.memberid as memberid, student.password
+        as password, student.name as name, student.imgUrl as imgUrl, memberCard.level as level, student.exp as exp
+        from student, memberCard where student.id = #{id} and memberCard.id = student.memberid;
+    </select>
+
+    <select id="selectByName" resultType="tc.model.Student">
+        select DISTINCT student.id as id, student.bankid as bankid, student.memberid as memberid, student.password
+        as password, student.name as name, student.imgUrl as imgUrl, memberCard.level as level, student.exp as exp
+        from student, memberCard where student.name = #{name} and memberCard.id = student.memberid;
+    </select>
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="tc.model.Student">
+        insert into student (bankid, password, `name`, imgUrl, memberid) values (#{bankid},
+         #{password}, #{name}, #{imgUrl}, #{memberid})
+    </insert>
+
+    <update id="updatePassword">
+        update student set password = #{password} where id = #{id}
+    </update>
+
+    <update id="updateLevel" parameterType="tc.model.Student">
+        update student, memberCard set student.exp = #{exp}, memberCard.level = #{level}
+        where student.id = #{id} and memberCard.id = student.memberid;
+    </update>
+
+    <update id="updateName" parameterType="tc.model.Student">
+        update student set name = #{name} where id = #{id};
+</update>
+
+    <update id="updateBank" parameterType="tc.model.Student">
+        update student set bankid = #{bankid} where id = #{id};
+    </update>
+
+
+</mapper>

@@ -155,6 +155,15 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
+
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">机构余额</h3>
+            </div>
+            <div class="box-body">
+                <p class="text-muted">${balance}</p>
+            </div>
+        </div>
         <div class="box">
             <div class="box-header">
                 <h3 class="box-title">资金日志</h3>
@@ -231,6 +240,53 @@
                 </div>
             </div>
         </div>
+
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">招生信息</h3>
+            </div>
+            <div class="box-body">
+                <div id="example3_wrapper" class="classdataTables_wrapper form-inline dt-bootstrap">
+                    <div class="row">
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="example3" class="table table-bordered table-hover dataTable"
+                                   role="grid" aria-describedby="example3_info">
+                                <thead>
+                                <tr role="row">
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="课程: activate to sort column ascending">
+                                        课程
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                        aria-label="选课人数: activate to sort column ascending">
+                                        选课人数
+                                    </th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <c:forEach var="statistics" items="${statisticsVOList}">
+                                <tr onclick="">
+                                    <td>
+                                        ${statistics.cname}
+                                    </td>
+                                    <td>
+                                        ${statistics.count}
+                                    </td>
+                                </tr>
+                                    </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -255,6 +311,13 @@
 </script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../../plugin/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugin/AdminLTE-2.3.11/plugins/fastclick/fastclick.js"></script>
 <!-- Morris.js charts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="../../plugin/AdminLTE-2.3.11/plugins/morris/morris.min.js"></script>
@@ -272,10 +335,7 @@
 <script src="../../plugin/AdminLTE-2.3.11/plugins/datepicker/bootstrap-datepicker.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="../../plugin/AdminLTE-2.3.11/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/fastclick/fastclick.js"></script>
+
 <!-- AdminLTE App -->
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/app.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
@@ -283,21 +343,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/demo.js"></script>
 
-<!-- jQuery 2.2.3 -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="../../plugin/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js"></script>
-<!-- DataTables -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/dataTables.bootstrap.min.js"></script>
-<!-- SlimScroll -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../../plugin/AdminLTE-2.3.11/dist/js/app.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../plugin/AdminLTE-2.3.11/dist/js/demo.js"></script>
 
 <script src="../../js/institutionLog.js"></script>
 </body>

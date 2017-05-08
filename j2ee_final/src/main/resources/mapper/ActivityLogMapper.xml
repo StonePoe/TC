@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.ActivityLogDAO">
+    <select id="selectById" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid from activityLog where id = #{id};
+    </select>
+
+    <select id="selectStudentCourse" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid, course.name as cname,
+        institution.name as instiName, student.name as sname
+        from activityLog, course, institution, student
+        where activityLog.sid = #{sid} and activityLog.type = 0 and course.id = activityLog.cid
+        and institution.id = activityLog.insid and student.id = activityLog.sid;
+    </select>
+
+    <select id="selectStudentLog" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.sid = #{sid} and activityLog.type = 1;
+    </select>
+
+    <select id="selectStudentOtherConsume" resultType="tc.model.ActivityLog">
+         select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.sid = #{sid} and activityLog.type = 2;
+    </select>
+
+    <select id="selectInstitutionCourse" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid, course.name as cname,
+        institution.name as instiName, student.name as sname
+        from activityLog, course, institution, student
+        where activityLog.insid = #{insid} and activityLog.type = 0 and course.id = activityLog.cid
+        and institution.id = activityLog.insid and student.id = activityLog.sid;
+    </select>
+
+    <select id="selectInstitutionLog" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.insid = #{insid} and activityLog.type = 3;
+    </select>
+
+    <select id="selectInstitutionOtherConsume" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.insid = #{insid} and activityLog.type = 4;
+    </select>
+
+    <select id="selectCourseFinances" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid, course.name as cname,
+        institution.name as instiName, student.name as sname
+        from activityLog, course, institution, student
+        where activityLog.type = 0 and course.id = activityLog.cid
+        and institution.id = activityLog.insid and student.id = activityLog.sid;
+    </select>
+
+    <select id="selectInstitutionLogs" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.type = 3;
+    </select>
+
+    <select id="selectStudentLogs" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.type = 1
+</select>
+    <!---->
+    <!--<select id="selectInstitutionLogs" resultType="tc.model.ActivityLog">-->
+        <!--select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,-->
+        <!--activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,-->
+        <!--activityLog.description as description, activityLog.money as money,-->
+        <!--activityLog.cid as cid, activityLog.insid as insid-->
+        <!--from activityLog-->
+        <!--where activityLog.type = 3;-->
+    <!--</select>-->
+
+    <select id="selectOtherFinances" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog
+        where activityLog.type = 2 or activityLog.type = 4;
+    </select>
+
+    <insert id="insert" parameterType="tc.model.ActivityLog">
+        insert into activityLog (type, sid, behaviour, description, money, cid, insid)
+        values (#{type}, #{sid}, #{behaviour}, #{description}, #{money}, #{cid}, #{insid})
+    </insert>
+
+    <select id="selectStudentFinance" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where activityLog.sid = #{sid} and (activityLog.type = 0 or activityLog.type = 2);
+    </select>
+
+    <select id="selectInstitutionFinance" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where activityLog.insid = #{insid} and (activityLog.type = 0 or activityLog.type = 4);
+    </select>
+
+    <select id="selectStudentFinanceList" resultType="tc.model.ActivityLog">
+         select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where (activityLog.type = 0 or activityLog.type = 2);
+    </select>
+
+    <select id="selectInstitutionFinanceList" resultType="tc.model.ActivityLog">
+        select activityLog.id as id, activityLog.type as type, activityLog.sid as sid,
+        activityLog.modifyTime as modifyTime, activityLog.behaviour as behaviour,
+        activityLog.description as description, activityLog.money as money,
+        activityLog.cid as cid, activityLog.insid as insid
+        from activityLog where (activityLog.type = 0 or activityLog.type = 4);
+    </select>
+</mapper>

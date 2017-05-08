@@ -1,0 +1,28 @@
+.img-bordered {
+    height: 50vh;
+}
+.box {
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.error-info {
+    display: inline;
+}
+
+.inputName {
+    width: 30%;
+    display: inline;
+}
+
+.d-none {
+    display: none;
+}
+
+.password .confirmPs {
+    width: 30%;
+    display: inline;
+}

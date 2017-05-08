@@ -199,8 +199,9 @@
                                             ${courseLog.modifyTime}
                                     </td>
 
-
+                                </tr>
                                     </c:forEach>
+
 
                                 </tbody>
                             </table>
@@ -261,10 +262,6 @@
 
 <script src="../../js/studentCourse.js"></script>
 
-<!-- jQuery 2.2.3 -->
-<script src="../../plugin/AdminLTE-2.3.11/plugins/jQuery/jquery-2.2.3.min.js"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="../../plugin/AdminLTE-2.3.11/bootstrap/js/bootstrap.min.js"></script>
 <!-- DataTables -->
 <script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../../plugin/AdminLTE-2.3.11/plugins/datatables/dataTables.bootstrap.min.js"></script>

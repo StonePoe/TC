@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.AttendingDAO">
+
+    <select id="selectById" resultType="tc.model.Attending" >
+        select * from attending where id = #{id}
+    </select>
+
+    <select id="selectBySid" resultType="tc.model.Attending">
+        select * from attending where sid = #{sid}
+    </select>
+
+    <select id="selectByCid" resultType="tc.model.Attending">
+        select * from attending where cid = #{cid}
+    </select>
+
+    <insert id="insert" parameterType="tc.model.Attending">
+        insert into attending (sid, cid, state, isMember, enrollingTime, score) values
+        (#{sid}, #{cid}, #{state}, #{isMember}, #{enrollingTime}, #{score})
+    </insert>
+
+    <select id="selectByBoth" resultType="tc.model.Attending">
+        select * from attending where sid = #{sid} and cid = #{cid}
+    </select>
+
+    <delete id="delete" parameterType="tc.model.Attending">
+        delete from attending where sid = #{sid} and cid = #{cid}
+    </delete>
+
+    <update id="updateScore" parameterType="tc.model.Attending">
+        update attending set score = #{score} where sid = #{sid} and cid = #{cid}
+    </update>
+
+    <update id="updateState" parameterType="tc.model.Attending">
+        update attending set state = #{state} where sid = #{sid} and cid = #{cid}
+    </update>
+</mapper>

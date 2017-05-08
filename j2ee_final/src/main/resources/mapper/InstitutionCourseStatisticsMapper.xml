@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.InstitutionCourseStatisticsDAO">
+    <select id="selectAll" resultType="tc.model.InstitutionCourseStatistics">
+        select count(*) as count, institution.id as insid, institution.name as insName, course.id as cid,
+        course.name as cname
+        from institution, attending, course
+        where course.insid = institution.id and attending.cid = course.id
+        group by institution.id, course.id, institution.name, course.name;
+    </select>
+
+    <select id="selectByInsti" resultType="tc.model.InstitutionCourseStatistics">
+        select count(*) as count, institution.id as insid, institution.name as insName, course.id as cid,
+        course.name as cname
+        from institution, attending, course
+        where course.insid = institution.id and attending.cid = course.id and institution.id = #{insid}
+        group by institution.id, course.id, institution.name, course.name;
+    </select>
+</mapper>

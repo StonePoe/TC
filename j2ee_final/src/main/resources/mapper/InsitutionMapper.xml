@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="tc.dao.InstitutionDAO">
+
+    <select id="selectById" resultType="tc.model.Institution" >
+        select DISTINCT institution.id as id, institution.password as password, institution.balance as balance,
+         institution.name as name, institution.imgUrl as imgUrl, institution.field as field,
+         institutionField.type as fieldName from institution, institutionField
+         where institution.id = #{id} and institutionField.id = institution.field;
+    </select>
+
+    <select id="selectByName" resultType="tc.model.Institution">
+         select DISTINCT institution.id as id, institution.password as password, institution.balance as balance,
+         institution.name as name, institution.imgUrl as imgUrl, institution.field as field,
+         institutionField.type as fieldName from institution, institutionField
+         where institution.name = #{name} and institutionField.id = institution.field;
+    </select>
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="tc.model.Institution">
+        insert into institution (password, `name`, balance, field, imgUrl)
+        values (#{password}, #{name}, #{balance}, #{field}, #{imgUrl})
+    </insert>
+
+    <update id="updateBalance" parameterType="tc.model.Institution">
+        update institution set balance = #{balance} where id = #{id}
+    </update>
+
+    <update id="updateName" parameterType="tc.model.Institution">
+        update institution set name = #{name} where id = #{id};
+    </update>
+
+    <update id="updatePassword" parameterType="tc.model.Institution">
+        update institution set password = #{password} where id = #{id};
+    </update>
+
+</mapper>
